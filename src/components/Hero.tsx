@@ -1,5 +1,6 @@
 import { Shield, CheckCircle2, ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
+import bankerLogo from "@/assets/banker-logo.png";
 
 const Hero = () => {
   const scrollToForm = () => {
@@ -16,7 +17,15 @@ const Hero = () => {
       <div className="container-section section-spacing relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="text-primary-foreground animate-fade-in">
-            <div className="inline-flex items-center gap-2 glass-morphism px-4 py-2 rounded-full mb-6">
+            <div className="mb-8 glass-morphism-dark p-6 rounded-3xl inline-block">
+              <img 
+                src={bankerLogo} 
+                alt="Banker Sistemas" 
+                className="h-16 w-auto"
+              />
+            </div>
+            
+            <div className="inline-flex items-center gap-2 glass-morphism px-5 py-2.5 rounded-full mb-6">
               <Shield className="w-4 h-4 text-secondary" />
               <span className="text-sm font-medium text-secondary">+1.500 imóveis protegidos</span>
             </div>
@@ -66,12 +75,14 @@ const Hero = () => {
           </div>
           
           <div className="relative animate-slide-in">
-            <div className="absolute inset-0 bg-secondary/20 rounded-3xl blur-3xl" />
-            <img 
-              src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=1200" 
-              alt="Cerca elétrica instalada em muro residencial"
-              className="relative rounded-3xl shadow-2xl w-full h-auto"
-            />
+            <div className="absolute inset-0 bg-secondary/20 rounded-[2.5rem] blur-3xl" />
+            <div className="glass-card-enhanced p-4 rounded-[2.5rem]">
+              <img 
+                src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=1200" 
+                alt="Cerca elétrica instalada em muro residencial"
+                className="relative rounded-[2rem] shadow-2xl w-full h-auto"
+              />
+            </div>
           </div>
         </div>
       </div>

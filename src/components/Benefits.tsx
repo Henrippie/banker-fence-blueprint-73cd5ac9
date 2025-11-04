@@ -50,11 +50,11 @@ const Benefits = () => {
             return (
               <div 
                 key={index}
-                className="glass-card p-8 rounded-2xl hover:shadow-xl transition-all duration-500 animate-fade-in group hover:scale-[1.02]"
+                className="glass-card-enhanced p-8 rounded-3xl hover:shadow-2xl transition-all duration-500 animate-fade-in group hover:scale-[1.02]"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="w-14 h-14 bg-gradient-to-br from-accent to-accent/70 rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform">
-                  <Icon className="w-7 h-7 text-white" />
+                <div className="w-16 h-16 glass-morphism-dark rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform">
+                  <Icon className="w-8 h-8 text-secondary" />
                 </div>
                 <h3 className="text-xl font-semibold mb-3 text-foreground">{benefit.title}</h3>
                 <p className="text-muted-foreground leading-relaxed text-sm">{benefit.description}</p>

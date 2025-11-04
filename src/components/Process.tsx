@@ -51,9 +51,9 @@ const Process = () => {
                   className="relative animate-fade-in"
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
-                  <div className="glass-card p-6 rounded-3xl hover:shadow-xl transition-all duration-500 hover:scale-105">
-                    <div className="w-16 h-16 bg-gradient-to-br from-accent to-accent/70 rounded-2xl flex items-center justify-center mb-6 mx-auto relative z-10 shadow-xl">
-                      <Icon className="w-8 h-8 text-white" />
+                  <div className="glass-card-enhanced p-8 rounded-[2rem] hover:shadow-2xl transition-all duration-500 hover:scale-105 group">
+                    <div className="w-16 h-16 glass-morphism-dark rounded-2xl flex items-center justify-center mb-6 mx-auto relative z-10 shadow-xl group-hover:scale-110 transition-transform">
+                      <Icon className="w-8 h-8 text-secondary" />
                     </div>
                     <div className="text-center">
                       <h3 className="text-lg font-semibold mb-3">{step.title}</h3>
