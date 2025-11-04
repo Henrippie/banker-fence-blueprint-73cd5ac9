@@ -1,8 +1,6 @@
 import { Shield, MapPin, Phone, Mail } from "lucide-react";
-
 const Footer = () => {
-  return (
-    <footer className="bg-primary text-primary-foreground py-12">
+  return <footer className="bg-primary text-primary-foreground py-12">
       <div className="container-section">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Logo e descrição */}
@@ -22,11 +20,12 @@ const Footer = () => {
             <ul className="space-y-3 text-sm text-primary-foreground/80">
               <li className="flex items-start gap-2">
                 <Phone className="w-4 h-4 mt-1 shrink-0" />
-                <span>(11) 99999-9999</span>
+                <span>(11) 2645-5553</span>
               </li>
               <li className="flex items-start gap-2">
                 <Mail className="w-4 h-4 mt-1 shrink-0" />
-                <span>contato@bankersistemas.com.br</span>
+                <span>vendas@bankersistemas.com.br
+              </span>
               </li>
               <li className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 mt-1 shrink-0" />
@@ -39,7 +38,8 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Informações</h3>
             <ul className="space-y-2 text-sm text-primary-foreground/80">
-              <li>CNPJ: 00.000.000/0001-00</li>
+              <li>CNPJ: 22.082.779/0001-74
+            </li>
               <li>Atendimento: Seg-Sex 8h-18h</li>
               <li className="pt-2">
                 <a href="#" className="hover:text-secondary transition-colors">
@@ -54,8 +54,6 @@ const Footer = () => {
           <p>&copy; {new Date().getFullYear()} Banker Sistemas. Todos os direitos reservados.</p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
