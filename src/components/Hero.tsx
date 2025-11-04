@@ -7,27 +7,26 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-primary via-primary to-accent">
+    <section className="relative overflow-hidden bg-gradient-to-br from-primary via-primary to-accent min-h-screen flex items-center">
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0" style={{
-          backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,.05) 35px, rgba(255,255,255,.05) 70px)',
-        }} />
+        <div className="absolute top-20 left-10 w-72 h-72 bg-secondary rounded-full blur-[120px]" />
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent rounded-full blur-[120px]" />
       </div>
       
       <div className="container-section section-spacing relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="text-primary-foreground animate-fade-in">
-            <div className="inline-flex items-center gap-2 bg-secondary/20 px-4 py-2 rounded-full mb-6 backdrop-blur-sm">
-              <Shield className="w-5 h-5 text-secondary" />
-              <span className="text-sm font-medium text-secondary">Proteção Profissional 24h</span>
+            <div className="inline-flex items-center gap-2 glass-morphism px-4 py-2 rounded-full mb-6">
+              <Shield className="w-4 h-4 text-secondary" />
+              <span className="text-sm font-medium text-secondary">+1.500 imóveis protegidos</span>
             </div>
             
             <h1 className="heading-xl mb-6 leading-tight">
-              Proteja sua casa ou empresa com tecnologia de <span className="text-secondary">Cerca Elétrica Profissional</span>
+              <span className="text-secondary">Cerca Elétrica Profissional</span> que protege de verdade
             </h1>
             
-            <p className="body-lg mb-8 text-primary-foreground/90">
-              Segurança que assusta invasores antes mesmo de entrar no seu terreno — com instalação rápida e suporte especializado completo.
+            <p className="text-xl mb-8 text-primary-foreground/80 max-w-xl leading-relaxed">
+              Segurança que intimida invasores antes de entrarem.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
@@ -67,11 +66,11 @@ const Hero = () => {
           </div>
           
           <div className="relative animate-slide-in">
-            <div className="absolute inset-0 bg-secondary/20 rounded-2xl blur-3xl" />
+            <div className="absolute inset-0 bg-secondary/20 rounded-3xl blur-3xl" />
             <img 
               src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=1200" 
               alt="Cerca elétrica instalada em muro residencial"
-              className="relative rounded-2xl shadow-2xl w-full h-auto"
+              className="relative rounded-3xl shadow-2xl w-full h-auto"
             />
           </div>
         </div>

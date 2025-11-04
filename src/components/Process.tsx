@@ -4,26 +4,26 @@ const processSteps = [
   {
     icon: ClipboardCheck,
     title: "Diagnóstico Gratuito",
-    description: "Análise técnica completa do seu imóvel sem compromisso",
-    benefit: "Identificamos os pontos críticos e necessidades específicas"
+    description: "Análise técnica completa sem compromisso",
+    benefit: "Identificamos pontos críticos"
   },
   {
     icon: FileText,
     title: "Proposta Personalizada",
-    description: "Orçamento detalhado e transparente adaptado à sua realidade",
-    benefit: "Melhor custo-benefício sem surpresas"
+    description: "Orçamento transparente e detalhado",
+    benefit: "Sem surpresas"
   },
   {
     icon: Hammer,
-    title: "Instalação Profissional",
-    description: "Equipe certificada realiza todo o processo com excelência",
-    benefit: "Rápido, limpo e sem transtornos"
+    title: "Instalação Rápida",
+    description: "Equipe certificada e processo eficiente",
+    benefit: "Rápido e sem transtornos"
   },
   {
     icon: Headphones,
     title: "Suporte Contínuo",
-    description: "Acompanhamento e assistência técnica sempre que precisar",
-    benefit: "Garantia de funcionamento e tranquilidade"
+    description: "Assistência técnica sempre disponível",
+    benefit: "Tranquilidade garantida"
   }
 ];
 
@@ -32,15 +32,15 @@ const Process = () => {
     <section className="section-spacing bg-background">
       <div className="container-section">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="heading-lg mb-4">Nossa Forma de Trabalho</h2>
-          <p className="body-lg text-muted-foreground max-w-2xl mx-auto">
-            Processo transparente e eficiente do primeiro contato até o suporte contínuo.
+          <h2 className="heading-lg mb-4">Como trabalhamos</h2>
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+            Processo simples do contato até o suporte
           </p>
         </div>
         
         <div className="relative">
           {/* Timeline line */}
-          <div className="hidden md:block absolute top-1/2 left-0 right-0 h-0.5 bg-border -translate-y-1/2" />
+          <div className="hidden md:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-border to-transparent -translate-y-1/2" />
           
           <div className="grid md:grid-cols-4 gap-8 relative">
             {processSteps.map((step, index) => {
@@ -51,16 +51,16 @@ const Process = () => {
                   className="relative animate-fade-in"
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
-                  <div className="bg-card p-6 rounded-xl shadow-card hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-                    <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mb-6 mx-auto relative z-10 shadow-lg">
-                      <Icon className="w-8 h-8 text-accent-foreground" />
+                  <div className="glass-card p-6 rounded-3xl hover:shadow-xl transition-all duration-500 hover:scale-105">
+                    <div className="w-16 h-16 bg-gradient-to-br from-accent to-accent/70 rounded-2xl flex items-center justify-center mb-6 mx-auto relative z-10 shadow-xl">
+                      <Icon className="w-8 h-8 text-white" />
                     </div>
                     <div className="text-center">
                       <h3 className="text-lg font-semibold mb-3">{step.title}</h3>
                       <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
                         {step.description}
                       </p>
-                      <div className="pt-4 border-t border-border">
+                      <div className="pt-4 border-t border-border/50">
                         <p className="text-xs text-accent font-medium">{step.benefit}</p>
                       </div>
                     </div>

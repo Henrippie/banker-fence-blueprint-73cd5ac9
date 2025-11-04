@@ -13,12 +13,12 @@ const About = () => {
       <div className="container-section">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12 animate-fade-in">
-            <h2 className="heading-lg mb-6">Sobre a Banker Sistemas</h2>
-            <p className="body-lg text-muted-foreground leading-relaxed mb-8">
-              Somos uma empresa especializada em <strong>segurança eletrônica profissional</strong>, com foco em soluções de cercas elétricas para residências, condomínios e empresas. 
+            <h2 className="heading-lg mb-6">Banker Sistemas</h2>
+            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+              Especialistas em <strong>segurança eletrônica profissional</strong> para residências, condomínios e empresas. 
             </p>
-            <p className="body-lg text-muted-foreground leading-relaxed">
-              Nossa missão é oferecer <strong>proteção de verdade</strong> através de tecnologia confiável, instalação impecável e suporte que realmente funciona. Cada projeto é tratado com atenção aos detalhes, respeitando normas técnicas e superando expectativas.
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              <strong>Proteção de verdade</strong> com tecnologia confiável e suporte que funciona.
             </p>
           </div>
           
@@ -26,11 +26,11 @@ const About = () => {
             {stats.map((stat, index) => {
               const Icon = stat.icon;
               return (
-                <div 
-                  key={index}
-                  className="text-center p-6 bg-background rounded-xl shadow-sm animate-fade-in"
-                  style={{ animationDelay: `${index * 100}ms` }}
-                >
+              <div 
+                key={index}
+                className="text-center p-6 glass-card rounded-2xl animate-fade-in hover:scale-105 transition-all duration-300"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
                   <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mb-4 mx-auto">
                     <Icon className="w-6 h-6 text-accent" />
                   </div>

@@ -37,19 +37,19 @@ const LeadForm = () => {
   ];
 
   return (
-    <section id="form-section" className="section-spacing bg-gradient-to-br from-accent/5 to-secondary/5">
+    <section id="form-section" className="section-spacing bg-gradient-to-br from-background to-muted/30">
       <div className="container-section">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12 animate-fade-in">
-            <h2 className="heading-lg mb-4">Solicite seu Diagnóstico Gratuito</h2>
-            <p className="body-lg text-muted-foreground max-w-2xl mx-auto">
-              Preencha o formulário e nossa equipe entrará em contato para agendar uma visita técnica sem compromisso.
+            <h2 className="heading-lg mb-4">Diagnóstico gratuito</h2>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+              Análise personalizada sem compromisso.
             </p>
           </div>
           
           <div className="grid md:grid-cols-2 gap-8">
             {/* Benefits */}
-            <div className="bg-card p-8 rounded-xl shadow-card animate-slide-in">
+            <div className="glass-card p-8 rounded-3xl animate-slide-in">
               <h3 className="text-xl font-semibold mb-6">O que você recebe:</h3>
               <ul className="space-y-4">
                 {benefits.map((benefit, index) => (
@@ -60,16 +60,16 @@ const LeadForm = () => {
                 ))}
               </ul>
               
-              <div className="mt-8 p-6 bg-accent/10 rounded-xl border border-accent/20">
+              <div className="mt-8 p-6 glass-morphism rounded-2xl">
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  <strong className="text-accent block mb-2">Atendimento Rápido</strong>
-                  Responderemos seu contato em até 2 horas úteis. Nosso time está pronto para esclarecer todas as suas dúvidas.
+                  <strong className="text-accent block mb-2">Resposta em até 2h</strong>
+                  Time pronto para esclarecer suas dúvidas.
                 </p>
               </div>
             </div>
             
             {/* Form */}
-            <div className="bg-card p-8 rounded-xl shadow-card animate-fade-in" style={{ animationDelay: '200ms' }}>
+            <div className="glass-card p-8 rounded-3xl animate-fade-in" style={{ animationDelay: '200ms' }}>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium mb-2">

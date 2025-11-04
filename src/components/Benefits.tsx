@@ -3,61 +3,61 @@ import { Zap, Shield, Clock, Users, Award, Bell } from "lucide-react";
 const benefits = [
   {
     icon: Clock,
-    title: "Instalação rápida e segura",
-    description: "Equipe especializada realiza todo o processo com agilidade, sem comprometer sua rotina."
+    title: "Instalação rápida",
+    description: "Equipe certificada, instalação em até 2 dias, sem bagunça."
   },
   {
     icon: Shield,
     title: "Tecnologia confiável",
-    description: "Equipamentos de alta qualidade com certificação técnica e durabilidade comprovada."
+    description: "Equipamentos homologados, proteção 24h, baixo consumo."
   },
   {
     icon: Bell,
-    title: "Monitoramento e aviso imediato",
-    description: "Sistema integrado que detecta tentativas de invasão e emite alertas instantâneos."
+    title: "Alerta em tempo real",
+    description: "Alarme sonoro e visual integrado para qualquer tentativa de invasão."
   },
   {
     icon: Users,
-    title: "Atendimento personalizado",
-    description: "Consultoria completa desde o diagnóstico até o pós-venda, sempre disponível."
+    title: "Suporte dedicado",
+    description: "Atendimento especializado e manutenção preventiva."
   },
   {
     icon: Zap,
-    title: "Baixo consumo de energia",
-    description: "Tecnologia eficiente que consome menos que uma lâmpada comum."
+    title: "Baixo consumo",
+    description: "Consome menos que uma lâmpada comum, economia garantida."
   },
   {
     icon: Award,
-    title: "+1.500 imóveis protegidos",
-    description: "Experiência comprovada em residências, condomínios e empresas."
+    title: "+1.500 imóveis",
+    description: "Experiência comprovada em residências e empresas."
   }
 ];
 
 const Benefits = () => {
   return (
-    <section className="section-spacing bg-gradient-to-b from-background to-muted">
+    <section className="section-spacing bg-background">
       <div className="container-section">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="heading-lg mb-4">Por que escolher a Banker Sistemas?</h2>
-          <p className="body-lg text-muted-foreground max-w-2xl mx-auto">
-            Somos referência em segurança eletrônica com soluções completas e suporte de excelência.
+          <h2 className="heading-lg mb-4">Por que escolher a Banker?</h2>
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+            Experiência, tecnologia e suporte que fazem a diferença
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {benefits.map((benefit, index) => {
             const Icon = benefit.icon;
             return (
               <div 
                 key={index}
-                className="bg-card p-8 rounded-xl shadow-card hover:shadow-xl transition-all duration-300 hover:-translate-y-1 animate-fade-in"
+                className="glass-card p-8 rounded-2xl hover:shadow-xl transition-all duration-500 animate-fade-in group hover:scale-[1.02]"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="w-14 h-14 bg-accent/10 rounded-xl flex items-center justify-center mb-6">
-                  <Icon className="w-7 h-7 text-accent" />
+                <div className="w-14 h-14 bg-gradient-to-br from-accent to-accent/70 rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform">
+                  <Icon className="w-7 h-7 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold mb-3">{benefit.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">{benefit.description}</p>
+                <h3 className="text-xl font-semibold mb-3 text-foreground">{benefit.title}</h3>
+                <p className="text-muted-foreground leading-relaxed text-sm">{benefit.description}</p>
               </div>
             );
           })}

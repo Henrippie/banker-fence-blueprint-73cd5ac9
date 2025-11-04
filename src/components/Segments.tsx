@@ -4,13 +4,13 @@ const segments = [
   {
     icon: Home,
     title: "Residências e Condomínios",
-    description: "Proteção completa para sua família e patrimônio",
+    description: "Proteção completa para sua família",
     benefits: [
-      "Proteção 24h para toda a família",
+      "Proteção 24h",
       "Dissuasão visual eficiente",
-      "Baixo consumo de energia",
-      "Integração com alarmes residenciais",
-      "Manutenção simples e rápida"
+      "Baixo consumo",
+      "Integração com alarmes",
+      "Manutenção simples"
     ]
   },
   {
@@ -18,23 +18,23 @@ const segments = [
     title: "Empresas e Comércios",
     description: "Segurança profissional para seu negócio",
     benefits: [
-      "Proteção de estoque e equipamentos",
-      "Redução de riscos e prejuízos",
-      "Sistema integrado com CFTV",
+      "Proteção de patrimônio",
+      "Redução de prejuízos",
+      "Integração com CFTV",
       "Certificação para seguros",
-      "Suporte técnico especializado"
+      "Suporte especializado"
     ]
   }
 ];
 
 const Segments = () => {
   return (
-    <section className="section-spacing bg-muted">
+    <section className="section-spacing bg-muted/30">
       <div className="container-section">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="heading-lg mb-4">Para quem é nossa solução</h2>
-          <p className="body-lg text-muted-foreground max-w-2xl mx-auto">
-            Atendemos diferentes necessidades com a mesma excelência e comprometimento.
+          <h2 className="heading-lg mb-4">Para quem é</h2>
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+            Soluções para residências e empresas
           </p>
         </div>
         
@@ -44,10 +44,10 @@ const Segments = () => {
             return (
               <div 
                 key={index}
-                className="bg-card p-8 rounded-xl shadow-card hover:shadow-xl transition-all duration-300 animate-fade-in"
+                className="glass-card p-8 rounded-3xl hover:shadow-xl transition-all duration-500 animate-fade-in hover:scale-[1.02]"
                 style={{ animationDelay: `${index * 150}ms` }}
               >
-                <div className="w-16 h-16 bg-primary rounded-xl flex items-center justify-center mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary/80 rounded-2xl flex items-center justify-center mb-6 shadow-xl">
                   <Icon className="w-8 h-8 text-primary-foreground" />
                 </div>
                 <h3 className="text-2xl font-semibold mb-3">{segment.title}</h3>

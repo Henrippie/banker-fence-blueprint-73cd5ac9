@@ -4,20 +4,20 @@ const steps = [
   {
     icon: Shield,
     number: "01",
-    title: "Barreira física e psicológica",
-    description: "A cerca elétrica cria uma proteção visível que intimida invasores antes mesmo da tentativa de invasão, funcionando como primeira linha de defesa."
+    title: "Barreira intimidadora",
+    description: "Dissuade invasores antes mesmo de tentarem entrar."
   },
   {
     icon: Zap,
-    title: "Choque repelente e seguro",
+    title: "Choque seguro",
     number: "02",
-    description: "Sistema com pulsos de alta tensão e baixa corrente: assusta e repele sem oferecer risco de lesões graves, totalmente dentro das normas de segurança."
+    description: "Pulsos de alta voltagem, baixa corrente. Repele sem risco."
   },
   {
     icon: Radar,
-    title: "Monitoramento automático",
+    title: "Alarme integrado",
     number: "03",
-    description: "Detecta tentativas de rompimento e envia alertas instantâneos, permitindo resposta rápida e registro de todas as ocorrências."
+    description: "Alerta imediato em caso de violação ou tentativa."
   }
 ];
 
@@ -26,9 +26,9 @@ const HowItWorks = () => {
     <section className="section-spacing bg-gradient-to-br from-primary via-primary/95 to-accent text-primary-foreground">
       <div className="container-section">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="heading-lg mb-4">Como funciona a Cerca Elétrica</h2>
-          <p className="body-lg text-primary-foreground/80 max-w-2xl mx-auto">
-            Tecnologia inteligente de proteção em três camadas complementares.
+          <h2 className="heading-lg mb-4">Como funciona</h2>
+          <p className="text-primary-foreground/80 text-lg max-w-2xl mx-auto">
+            Proteção eficaz e segura para seu patrimônio
           </p>
         </div>
         
@@ -38,17 +38,17 @@ const HowItWorks = () => {
             return (
               <div 
                 key={index}
-                className="relative bg-primary-foreground/10 backdrop-blur-sm p-8 rounded-xl border border-primary-foreground/20 hover:bg-primary-foreground/15 transition-all duration-300 animate-fade-in"
+                className="relative glass-morphism p-8 rounded-3xl hover:scale-[1.02] transition-all duration-500 animate-fade-in"
                 style={{ animationDelay: `${index * 150}ms` }}
               >
                 <div className="absolute -top-4 left-8 text-6xl font-bold text-secondary/20">
                   {step.number}
                 </div>
-                <div className="w-16 h-16 bg-secondary rounded-xl flex items-center justify-center mb-6 relative z-10">
+                <div className="w-16 h-16 bg-secondary rounded-2xl flex items-center justify-center mb-6 relative z-10 shadow-xl">
                   <Icon className="w-8 h-8 text-secondary-foreground" />
                 </div>
                 <h3 className="text-xl font-semibold mb-4">{step.title}</h3>
-                <p className="text-primary-foreground/80 leading-relaxed">{step.description}</p>
+                <p className="text-primary-foreground/80 leading-relaxed text-sm">{step.description}</p>
               </div>
             );
           })}
