@@ -26,10 +26,7 @@ const HowItWorks = () => {
     <section className="section-spacing bg-gradient-to-br from-primary via-primary/95 to-accent text-primary-foreground">
       <div className="container-section">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="heading-lg mb-4">Como funciona</h2>
-          <p className="text-primary-foreground/80 text-lg max-w-2xl mx-auto">
-            Proteção eficaz e segura para seu patrimônio
-          </p>
+          <h2 className="heading-lg mb-3">Como funciona</h2>
         </div>
         
         <div className="grid md:grid-cols-3 gap-8">

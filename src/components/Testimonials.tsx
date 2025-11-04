@@ -44,11 +44,8 @@ const Testimonials = () => {
   return (
     <section className="section-spacing bg-card">
       <div className="container-section">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="heading-lg mb-4">Clientes satisfeitos</h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Quem confia na Banker tem segurança garantida
-          </p>
+        <div className="text-center mb-12 animate-fade-in">
+          <h2 className="heading-lg mb-3">O que dizem nossos clientes</h2>
         </div>
         
         <Carousel

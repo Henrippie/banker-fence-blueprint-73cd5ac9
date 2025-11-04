@@ -13,12 +13,9 @@ const About = () => {
       <div className="container-section">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12 animate-fade-in">
-            <h2 className="heading-lg mb-6">Banker Sistemas</h2>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              Especialistas em <strong>segurança eletrônica profissional</strong> para residências, condomínios e empresas. 
-            </p>
+            <h2 className="heading-lg mb-4">Banker Sistemas</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              <strong>Proteção de verdade</strong> com tecnologia confiável e suporte que funciona.
+              Especialistas em segurança eletrônica desde 2014
             </p>
           </div>
           
