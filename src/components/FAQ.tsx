@@ -7,24 +7,32 @@ import {
 
 const faqs = [
   {
-    question: "Consome muita energia?",
-    answer: "Não. Consumo equivalente a uma lâmpada LED."
+    question: "A cerca elétrica consome muita energia?",
+    answer: "Não. O consumo é muito baixo, equivalente a uma lâmpada LED comum. A tecnologia moderna permite proteção eficiente com economia de energia."
   },
   {
-    question: "E se faltar energia?",
-    answer: "Opção de bateria de backup para funcionamento contínuo."
+    question: "E se faltar energia elétrica?",
+    answer: "Nossos sistemas podem ser integrados com baterias de backup (opcional), garantindo funcionamento contínuo mesmo durante quedas de energia."
   },
   {
-    question: "É seguro para crianças e pets?",
-    answer: "Sim. Alta tensão, baixa corrente. Repele sem causar lesões."
+    question: "É seguro para crianças e animais de estimação?",
+    answer: "Sim. O sistema gera pulsos de alta tensão e baixa corrente, projetados para repelir sem causar lesões graves. É totalmente seguro dentro das normas técnicas."
   },
   {
-    question: "Prazo de instalação?",
-    answer: "1 a 2 dias em média."
+    question: "E se alguém tentar cortar os fios?",
+    answer: "O sistema detecta imediatamente tentativas de rompimento e envia alertas. Além disso, os fios são instalados de forma estratégica para dificultar o acesso."
   },
   {
-    question: "Tem garantia?",
-    answer: "Sim. Garantia completa de equipamentos e instalação."
+    question: "Qual é o prazo de instalação?",
+    answer: "Em média, a instalação completa é realizada em 1 a 2 dias, dependendo do tamanho do perímetro e complexidade do projeto."
+  },
+  {
+    question: "Existe garantia?",
+    answer: "Sim. Oferecemos garantia de equipamentos e instalação, além de suporte técnico contínuo para manutenção preventiva e corretiva."
+  },
+  {
+    question: "Posso integrar com meu sistema de alarme atual?",
+    answer: "Sim. Nossos sistemas são compatíveis com a maioria dos alarmes e câmeras de segurança, criando uma proteção integrada e ainda mais eficiente."
   }
 ];
 
@@ -34,7 +42,10 @@ const FAQ = () => {
       <div className="container-section">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-12 animate-fade-in">
-            <h2 className="heading-lg mb-3">Perguntas frequentes</h2>
+            <h2 className="heading-lg mb-4">Perguntas Frequentes</h2>
+            <p className="body-lg text-muted-foreground">
+              Respostas para as dúvidas mais comuns sobre cerca elétrica.
+            </p>
           </div>
           
           <Accordion type="single" collapsible className="w-full space-y-4">

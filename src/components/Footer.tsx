@@ -10,7 +10,7 @@ const Footer = () => {
               <span className="text-2xl font-bold">Banker Sistemas</span>
             </div>
             <p className="text-primary-foreground/80 text-sm leading-relaxed">
-              Segurança eletrônica profissional desde 2014
+              Especialistas em segurança eletrônica com foco em cercas elétricas profissionais para residências e empresas.
             </p>
           </div>
           
