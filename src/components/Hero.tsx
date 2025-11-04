@@ -47,6 +47,8 @@ const Hero = () => {
               src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=1200" 
               alt="Cerca elétrica instalada em muro residencial"
               className="relative rounded-3xl shadow-2xl w-full h-auto"
+              loading="eager"
+              fetchPriority="high"
             />
           </div>
         </div>
