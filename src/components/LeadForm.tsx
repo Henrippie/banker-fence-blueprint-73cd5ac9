@@ -30,10 +30,10 @@ const LeadForm = () => {
   };
 
   const benefits = [
-    "Visita técnica gratuita",
-    "Orçamento em até 24h",
-    "Instalação profissional",
-    "Garantia e suporte"
+    "Avaliação completa do seu imóvel",
+    "Orçamento sem compromisso",
+    "Recomendações personalizadas de proteção",
+    "Resposta em até 24 horas"
   ];
 
   return (
@@ -41,16 +41,30 @@ const LeadForm = () => {
       <div className="container-section px-4">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-8 md:mb-12 animate-fade-in">
-            <h2 className="heading-lg mb-3">Orçamento em 24h</h2>
-            <p className="text-muted-foreground text-base md:text-lg">
-              Sem compromisso. Totalmente gratuito.
+            <h2 className="heading-lg mb-3">Solicite um Diagnóstico Gratuito do Seu Perímetro</h2>
+            <p className="text-muted-foreground text-base md:text-lg mb-6">
+              Preencha o formulário abaixo e receba:
             </p>
+            <ul className="text-left mt-4 space-y-2 inline-block">
+              <li className="flex items-center gap-2 text-muted-foreground">
+                <CheckCircle2 className="w-5 h-5 text-success" />
+                Avaliação completa do seu imóvel
+              </li>
+              <li className="flex items-center gap-2 text-muted-foreground">
+                <CheckCircle2 className="w-5 h-5 text-success" />
+                Orçamento sem compromisso
+              </li>
+              <li className="flex items-center gap-2 text-muted-foreground">
+                <CheckCircle2 className="w-5 h-5 text-success" />
+                Recomendações personalizadas de proteção
+              </li>
+            </ul>
           </div>
           
           <div className="grid md:grid-cols-2 gap-6 md:gap-8">
             {/* Benefits */}
             <div className="glass-card p-6 md:p-8 rounded-3xl animate-slide-in">
-              <h3 className="text-lg md:text-xl font-semibold mb-4 md:mb-6">O que está incluído</h3>
+              <h3 className="text-lg md:text-xl font-semibold mb-4 md:mb-6">Você receberá</h3>
               <ul className="space-y-4">
                 {benefits.map((benefit, index) => (
                   <li key={index} className="flex items-start gap-3">
@@ -135,7 +149,7 @@ const LeadForm = () => {
                   size="lg" 
                   className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/90 shadow-button transition-all duration-300 hover:scale-105 active:scale-95 touch-manipulation py-6"
                 >
-                  Solicitar orçamento
+                  Quero meu diagnóstico gratuito
                   <Send className="ml-2 w-5 h-5" />
                 </Button>
                 

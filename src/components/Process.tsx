@@ -3,27 +3,27 @@ import { ClipboardCheck, FileText, Hammer, Headphones } from "lucide-react";
 const processSteps = [
   {
     icon: ClipboardCheck,
-    title: "Diagnóstico",
-    description: "Análise técnica gratuita",
-    benefit: "Sem compromisso"
+    title: "Diagnóstico do perímetro",
+    description: "Avaliamos o seu espaço para entender os pontos vulneráveis do seu imóvel.",
+    benefit: "Análise completa"
   },
   {
     icon: FileText,
-    title: "Proposta",
-    description: "Orçamento em 24h",
+    title: "Proposta sob medida",
+    description: "Você recebe orçamento claro e detalhado.",
     benefit: "Transparente"
   },
   {
     icon: Hammer,
-    title: "Instalação",
-    description: "Rápida e certificada",
-    benefit: "Até 2 dias"
+    title: "Instalação profissional",
+    description: "Equipe especializada garante funcionamento perfeito.",
+    benefit: "Sem preocupação"
   },
   {
     icon: Headphones,
-    title: "Suporte",
-    description: "Assistência contínua",
-    benefit: "Sempre disponível"
+    title: "Suporte contínuo",
+    description: "Manutenção e assistência sempre que precisar.",
+    benefit: "24/7"
   }
 ];
 
@@ -32,7 +32,7 @@ const Process = () => {
     <section className="section-spacing bg-background">
       <div className="container-section">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="heading-lg mb-3">Nosso processo</h2>
+          <h2 className="heading-lg mb-3">Nossa forma de trabalho</h2>
         </div>
         
         <div className="relative">

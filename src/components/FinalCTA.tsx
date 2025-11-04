@@ -22,12 +22,27 @@ const FinalCTA = () => {
             Orçamento gratuito em até 24 horas
           </p>
           
+          <div className="space-y-4 mb-8 max-w-xl mx-auto text-left">
+            <p className="flex items-center gap-3 text-primary-foreground/90">
+              <CheckCircle2 className="w-5 h-5 text-secondary shrink-0" />
+              Trabalhamos com equipamentos certificados e instalação profissional.
+            </p>
+            <p className="flex items-center gap-3 text-primary-foreground/90">
+              <CheckCircle2 className="w-5 h-5 text-secondary shrink-0" />
+              Você recebe suporte rápido e sem burocracia.
+            </p>
+            <p className="flex items-center gap-3 text-primary-foreground/90">
+              <CheckCircle2 className="w-5 h-5 text-secondary shrink-0" />
+              Sem compromisso de contratação após o orçamento.
+            </p>
+          </div>
+          
           <Button 
             size="lg" 
             onClick={scrollToForm}
             className="bg-secondary text-secondary-foreground hover:bg-secondary/90 shadow-button text-lg px-12 py-7 transition-all duration-300 hover:scale-105"
           >
-            Solicitar orçamento
+            Solicitar orçamento gratuito agora
             <ArrowRight className="ml-2 w-5 h-5" />
           </Button>
         </div>

@@ -1,35 +1,29 @@
-import { Zap, Shield, Clock, Users, Award, Bell } from "lucide-react";
+import { Clock, Shield, Bell, Users } from "lucide-react";
 
 const benefits = [
   {
     icon: Clock,
-    title: "Instalação rápida",
-    description: "Até 2 dias. Equipe certificada."
+    title: "Instalação rápida e segura",
+    description: "Técnicos especializados cuidam de tudo sem dor de cabeça.",
+    image: "https://images.unsplash.com/photo-1621905251918-48416bd8575a?q=80&w=600"
   },
   {
     icon: Shield,
     title: "Tecnologia confiável",
-    description: "Equipamentos homologados. Proteção 24h."
+    description: "Os melhores sistemas modernos do mercado com alta durabilidade.",
+    image: "https://images.unsplash.com/photo-1558002038-1055907df827?q=80&w=600"
   },
   {
     icon: Bell,
-    title: "Alerta imediato",
-    description: "Alarme integrado contra invasões."
+    title: "Monitoramento e aviso imediato",
+    description: "Em caso de corte ou violação.",
+    image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=600"
   },
   {
     icon: Users,
-    title: "Suporte dedicado",
-    description: "Atendimento e manutenção especializados."
-  },
-  {
-    icon: Zap,
-    title: "Baixo consumo",
-    description: "Menos que uma lâmpada comum."
-  },
-  {
-    icon: Award,
-    title: "+1.500 imóveis",
-    description: "Experiência comprovada."
+    title: "Atendimento personalizado",
+    description: "Suporte antes, durante e depois da instalação.",
+    image: "https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=600"
   }
 ];
 
@@ -38,26 +32,37 @@ const Benefits = () => {
     <section className="section-spacing bg-background">
       <div className="container-section">
         <div className="text-center mb-12 md:mb-16 animate-fade-in px-4">
-          <h2 className="heading-lg mb-3">Por que a Banker?</h2>
+          <h2 className="heading-lg mb-3">Por que escolher a Banker Sistemas?</h2>
           <p className="text-muted-foreground text-base md:text-lg">
-            Mais de 1.500 clientes protegidos
+            Mais de 1.500 imóveis protegidos em São Paulo e região confiam na Banker para garantir segurança real, 24h por dia.
           </p>
         </div>
         
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 px-4">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 px-4">
           {benefits.map((benefit, index) => {
             const Icon = benefit.icon;
             return (
               <div 
                 key={index}
-                className="card-premium p-6 md:p-8 rounded-2xl animate-fade-in group"
+                className="card-premium rounded-2xl overflow-hidden animate-fade-in group"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="w-12 h-12 md:w-14 md:h-14 bg-gradient-to-br from-accent to-accent/70 rounded-2xl flex items-center justify-center mb-4 md:mb-6 shadow-lg card-icon-glow icon-float">
-                  <Icon className="w-6 h-6 md:w-7 md:h-7 text-white" />
+                <div className="relative h-40 overflow-hidden">
+                  <img 
+                    src={benefit.image}
+                    alt={benefit.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/95 to-transparent" />
                 </div>
-                <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-3 text-foreground">{benefit.title}</h3>
-                <p className="text-muted-foreground leading-relaxed text-sm">{benefit.description}</p>
+                
+                <div className="p-6 md:p-8">
+                  <div className="w-12 h-12 md:w-14 md:h-14 bg-gradient-to-br from-accent to-accent/70 rounded-2xl flex items-center justify-center mb-4 md:mb-6 shadow-lg card-icon-glow icon-float -mt-16 relative">
+                    <Icon className="w-6 h-6 md:w-7 md:h-7 text-white" />
+                  </div>
+                  <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-3 text-foreground">{benefit.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed text-sm">{benefit.description}</p>
+                </div>
               </div>
             );
           })}

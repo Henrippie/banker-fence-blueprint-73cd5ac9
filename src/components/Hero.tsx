@@ -24,11 +24,11 @@ const Hero = () => {
             />
             
             <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 leading-tight">
-              Sua segurança merece <span className="text-secondary">tecnologia de verdade</span>
+              Proteja sua casa ou empresa com <span className="text-secondary">tecnologia de Cerca Elétrica Profissional</span>
             </h1>
             
             <p className="text-lg md:text-xl mb-8 text-primary-foreground/90 max-w-xl mx-auto lg:mx-0">
-              Cerca elétrica certificada. Instalação em 24h.
+              Segurança que assusta invasores antes mesmo de entrar no seu terreno — com instalação rápida e suporte especializado completo.
             </p>
             
             <Button 
@@ -36,7 +36,7 @@ const Hero = () => {
               onClick={scrollToForm}
               className="bg-secondary text-secondary-foreground hover:bg-secondary/90 shadow-button text-base md:text-lg px-8 md:px-10 py-6 md:py-7 transition-all duration-300 hover:scale-105 active:scale-95 touch-manipulation w-full sm:w-auto"
             >
-              Orçamento Gratuito
+              Quero meu orçamento gratuito
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
           </div>

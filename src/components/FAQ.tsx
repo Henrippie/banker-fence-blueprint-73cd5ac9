@@ -7,24 +7,20 @@ import {
 
 const faqs = [
   {
-    question: "Consome muita energia?",
-    answer: "Não. Consumo equivalente a uma lâmpada LED."
+    question: "A conta de luz aumenta muito?",
+    answer: "Não. O consumo é mínimo, equivalente a uma lâmpada acesa 24h."
   },
   {
     question: "E se faltar energia?",
-    answer: "Opção de bateria de backup para funcionamento contínuo."
+    answer: "O sistema possui bateria que mantém a proteção por várias horas."
   },
   {
-    question: "É seguro para crianças e pets?",
-    answer: "Sim. Alta tensão, baixa corrente. Repele sem causar lesões."
+    question: "A cerca elétrica é perigosa para crianças ou animais?",
+    answer: "Não. O choque é apenas repelente, não letal. Seguindo todas as normas."
   },
   {
-    question: "Prazo de instalação?",
-    answer: "1 a 2 dias em média."
-  },
-  {
-    question: "Tem garantia?",
-    answer: "Sim. Garantia completa de equipamentos e instalação."
+    question: "E se alguém cortar os fios?",
+    answer: "Um alarme sonoro é disparado imediatamente e você é alertado."
   }
 ];
 

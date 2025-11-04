@@ -37,17 +37,29 @@ const StatCard = ({ stat, index }: { stat: typeof stats[0], index: number }) => 
 
 const About = () => {
   return (
-    <section className="section-spacing bg-card">
+    <section className="section-spacing bg-gradient-to-br from-muted/50 to-background">
       <div className="container-section">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12 animate-fade-in">
-            <h2 className="heading-lg mb-4">Banker Sistemas</h2>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Especialistas em segurança eletrônica desde 2014
+            <h2 className="heading-lg mb-4">Quem somos</h2>
+            <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+              Somos uma empresa especializada em Segurança Eletrônica e tecnologia que tem como maior prioridade, a sua segurança. Por meio de equipes qualificadas e treinadas constantemente, podemos proporcionar aos nossos clientes tranquilidade e a certeza de que um trabalho exemplar será entregue ao final do projeto.
+            </p>
+            <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto mt-4">
+              Dos sistemas mais simples aos mais complexos, buscamos sempre agir com transparência e honestidade, fornecendo aquilo que é necessário, com a qualidade de produtos líderes de mercado e a preços justos.
             </p>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
+          <div className="relative mb-12 rounded-3xl overflow-hidden">
+            <img 
+              src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1200"
+              alt="Equipe Banker Sistemas trabalhando"
+              className="w-full h-64 md:h-96 object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {stats.map((stat, index) => (
               <StatCard key={index} stat={stat} index={index} />
             ))}

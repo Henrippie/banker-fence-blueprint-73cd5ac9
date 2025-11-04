@@ -45,7 +45,7 @@ const Testimonials = () => {
     <section className="section-spacing bg-card">
       <div className="container-section">
         <div className="text-center mb-12 animate-fade-in">
-          <h2 className="heading-lg mb-3">O que dizem nossos clientes</h2>
+          <h2 className="heading-lg mb-3">O que os clientes estão falando sobre a Banker</h2>
         </div>
         
         <Carousel
