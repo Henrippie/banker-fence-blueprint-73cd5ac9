@@ -49,7 +49,7 @@ const LeadForm = () => {
           
           <div className="grid md:grid-cols-2 gap-8">
             {/* Benefits */}
-            <div className="glass-card p-8 rounded-3xl animate-slide-in">
+            <div className="glass-card-enhanced p-8 rounded-[2rem] animate-slide-in">
               <h3 className="text-xl font-semibold mb-6">O que está incluído</h3>
               <ul className="space-y-4">
                 {benefits.map((benefit, index) => (
@@ -60,16 +60,16 @@ const LeadForm = () => {
                 ))}
               </ul>
               
-              <div className="mt-8 p-6 glass-morphism rounded-2xl">
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  <strong className="text-accent block mb-1">Atendimento rápido</strong>
+              <div className="mt-8 p-6 glass-morphism-dark rounded-2xl">
+                <p className="text-sm text-primary-foreground leading-relaxed">
+                  <strong className="text-secondary block mb-1">Atendimento rápido</strong>
                   Resposta em até 2 horas
                 </p>
               </div>
             </div>
             
             {/* Form */}
-            <div className="glass-card p-8 rounded-3xl animate-fade-in" style={{ animationDelay: '200ms' }}>
+            <div className="glass-card-enhanced p-8 rounded-[2rem] animate-fade-in" style={{ animationDelay: '200ms' }}>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium mb-2">
