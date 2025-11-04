@@ -3,25 +3,21 @@ import { Home, Building2, CheckCircle2 } from "lucide-react";
 const segments = [
   {
     icon: Home,
-    title: "Residências e Condomínios",
-    description: "Proteção completa para sua família",
+    title: "Residências",
+    description: "Proteção para sua família",
     benefits: [
-      "Proteção 24h",
-      "Dissuasão visual eficiente",
-      "Baixo consumo",
-      "Integração com alarmes",
-      "Manutenção simples"
+      "Segurança 24h",
+      "Dissuasão visual",
+      "Baixo consumo"
     ]
   },
   {
     icon: Building2,
-    title: "Empresas e Comércios",
-    description: "Segurança profissional para seu negócio",
+    title: "Empresas",
+    description: "Proteção profissional",
     benefits: [
-      "Proteção de patrimônio",
-      "Redução de prejuízos",
-      "Integração com CFTV",
-      "Certificação para seguros",
+      "Proteção patrimonial",
+      "Integração CFTV",
       "Suporte especializado"
     ]
   }
@@ -32,10 +28,7 @@ const Segments = () => {
     <section className="section-spacing bg-muted/30">
       <div className="container-section">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="heading-lg mb-4">Para quem é</h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Soluções para residências e empresas
-          </p>
+          <h2 className="heading-lg mb-3">Soluções personalizadas</h2>
         </div>
         
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
@@ -44,11 +37,11 @@ const Segments = () => {
             return (
               <div 
                 key={index}
-                className="glass-card-enhanced p-10 rounded-[2rem] hover:shadow-2xl transition-all duration-500 animate-fade-in hover:scale-[1.02] group"
+                className="glass-card p-8 rounded-3xl hover:shadow-xl transition-all duration-500 animate-fade-in hover:scale-[1.02]"
                 style={{ animationDelay: `${index * 150}ms` }}
               >
-                <div className="w-16 h-16 glass-morphism-dark rounded-2xl flex items-center justify-center mb-6 shadow-xl group-hover:scale-110 transition-transform">
-                  <Icon className="w-8 h-8 text-secondary" />
+                <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary/80 rounded-2xl flex items-center justify-center mb-6 shadow-xl">
+                  <Icon className="w-8 h-8 text-primary-foreground" />
                 </div>
                 <h3 className="text-2xl font-semibold mb-3">{segment.title}</h3>
                 <p className="text-muted-foreground mb-6">{segment.description}</p>

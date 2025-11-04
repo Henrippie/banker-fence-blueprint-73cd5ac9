@@ -26,10 +26,7 @@ const HowItWorks = () => {
     <section className="section-spacing bg-gradient-to-br from-primary via-primary/95 to-accent text-primary-foreground">
       <div className="container-section">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="heading-lg mb-4">Como funciona</h2>
-          <p className="text-primary-foreground/80 text-lg max-w-2xl mx-auto">
-            Proteção eficaz e segura para seu patrimônio
-          </p>
+          <h2 className="heading-lg mb-3">Como funciona</h2>
         </div>
         
         <div className="grid md:grid-cols-3 gap-8">
@@ -38,14 +35,14 @@ const HowItWorks = () => {
             return (
               <div 
                 key={index}
-                className="relative glass-card-enhanced p-10 rounded-[2rem] hover:scale-[1.02] transition-all duration-500 animate-fade-in group"
+                className="relative glass-morphism p-8 rounded-3xl hover:scale-[1.02] transition-all duration-500 animate-fade-in"
                 style={{ animationDelay: `${index * 150}ms` }}
               >
                 <div className="absolute -top-4 left-8 text-6xl font-bold text-secondary/20">
                   {step.number}
                 </div>
-                <div className="w-16 h-16 glass-morphism-dark rounded-2xl flex items-center justify-center mb-6 relative z-10 shadow-xl group-hover:scale-110 transition-transform">
-                  <Icon className="w-8 h-8 text-secondary" />
+                <div className="w-16 h-16 bg-secondary rounded-2xl flex items-center justify-center mb-6 relative z-10 shadow-xl">
+                  <Icon className="w-8 h-8 text-secondary-foreground" />
                 </div>
                 <h3 className="text-xl font-semibold mb-4">{step.title}</h3>
                 <p className="text-primary-foreground/80 leading-relaxed text-sm">{step.description}</p>
