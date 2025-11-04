@@ -1,5 +1,6 @@
 import { Shield, CheckCircle2, ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
+import bankerLogo from "@/assets/banker-logo.png";
 
 const Hero = () => {
   const scrollToForm = () => {
@@ -16,10 +17,11 @@ const Hero = () => {
       <div className="container-section section-spacing relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="text-primary-foreground animate-fade-in">
-            <div className="inline-flex items-center gap-2 glass-morphism px-4 py-2 rounded-full mb-6">
-              <Shield className="w-4 h-4 text-secondary" />
-              <span className="text-sm font-medium text-secondary">Proteção Profissional</span>
-            </div>
+            <img 
+              src={bankerLogo} 
+              alt="Banker Sistemas" 
+              className="h-16 mb-6"
+            />
             
             <h1 className="heading-xl mb-6 leading-tight">
               Sua segurança merece <span className="text-secondary">tecnologia de verdade</span>

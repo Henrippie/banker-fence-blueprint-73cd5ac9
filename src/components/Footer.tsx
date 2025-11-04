@@ -1,14 +1,17 @@
 import { Shield, MapPin, Phone, Mail } from "lucide-react";
+import bankerLogo from "@/assets/banker-logo.png";
+
 const Footer = () => {
   return <footer className="bg-primary text-primary-foreground py-12">
       <div className="container-section">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Logo e descrição */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <Shield className="w-8 h-8 text-secondary" />
-              <span className="text-2xl font-bold">Banker Sistemas</span>
-            </div>
+            <img 
+              src={bankerLogo} 
+              alt="Banker Sistemas" 
+              className="h-12 mb-4"
+            />
             <p className="text-primary-foreground/80 text-sm leading-relaxed">
               Segurança eletrônica profissional desde 2014
             </p>
