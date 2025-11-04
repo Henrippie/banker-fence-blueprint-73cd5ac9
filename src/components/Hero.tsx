@@ -17,13 +17,11 @@ const Hero = () => {
       <div className="container-section section-spacing relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="text-primary-foreground animate-fade-in">
-            <div className="glass-morphism-dark p-4 rounded-[2rem] inline-block mb-6">
-              <img 
-                src={bankerLogo} 
-                alt="Banker Sistemas" 
-                className="h-12"
-              />
-            </div>
+            <img 
+              src={bankerLogo} 
+              alt="Banker Sistemas" 
+              className="h-16 mb-6"
+            />
             
             <h1 className="heading-xl mb-6 leading-tight">
               Sua segurança merece <span className="text-secondary">tecnologia de verdade</span>
@@ -44,14 +42,12 @@ const Hero = () => {
           </div>
           
           <div className="relative animate-slide-in">
-            <div className="absolute inset-0 bg-secondary/20 rounded-[2.5rem] blur-3xl" />
-            <div className="glass-card-enhanced p-4 rounded-[2.5rem]">
-              <img 
-                src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=1200" 
-                alt="Cerca elétrica instalada em muro residencial"
-                className="relative rounded-[2rem] shadow-2xl w-full h-auto"
-              />
-            </div>
+            <div className="absolute inset-0 bg-secondary/20 rounded-3xl blur-3xl" />
+            <img 
+              src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=1200" 
+              alt="Cerca elétrica instalada em muro residencial"
+              className="relative rounded-3xl shadow-2xl w-full h-auto"
+            />
           </div>
         </div>
       </div>
