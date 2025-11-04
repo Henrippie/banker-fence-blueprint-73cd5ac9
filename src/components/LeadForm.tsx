@@ -38,19 +38,19 @@ const LeadForm = () => {
 
   return (
     <section id="form-section" className="section-spacing bg-gradient-to-br from-background to-muted/30">
-      <div className="container-section">
+      <div className="container-section px-4">
         <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-12 animate-fade-in">
+          <div className="text-center mb-8 md:mb-12 animate-fade-in">
             <h2 className="heading-lg mb-3">Orçamento em 24h</h2>
-            <p className="text-muted-foreground text-lg">
+            <p className="text-muted-foreground text-base md:text-lg">
               Sem compromisso. Totalmente gratuito.
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-6 md:gap-8">
             {/* Benefits */}
-            <div className="glass-card p-8 rounded-3xl animate-slide-in">
-              <h3 className="text-xl font-semibold mb-6">O que está incluído</h3>
+            <div className="glass-card p-6 md:p-8 rounded-3xl animate-slide-in">
+              <h3 className="text-lg md:text-xl font-semibold mb-4 md:mb-6">O que está incluído</h3>
               <ul className="space-y-4">
                 {benefits.map((benefit, index) => (
                   <li key={index} className="flex items-start gap-3">
@@ -69,8 +69,8 @@ const LeadForm = () => {
             </div>
             
             {/* Form */}
-            <div className="glass-card p-8 rounded-3xl animate-fade-in" style={{ animationDelay: '200ms' }}>
-              <form onSubmit={handleSubmit} className="space-y-6">
+            <div className="glass-card p-6 md:p-8 rounded-3xl animate-fade-in" style={{ animationDelay: '200ms' }}>
+              <form onSubmit={handleSubmit} className="space-y-5 md:space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium mb-2">
                     Nome completo *
@@ -133,7 +133,7 @@ const LeadForm = () => {
                 <Button 
                   type="submit" 
                   size="lg" 
-                  className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/90 shadow-button transition-all duration-300 hover:scale-105"
+                  className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/90 shadow-button transition-all duration-300 hover:scale-105 active:scale-95 touch-manipulation py-6"
                 >
                   Solicitar orçamento
                   <Send className="ml-2 w-5 h-5" />

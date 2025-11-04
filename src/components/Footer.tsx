@@ -2,9 +2,9 @@ import { Shield, MapPin, Phone, Mail } from "lucide-react";
 import bankerLogo from "@/assets/banker-logo.png";
 
 const Footer = () => {
-  return <footer className="bg-primary text-primary-foreground py-12">
-      <div className="container-section">
-        <div className="grid md:grid-cols-3 gap-8 mb-8">
+  return <footer className="bg-primary text-primary-foreground py-8 md:py-12">
+      <div className="container-section px-4">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 mb-6 md:mb-8">
           {/* Logo e descrição */}
           <div>
             <img 
