@@ -37,10 +37,10 @@ const Segments = () => {
             return (
               <div 
                 key={index}
-                className="glass-card p-8 rounded-3xl hover:shadow-xl transition-all duration-500 animate-fade-in hover:scale-[1.02]"
+                className="card-premium p-8 rounded-3xl animate-fade-in group"
                 style={{ animationDelay: `${index * 150}ms` }}
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary/80 rounded-2xl flex items-center justify-center mb-6 shadow-xl">
+                <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary/80 rounded-2xl flex items-center justify-center mb-6 shadow-xl card-icon-glow icon-float">
                   <Icon className="w-8 h-8 text-primary-foreground" />
                 </div>
                 <h3 className="text-2xl font-semibold mb-3">{segment.title}</h3>

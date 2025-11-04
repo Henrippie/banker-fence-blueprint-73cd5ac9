@@ -35,13 +35,13 @@ const HowItWorks = () => {
             return (
               <div 
                 key={index}
-                className="relative glass-morphism p-8 rounded-3xl hover:scale-[1.02] transition-all duration-500 animate-fade-in"
+                className="relative glass-morphism p-8 rounded-3xl transition-all duration-500 animate-fade-in group hover:scale-[1.05] hover:-translate-y-2 hover:shadow-[0_20px_60px_-15px_rgba(244,197,66,0.4)]"
                 style={{ animationDelay: `${index * 150}ms` }}
               >
                 <div className="absolute -top-4 left-8 text-6xl font-bold text-secondary/20">
                   {step.number}
                 </div>
-                <div className="w-16 h-16 bg-secondary rounded-2xl flex items-center justify-center mb-6 relative z-10 shadow-xl">
+                <div className="w-16 h-16 bg-secondary rounded-2xl flex items-center justify-center mb-6 relative z-10 shadow-xl card-icon-glow icon-float">
                   <Icon className="w-8 h-8 text-secondary-foreground" />
                 </div>
                 <h3 className="text-xl font-semibold mb-4">{step.title}</h3>

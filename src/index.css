@@ -103,4 +103,37 @@ All colors MUST be HSL.
     -webkit-backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.18);
   }
+
+  .glass-morphism-dark {
+    background: rgba(10, 30, 63, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* Premium card interactions */
+  .card-premium {
+    @apply glass-card transition-all duration-500;
+    @apply hover:shadow-[0_20px_60px_-15px_rgba(217,88,53,0.3)];
+    @apply hover:scale-[1.05] hover:-translate-y-2;
+  }
+
+  .card-icon-glow {
+    @apply transition-all duration-500;
+    @apply group-hover:shadow-[0_0_30px_rgba(244,197,66,0.6)];
+    @apply group-hover:scale-110;
+  }
+
+  .icon-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
 }

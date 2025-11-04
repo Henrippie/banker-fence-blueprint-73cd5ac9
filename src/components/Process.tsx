@@ -45,11 +45,11 @@ const Process = () => {
               return (
                 <div 
                   key={index}
-                  className="relative animate-fade-in"
+                  className="relative animate-fade-in group"
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
-                  <div className="glass-card p-6 rounded-3xl hover:shadow-xl transition-all duration-500 hover:scale-105">
-                    <div className="w-16 h-16 bg-gradient-to-br from-accent to-accent/70 rounded-2xl flex items-center justify-center mb-6 mx-auto relative z-10 shadow-xl">
+                  <div className="card-premium p-6 rounded-3xl">
+                    <div className="w-16 h-16 bg-gradient-to-br from-accent to-accent/70 rounded-2xl flex items-center justify-center mb-6 mx-auto relative z-10 shadow-xl card-icon-glow icon-float">
                       <Icon className="w-8 h-8 text-white" />
                     </div>
                     <div className="text-center">
