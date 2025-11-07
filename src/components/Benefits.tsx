@@ -1,4 +1,5 @@
 import { Clock, Shield, Bell, Users } from "lucide-react";
+import OptimizedImage from "./OptimizedImage";
 
 const benefits = [
   {
@@ -48,12 +49,15 @@ const Benefits = () => {
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="relative h-40 overflow-hidden">
-                  <img 
+                  <OptimizedImage
                     src={benefit.image}
-                    alt={benefit.title}
+                    alt={`${benefit.title} - Banker Sistemas cerca elétrica`}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    width={600}
+                    height={160}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/95 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/95 to-transparent" aria-hidden="true" />
                 </div>
                 
                 <div className="p-6 md:p-8">

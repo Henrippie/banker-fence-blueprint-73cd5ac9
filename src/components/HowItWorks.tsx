@@ -1,4 +1,5 @@
 import { Shield, Zap, Radar } from "lucide-react";
+import OptimizedImage from "./OptimizedImage";
 
 const steps = [
   {
@@ -42,13 +43,16 @@ const HowItWorks = () => {
                 style={{ animationDelay: `${index * 150}ms` }}
               >
                 <div className="relative h-48 overflow-hidden">
-                  <img 
+                  <OptimizedImage
                     src={step.image}
-                    alt={step.title}
+                    alt={`${step.title} - Como funciona cerca elétrica`}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    width={800}
+                    height={192}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent" />
-                  <div className="absolute -bottom-4 left-8 text-7xl font-bold text-secondary/30">
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent" aria-hidden="true" />
+                  <div className="absolute -bottom-4 left-8 text-7xl font-bold text-secondary/30" aria-hidden="true">
                     {step.number}
                   </div>
                 </div>

@@ -1,6 +1,7 @@
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, Wrench, Clock, Shield } from "lucide-react";
+import OptimizedImage from "./OptimizedImage";
 
 const Maintenance = () => {
   const { ref, isInView } = useIntersectionObserver({ threshold: 0.1 });
@@ -83,13 +84,15 @@ const Maintenance = () => {
             isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          <img
+          <OptimizedImage
             src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=1200"
-            alt="Técnico realizando manutenção em cerca elétrica"
+            alt="Técnico especializado realizando manutenção preventiva em cerca elétrica"
             className="w-full h-[300px] md:h-[400px] object-cover"
-            loading="lazy"
+            sizes="(max-width: 768px) 100vw, 1200px"
+            width={1200}
+            height={400}
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" aria-hidden="true" />
           <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
             <h3 className="text-2xl md:text-3xl font-bold mb-4 text-white drop-shadow-lg">
               Serviços de Manutenção Incluem:

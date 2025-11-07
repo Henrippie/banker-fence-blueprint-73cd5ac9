@@ -1,6 +1,7 @@
-import { Shield, CheckCircle2, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
 import bankerLogo from "@/assets/banker-logo.png";
+import OptimizedImage from "./OptimizedImage";
 
 const Hero = () => {
   const scrollToForm = () => {
@@ -8,8 +9,8 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-primary via-primary to-accent min-h-screen flex items-center">
-      <div className="absolute inset-0 opacity-10">
+    <header className="relative overflow-hidden bg-gradient-to-br from-primary via-primary to-accent min-h-screen flex items-center">
+      <div className="absolute inset-0 opacity-10" aria-hidden="true">
         <div className="absolute top-20 left-10 w-72 h-72 bg-secondary rounded-full blur-[120px]" />
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent rounded-full blur-[120px]" />
       </div>
@@ -19,8 +20,11 @@ const Hero = () => {
           <div className="text-primary-foreground animate-fade-in text-center lg:text-left">
             <img 
               src={bankerLogo} 
-              alt="Banker Sistemas" 
+              alt="Banker Sistemas - Segurança Eletrônica" 
               className="h-12 md:h-16 mb-6 mx-auto lg:mx-0"
+              width="200"
+              height="64"
+              loading="eager"
             />
             
             <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 leading-tight">
@@ -41,26 +45,21 @@ const Hero = () => {
             </Button>
           </div>
           
-            <div className="relative animate-slide-in">
-            <div className="absolute inset-0 bg-secondary/20 rounded-3xl blur-3xl" />
-            <img 
-              srcSet="
-                https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=400 400w,
-                https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=800 800w,
-                https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=1200 1200w,
-                https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=1600 1600w
-              "
-              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 600px"
-              src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=1200" 
-              alt="Cerca elétrica instalada em muro residencial"
+          <div className="relative animate-slide-in">
+            <div className="absolute inset-0 bg-secondary/20 rounded-3xl blur-3xl" aria-hidden="true" />
+            <OptimizedImage
+              src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=1200"
+              alt="Cerca elétrica profissional instalada em muro residencial - proteção e segurança"
               className="relative rounded-3xl shadow-2xl w-full h-auto"
-              loading="eager"
-              fetchPriority="high"
+              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 600px"
+              priority
+              width={1200}
+              height={800}
             />
           </div>
         </div>
       </div>
-    </section>
+    </header>
   );
 };
 

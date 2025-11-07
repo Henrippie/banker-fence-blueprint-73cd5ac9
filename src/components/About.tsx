@@ -1,6 +1,7 @@
 import { Award, Users, Clock, Shield } from "lucide-react";
 import { useCounterAnimation } from "@/hooks/useCounterAnimation";
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
+import OptimizedImage from "./OptimizedImage";
 
 const stats = [
   { icon: Users, value: 1500, suffix: "+", label: "Imóveis Protegidos" },
@@ -51,12 +52,15 @@ const About = () => {
           </div>
           
           <div className="relative mb-12 rounded-3xl overflow-hidden">
-            <img 
+            <OptimizedImage
               src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1200"
-              alt="Equipe Banker Sistemas trabalhando"
+              alt="Equipe técnica especializada Banker Sistemas instalando cerca elétrica"
               className="w-full h-64 md:h-96 object-cover"
+              sizes="(max-width: 768px) 100vw, 1200px"
+              width={1200}
+              height={384}
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" aria-hidden="true" />
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">

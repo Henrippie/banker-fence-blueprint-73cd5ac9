@@ -1,4 +1,5 @@
 import { Home, Building2, CheckCircle2 } from "lucide-react";
+import OptimizedImage from "./OptimizedImage";
 
 const segments = [
   {
@@ -46,12 +47,15 @@ const Segments = () => {
                 style={{ animationDelay: `${index * 150}ms` }}
               >
                 <div className="relative h-64 overflow-hidden">
-                  <img 
+                  <OptimizedImage
                     src={segment.image}
-                    alt={segment.title}
+                    alt={`Cerca elétrica profissional para ${segment.title} - Banker Sistemas`}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    width={800}
+                    height={256}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent" aria-hidden="true" />
                 </div>
                 
                 <div className="p-8">
