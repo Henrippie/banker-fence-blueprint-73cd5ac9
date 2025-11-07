@@ -14,6 +14,7 @@ const Testimonials = lazy(() => import("@/components/Testimonials"));
 const HowItWorks = lazy(() => import("@/components/HowItWorks"));
 const Process = lazy(() => import("@/components/Process"));
 const Segments = lazy(() => import("@/components/Segments"));
+const Maintenance = lazy(() => import("@/components/Maintenance"));
 const LeadForm = lazy(() => import("@/components/LeadForm"));
 const About = lazy(() => import("@/components/About"));
 const FAQ = lazy(() => import("@/components/FAQ"));
@@ -45,6 +46,10 @@ const Index = () => {
       
       <Suspense fallback={<BenefitsSkeleton />}>
         <Segments />
+      </Suspense>
+      
+      <Suspense fallback={<BenefitsSkeleton />}>
+        <Maintenance />
       </Suspense>
       
       <Suspense fallback={<FormSkeleton />}>
