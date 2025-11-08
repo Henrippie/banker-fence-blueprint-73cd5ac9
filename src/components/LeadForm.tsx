@@ -4,22 +4,107 @@ import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { CheckCircle2, Send } from "lucide-react";
 import { toast } from "sonner";
+import { z } from "zod";
+
+// Schema de validação
+const formSchema = z.object({
+  name: z.string().trim().min(3, "Nome deve ter pelo menos 3 caracteres").max(100, "Nome muito longo"),
+  phone: z.string().regex(/^\(\d{2}\) \d{5}-\d{4}$/, "Telefone inválido. Use o formato (XX) XXXXX-XXXX"),
+  email: z.string().trim().email("E-mail inválido").max(255, "E-mail muito longo"),
+  cep: z.string().regex(/^\d{5}-\d{3}$/, "CEP inválido. Use o formato XXXXX-XXX"),
+  message: z.string().max(1000, "Mensagem muito longa").optional()
+});
 
 const LeadForm = () => {
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
     email: "",
+    cep: "",
     message: ""
   });
+  
+  const [errors, setErrors] = useState<Record<string, string>>({});
+
+  // Máscara para telefone: (XX) XXXXX-XXXX
+  const formatPhone = (value: string) => {
+    const numbers = value.replace(/\D/g, '');
+    if (numbers.length <= 2) return numbers;
+    if (numbers.length <= 7) return `(${numbers.slice(0, 2)}) ${numbers.slice(2)}`;
+    return `(${numbers.slice(0, 2)}) ${numbers.slice(2, 7)}-${numbers.slice(7, 11)}`;
+  };
+
+  // Máscara para CEP: XXXXX-XXX
+  const formatCEP = (value: string) => {
+    const numbers = value.replace(/\D/g, '');
+    if (numbers.length <= 5) return numbers;
+    return `${numbers.slice(0, 5)}-${numbers.slice(5, 8)}`;
+  };
+
+  const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const formatted = formatPhone(e.target.value);
+    setFormData({ ...formData, phone: formatted });
+    
+    // Validação em tempo real
+    try {
+      formSchema.shape.phone.parse(formatted);
+      setErrors(prev => ({ ...prev, phone: "" }));
+    } catch (error) {
+      if (error instanceof z.ZodError) {
+        setErrors(prev => ({ ...prev, phone: error.errors[0].message }));
+      }
+    }
+  };
+
+  const handleCEPChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const formatted = formatCEP(e.target.value);
+    setFormData({ ...formData, cep: formatted });
+    
+    // Validação em tempo real
+    try {
+      formSchema.shape.cep.parse(formatted);
+      setErrors(prev => ({ ...prev, cep: "" }));
+    } catch (error) {
+      if (error instanceof z.ZodError) {
+        setErrors(prev => ({ ...prev, cep: error.errors[0].message }));
+      }
+    }
+  };
+
+  const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
+    setFormData({ ...formData, email: value });
+    
+    // Validação em tempo real
+    try {
+      formSchema.shape.email.parse(value);
+      setErrors(prev => ({ ...prev, email: "" }));
+    } catch (error) {
+      if (error instanceof z.ZodError) {
+        setErrors(prev => ({ ...prev, email: error.errors[0].message }));
+      }
+    }
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Validação básica
-    if (!formData.name || !formData.phone || !formData.email) {
-      toast.error("Por favor, preencha todos os campos obrigatórios");
-      return;
+    // Validação completa com zod
+    try {
+      formSchema.parse(formData);
+      setErrors({});
+    } catch (error) {
+      if (error instanceof z.ZodError) {
+        const newErrors: Record<string, string> = {};
+        error.errors.forEach((err) => {
+          if (err.path[0]) {
+            newErrors[err.path[0].toString()] = err.message;
+          }
+        });
+        setErrors(newErrors);
+        toast.error("Por favor, corrija os erros no formulário");
+        return;
+      }
     }
 
     // Formatar mensagem para WhatsApp
@@ -27,7 +112,8 @@ const LeadForm = () => {
     let whatsappMessage = `*Solicitação de Diagnóstico Gratuito*\n\n`;
     whatsappMessage += `*Nome:* ${formData.name}\n`;
     whatsappMessage += `*WhatsApp:* ${formData.phone}\n`;
-    whatsappMessage += `*E-mail:* ${formData.email}`;
+    whatsappMessage += `*E-mail:* ${formData.email}\n`;
+    whatsappMessage += `*CEP:* ${formData.cep}`;
     
     if (formData.message) {
       whatsappMessage += `\n\n*Mensagem:*\n${formData.message}`;
@@ -38,7 +124,7 @@ const LeadForm = () => {
     window.open(url, '_blank');
     
     // Limpar formulário
-    setFormData({ name: "", phone: "", email: "", message: "" });
+    setFormData({ name: "", phone: "", email: "", cep: "", message: "" });
     toast.success("Redirecionando para o WhatsApp...");
   };
 
@@ -122,10 +208,14 @@ const LeadForm = () => {
                     type="tel"
                     placeholder="(00) 00000-0000"
                     value={formData.phone}
-                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                    onChange={handlePhoneChange}
+                    maxLength={15}
                     required
-                    className="w-full"
+                    className={`w-full ${errors.phone ? 'border-destructive' : ''}`}
                   />
+                  {errors.phone && (
+                    <p className="text-xs text-destructive mt-1">{errors.phone}</p>
+                  )}
                 </div>
                 
                 <div>
@@ -137,10 +227,32 @@ const LeadForm = () => {
                     type="email"
                     placeholder="seu@email.com"
                     value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    onChange={handleEmailChange}
                     required
-                    className="w-full"
+                    className={`w-full ${errors.email ? 'border-destructive' : ''}`}
                   />
+                  {errors.email && (
+                    <p className="text-xs text-destructive mt-1">{errors.email}</p>
+                  )}
+                </div>
+                
+                <div>
+                  <label htmlFor="cep" className="block text-sm font-medium mb-2">
+                    CEP *
+                  </label>
+                  <Input
+                    id="cep"
+                    type="text"
+                    placeholder="00000-000"
+                    value={formData.cep}
+                    onChange={handleCEPChange}
+                    maxLength={9}
+                    required
+                    className={`w-full ${errors.cep ? 'border-destructive' : ''}`}
+                  />
+                  {errors.cep && (
+                    <p className="text-xs text-destructive mt-1">{errors.cep}</p>
+                  )}
                 </div>
                 
                 <div>
