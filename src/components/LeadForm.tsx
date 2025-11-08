@@ -22,11 +22,24 @@ const LeadForm = () => {
       return;
     }
 
-    // Aqui você implementaria o envio real
-    toast.success("Formulário enviado! Entraremos em contato em breve.");
+    // Formatar mensagem para WhatsApp
+    const phoneNumber = "5511999999999"; // Substitua pelo número real
+    let whatsappMessage = `*Solicitação de Diagnóstico Gratuito*\n\n`;
+    whatsappMessage += `*Nome:* ${formData.name}\n`;
+    whatsappMessage += `*WhatsApp:* ${formData.phone}\n`;
+    whatsappMessage += `*E-mail:* ${formData.email}`;
+    
+    if (formData.message) {
+      whatsappMessage += `\n\n*Mensagem:*\n${formData.message}`;
+    }
+    
+    // Redirecionar para WhatsApp
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+    window.open(url, '_blank');
     
     // Limpar formulário
     setFormData({ name: "", phone: "", email: "", message: "" });
+    toast.success("Redirecionando para o WhatsApp...");
   };
 
   const benefits = [
