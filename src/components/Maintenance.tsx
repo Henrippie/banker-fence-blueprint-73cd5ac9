@@ -85,8 +85,8 @@ const Maintenance = () => {
           }`}
         >
           <OptimizedImage
-            src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=1200"
-            alt="Técnico especializado realizando manutenção preventiva em cerca elétrica"
+            src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=1200"
+            alt="Sistema de cerca elétrica residencial instalado em muro com isoladores brancos"
             className="w-full h-[300px] md:h-[400px] object-cover"
             sizes="(max-width: 768px) 100vw, 1200px"
             width={1200}
