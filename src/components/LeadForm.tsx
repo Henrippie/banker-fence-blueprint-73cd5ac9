@@ -23,7 +23,7 @@ const LeadForm = () => {
     }
 
     // Formatar mensagem para WhatsApp
-    const phoneNumber = "5511999999999"; // Substitua pelo número real
+    const phoneNumber = "5511264555553";
     let whatsappMessage = `*Solicitação de Diagnóstico Gratuito*\n\n`;
     whatsappMessage += `*Nome:* ${formData.name}\n`;
     whatsappMessage += `*WhatsApp:* ${formData.phone}\n`;
