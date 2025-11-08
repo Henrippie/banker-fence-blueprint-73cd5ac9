@@ -1,5 +1,6 @@
 import { Home, Building2, CheckCircle2 } from "lucide-react";
 import OptimizedImage from "./OptimizedImage";
+import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 
 const segments = [
   {
@@ -26,26 +27,18 @@ const segments = [
   }
 ];
 
-const Segments = () => {
+const SegmentCard = ({ segment, index }: { segment: typeof segments[0], index: number }) => {
+  const { ref, isInView } = useIntersectionObserver({ threshold: 0.2 });
+  const Icon = segment.icon;
+  
   return (
-    <section className="section-spacing bg-muted/30">
-      <div className="container-section">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="heading-lg mb-3">Para quem é a Cerca Elétrica da Banker Sistemas</h2>
-          <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
-            Se você quer dormir tranquilo sabendo que seu imóvel está protegido — seja sua casa ou seu negócio — a cerca elétrica profissional é para você.
-          </p>
-        </div>
-        
-        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-          {segments.map((segment, index) => {
-            const Icon = segment.icon;
-            return (
-              <div 
-                key={index}
-                className="card-premium rounded-3xl overflow-hidden animate-fade-in group"
-                style={{ animationDelay: `${index * 150}ms` }}
-              >
+    <div 
+      ref={ref}
+      className={`card-premium rounded-3xl overflow-hidden group transition-all duration-700 ${
+        isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+      }`}
+      style={{ transitionDelay: `${index * 150}ms` }}
+    >
                 <div className="relative h-64 overflow-hidden">
                   <OptimizedImage
                     src={segment.image}
@@ -74,9 +67,25 @@ const Segments = () => {
                     ))}
                   </ul>
                 </div>
-              </div>
-            );
-          })}
+    </div>
+  );
+};
+
+const Segments = () => {
+  return (
+    <section className="section-spacing bg-muted/30">
+      <div className="container-section">
+        <div className="text-center mb-16 animate-fade-in">
+          <h2 className="heading-lg mb-3">Para quem é a Cerca Elétrica da Banker Sistemas</h2>
+          <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
+            Se você quer dormir tranquilo sabendo que seu imóvel está protegido — seja sua casa ou seu negócio — a cerca elétrica profissional é para você.
+          </p>
+        </div>
+        
+        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          {segments.map((segment, index) => (
+            <SegmentCard key={index} segment={segment} index={index} />
+          ))}
         </div>
       </div>
     </section>

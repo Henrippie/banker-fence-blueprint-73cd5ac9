@@ -1,4 +1,5 @@
 import { ClipboardCheck, FileText, Hammer, Headphones } from "lucide-react";
+import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 
 const processSteps = [
   {
@@ -27,27 +28,18 @@ const processSteps = [
   }
 ];
 
-const Process = () => {
+const ProcessCard = ({ step, index }: { step: typeof processSteps[0], index: number }) => {
+  const { ref, isInView } = useIntersectionObserver({ threshold: 0.2 });
+  const Icon = step.icon;
+  
   return (
-    <section className="section-spacing bg-background">
-      <div className="container-section">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="heading-lg mb-3">Nossa forma de trabalho</h2>
-        </div>
-        
-        <div className="relative">
-          {/* Timeline line */}
-          <div className="hidden md:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-border to-transparent -translate-y-1/2" />
-          
-          <div className="grid md:grid-cols-4 gap-8 relative">
-            {processSteps.map((step, index) => {
-              const Icon = step.icon;
-              return (
-                <div 
-                  key={index}
-                  className="relative animate-fade-in group"
-                  style={{ animationDelay: `${index * 100}ms` }}
-                >
+    <div 
+      ref={ref}
+      className={`relative group transition-all duration-700 ${
+        isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+      }`}
+      style={{ transitionDelay: `${index * 100}ms` }}
+    >
                   <div className="card-premium p-6 rounded-3xl">
                     <div className="w-16 h-16 bg-gradient-to-br from-accent to-accent/70 rounded-2xl flex items-center justify-center mb-6 mx-auto relative z-10 shadow-xl card-icon-glow icon-float">
                       <Icon className="w-8 h-8 text-white" />
@@ -62,9 +54,26 @@ const Process = () => {
                       </div>
                     </div>
                   </div>
-                </div>
-              );
-            })}
+    </div>
+  );
+};
+
+const Process = () => {
+  return (
+    <section className="section-spacing bg-background">
+      <div className="container-section">
+        <div className="text-center mb-16 animate-fade-in">
+          <h2 className="heading-lg mb-3">Nossa forma de trabalho</h2>
+        </div>
+        
+        <div className="relative">
+          {/* Timeline line */}
+          <div className="hidden md:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-border to-transparent -translate-y-1/2" />
+          
+          <div className="grid md:grid-cols-4 gap-8 relative">
+            {processSteps.map((step, index) => (
+              <ProcessCard key={index} step={step} index={index} />
+            ))}
           </div>
         </div>
       </div>

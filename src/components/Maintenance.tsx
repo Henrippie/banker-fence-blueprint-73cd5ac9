@@ -3,6 +3,31 @@ import { Button } from "@/components/ui/button";
 import { CheckCircle, Wrench, Clock, Shield } from "lucide-react";
 import OptimizedImage from "./OptimizedImage";
 
+const MaintenanceBenefit = ({ benefit, index }: { benefit: { icon: any, title: string, description: string }, index: number }) => {
+  const { ref, isInView } = useIntersectionObserver({ threshold: 0.2 });
+  const Icon = benefit.icon;
+  
+  return (
+    <div
+      ref={ref}
+      className={`glass-card p-6 md:p-8 hover:scale-[1.02] transition-all duration-700 ${
+        isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+      }`}
+      style={{ transitionDelay: `${index * 100}ms` }}
+    >
+      <div className="flex items-start gap-4">
+        <div className="card-icon-glow bg-primary/10 rounded-xl p-3 flex-shrink-0">
+          <Icon className="w-6 h-6 text-primary" />
+        </div>
+        <div className="flex-1">
+          <h3 className="text-xl font-semibold mb-2">{benefit.title}</h3>
+          <p className="text-muted-foreground">{benefit.description}</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const Maintenance = () => {
   const { ref, isInView } = useIntersectionObserver({ threshold: 0.1 });
 
@@ -55,28 +80,9 @@ const Maintenance = () => {
         </div>
 
         <div className="grid md:grid-cols-2 gap-6 md:gap-8 mb-12">
-          {benefits.map((benefit, index) => {
-            const Icon = benefit.icon;
-            return (
-              <div
-                key={index}
-                className={`glass-card p-6 md:p-8 hover:scale-[1.02] transition-all duration-300 ${
-                  isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-                }`}
-                style={{ transitionDelay: `${index * 100}ms` }}
-              >
-                <div className="flex items-start gap-4">
-                  <div className="card-icon-glow bg-primary/10 rounded-xl p-3 flex-shrink-0">
-                    <Icon className="w-6 h-6 text-primary" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-semibold mb-2">{benefit.title}</h3>
-                    <p className="text-muted-foreground">{benefit.description}</p>
-                  </div>
-                </div>
-              </div>
-            );
-          })}
+          {benefits.map((benefit, index) => (
+            <MaintenanceBenefit key={index} benefit={benefit} index={index} />
+          ))}
         </div>
 
         <div

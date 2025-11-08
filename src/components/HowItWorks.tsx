@@ -1,5 +1,6 @@
 import { Shield, Zap, Radar } from "lucide-react";
 import OptimizedImage from "./OptimizedImage";
+import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 
 const steps = [
   {
@@ -25,23 +26,18 @@ const steps = [
   }
 ];
 
-const HowItWorks = () => {
+const StepCard = ({ step, index }: { step: typeof steps[0], index: number }) => {
+  const { ref, isInView } = useIntersectionObserver({ threshold: 0.2 });
+  const Icon = step.icon;
+  
   return (
-    <section className="section-spacing bg-gradient-to-br from-primary via-primary/95 to-accent text-primary-foreground">
-      <div className="container-section">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="heading-lg mb-3">Como funciona a cerca elétrica</h2>
-        </div>
-        
-        <div className="grid md:grid-cols-3 gap-8">
-          {steps.map((step, index) => {
-            const Icon = step.icon;
-            return (
-              <div 
-                key={index}
-                className="relative glass-morphism rounded-3xl overflow-hidden transition-all duration-500 animate-fade-in group hover:scale-[1.05] hover:-translate-y-2 hover:shadow-[0_20px_60px_-15px_rgba(244,197,66,0.4)]"
-                style={{ animationDelay: `${index * 150}ms` }}
-              >
+    <div 
+      ref={ref}
+      className={`relative glass-morphism rounded-3xl overflow-hidden transition-all duration-700 group hover:scale-[1.05] hover:-translate-y-2 hover:shadow-[0_20px_60px_-15px_rgba(244,197,66,0.4)] ${
+        isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+      }`}
+      style={{ transitionDelay: `${index * 150}ms` }}
+    >
                 <div className="relative h-48 overflow-hidden">
                   <OptimizedImage
                     src={step.image}
@@ -64,9 +60,22 @@ const HowItWorks = () => {
                   <h3 className="text-xl font-semibold mb-4">{step.title}</h3>
                   <p className="text-primary-foreground/80 leading-relaxed text-sm">{step.description}</p>
                 </div>
-              </div>
-            );
-          })}
+    </div>
+  );
+};
+
+const HowItWorks = () => {
+  return (
+    <section className="section-spacing bg-gradient-to-br from-primary via-primary/95 to-accent text-primary-foreground">
+      <div className="container-section">
+        <div className="text-center mb-16 animate-fade-in">
+          <h2 className="heading-lg mb-3">Como funciona a cerca elétrica</h2>
+        </div>
+        
+        <div className="grid md:grid-cols-3 gap-8">
+          {steps.map((step, index) => (
+            <StepCard key={index} step={step} index={index} />
+          ))}
         </div>
       </div>
     </section>

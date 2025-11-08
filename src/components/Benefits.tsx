@@ -1,5 +1,6 @@
 import { Clock, Shield, Bell, Users } from "lucide-react";
 import OptimizedImage from "./OptimizedImage";
+import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 
 const benefits = [
   {
@@ -28,26 +29,18 @@ const benefits = [
   }
 ];
 
-const Benefits = () => {
+const BenefitCard = ({ benefit, index }: { benefit: typeof benefits[0], index: number }) => {
+  const { ref, isInView } = useIntersectionObserver({ threshold: 0.2 });
+  const Icon = benefit.icon;
+  
   return (
-    <section className="section-spacing bg-background">
-      <div className="container-section">
-        <div className="text-center mb-12 md:mb-16 animate-fade-in px-4">
-          <h2 className="heading-lg mb-3">Por que escolher a Banker Sistemas?</h2>
-          <p className="text-muted-foreground text-base md:text-lg">
-            Mais de 1.500 imóveis protegidos em São Paulo e região confiam na Banker para garantir segurança real, 24h por dia.
-          </p>
-        </div>
-        
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 px-4">
-          {benefits.map((benefit, index) => {
-            const Icon = benefit.icon;
-            return (
-              <div 
-                key={index}
-                className="card-premium rounded-2xl overflow-hidden animate-fade-in group"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
+    <div 
+      ref={ref}
+      className={`card-premium rounded-2xl overflow-hidden group transition-all duration-700 ${
+        isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+      }`}
+      style={{ transitionDelay: `${index * 100}ms` }}
+    >
                 <div className="relative h-40 overflow-hidden">
                   <OptimizedImage
                     src={benefit.image}
@@ -67,9 +60,25 @@ const Benefits = () => {
                   <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-3 text-foreground">{benefit.title}</h3>
                   <p className="text-muted-foreground leading-relaxed text-sm">{benefit.description}</p>
                 </div>
-              </div>
-            );
-          })}
+    </div>
+  );
+};
+
+const Benefits = () => {
+  return (
+    <section className="section-spacing bg-background">
+      <div className="container-section">
+        <div className="text-center mb-12 md:mb-16 animate-fade-in px-4">
+          <h2 className="heading-lg mb-3">Por que escolher a Banker Sistemas?</h2>
+          <p className="text-muted-foreground text-base md:text-lg">
+            Mais de 1.500 imóveis protegidos em São Paulo e região confiam na Banker para garantir segurança real, 24h por dia.
+          </p>
+        </div>
+        
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 px-4">
+          {benefits.map((benefit, index) => (
+            <BenefitCard key={index} benefit={benefit} index={index} />
+          ))}
         </div>
       </div>
     </section>
