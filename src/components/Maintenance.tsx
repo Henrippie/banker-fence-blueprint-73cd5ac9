@@ -67,9 +67,9 @@ const Maintenance = () => {
   }];
   return <section className="section-spacing bg-gradient-to-b from-background via-background/95 to-background">
       <div className="container-section">
-        <div ref={ref} className={`text-center mb-12 md:mb-16 transition-all duration-700 ${isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
-          <h2 className="heading-xl mb-4 md:mb-6">&quot;Mas eu já tenho uma cerca elétrica&quot;</h2>
-          <p className="body-lg text-muted-foreground max-w-3xl mx-auto mb-6">
+        <div ref={ref} className={`text-center mb-16 md:mb-20 py-8 md:py-12 transition-all duration-700 ${isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
+          <h2 className="heading-xl mb-6 md:mb-8 text-primary">&quot;Mas eu já tenho uma cerca elétrica&quot;</h2>
+          <p className="body-lg text-muted-foreground max-w-3xl mx-auto mb-8">
             Não tem problema! Aqui também fazemos manutenção, reparo e modernização do seu sistema existente.
           </p>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
