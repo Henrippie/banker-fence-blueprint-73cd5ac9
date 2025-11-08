@@ -83,15 +83,15 @@ const Maintenance = () => {
 
         <div className={`relative overflow-hidden rounded-2xl transition-all duration-700 delay-300 ${isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
           <img src={cercaEletrica1} alt="Sistema de cerca elétrica residencial instalado em muro com isoladores brancos" className="w-full h-[300px] md:h-[400px] object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" aria-hidden="true" />
-          <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
-            <h3 className="text-2xl md:text-3xl font-bold mb-4 text-white drop-shadow-lg">
+          <div className="absolute inset-0 bg-gradient-to-t from-background/95 via-background/80 to-transparent" aria-hidden="true" />
+          <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 bg-background/50 backdrop-blur-sm">
+            <h3 className="text-2xl md:text-3xl font-bold mb-4 text-foreground">
               Serviços de Manutenção Incluem:
             </h3>
             <ul className="grid sm:grid-cols-2 gap-3 mb-6">
-              {["Inspeção completa do sistema", "Teste de voltagem e funcionamento", "Substituição de hastes e isoladores", "Atualização de centrais", "Reparo de fios rompidos", "Limpeza e ajustes gerais"].map((item, index) => <li key={index} className="flex items-center gap-2 text-white drop-shadow-md">
+              {["Inspeção completa do sistema", "Teste de voltagem e funcionamento", "Substituição de hastes e isoladores", "Atualização de centrais", "Reparo de fios rompidos", "Limpeza e ajustes gerais"].map((item, index) => <li key={index} className="flex items-center gap-2 text-foreground">
                   <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
-                  <span className="text-sm md:text-base">{item}</span>
+                  <span className="text-sm md:text-base font-medium">{item}</span>
                 </li>)}
             </ul>
             <Button onClick={scrollToForm} size="lg" className="w-full sm:w-auto shadow-button hover:scale-105 transition-transform touch-manipulation active:scale-95">
