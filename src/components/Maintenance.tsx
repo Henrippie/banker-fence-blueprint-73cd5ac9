@@ -1,7 +1,7 @@
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, Wrench, Clock, Shield } from "lucide-react";
-import OptimizedImage from "./OptimizedImage";
+import cercaEletrica1 from "@/assets/cerca-eletrica-1.png";
 const MaintenanceBenefit = ({
   benefit,
   index
@@ -82,7 +82,7 @@ const Maintenance = () => {
         </div>
 
         <div className={`relative overflow-hidden rounded-2xl transition-all duration-700 delay-300 ${isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
-          <OptimizedImage src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=1200" alt="Sistema de cerca elétrica residencial instalado em muro com isoladores brancos" className="w-full h-[300px] md:h-[400px] object-cover" sizes="(max-width: 768px) 100vw, 1200px" width={1200} height={400} />
+          <img src={cercaEletrica1} alt="Sistema de cerca elétrica residencial instalado em muro com isoladores brancos" className="w-full h-[300px] md:h-[400px] object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" aria-hidden="true" />
           <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
             <h3 className="text-2xl md:text-3xl font-bold mb-4 text-white drop-shadow-lg">

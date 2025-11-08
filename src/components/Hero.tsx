@@ -1,7 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
 import bankerLogo from "@/assets/banker-logo.png";
-import OptimizedImage from "./OptimizedImage";
+import cercaEletrica2 from "@/assets/cerca-eletrica-2.png";
 
 const Hero = () => {
   const scrollToForm = () => {
@@ -47,14 +47,10 @@ const Hero = () => {
           
           <div className="relative animate-slide-in">
             <div className="absolute inset-0 bg-secondary/20 rounded-3xl blur-3xl" aria-hidden="true" />
-            <OptimizedImage
-              src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=1200"
-              alt="Cerca elétrica profissional instalada em muro residencial - proteção e segurança"
+            <img
+              src={cercaEletrica2}
+              alt="Cerca elétrica profissional instalada em muro comercial - proteção e segurança"
               className="relative rounded-3xl shadow-2xl w-full h-auto"
-              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 600px"
-              priority
-              width={1200}
-              height={800}
             />
           </div>
         </div>

@@ -1,6 +1,6 @@
 import { Shield, Zap, Radar } from "lucide-react";
-import OptimizedImage from "./OptimizedImage";
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
+import cercaEletrica1 from "@/assets/cerca-eletrica-1.png";
 
 const steps = [
   {
@@ -8,7 +8,7 @@ const steps = [
     number: "01",
     title: "Barreira física e psicológica",
     description: "Os fios eletrificados e as placas de aviso já afastam invasores antes mesmo da tentativa.",
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=800"
+    image: cercaEletrica1
   },
   {
     icon: Zap,
@@ -39,13 +39,10 @@ const StepCard = ({ step, index }: { step: typeof steps[0], index: number }) => 
       style={{ transitionDelay: `${index * 150}ms` }}
     >
                 <div className="relative h-48 overflow-hidden">
-                  <OptimizedImage
-                    src={step.image}
+                  <img
+                    src={typeof step.image === 'string' ? step.image : step.image}
                     alt={`${step.title} - Como funciona cerca elétrica`}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                    width={800}
-                    height={192}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent" aria-hidden="true" />
                   <div className="absolute -bottom-4 left-8 text-7xl font-bold text-secondary/30" aria-hidden="true">
