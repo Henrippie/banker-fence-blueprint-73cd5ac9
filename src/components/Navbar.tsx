@@ -46,19 +46,9 @@ const Navbar = () => {
     >
       <div className="glass-morphism-dark backdrop-blur-xl border-b border-white/10 shadow-xl">
         <div className="container-section">
-          <div className="flex items-center justify-between h-16 md:h-20">
-            {/* Logo */}
-            <div className="flex items-center touch-manipulation">
-              <img 
-                src="/src/assets/banker-logo.png" 
-                alt="Banker Logo" 
-                className="h-8 md:h-10 w-auto cursor-pointer hover:scale-105 active:scale-95 transition-transform"
-                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-              />
-            </div>
-
+          <div className="flex items-center justify-center md:justify-between h-16 md:h-20">
             {/* Desktop Menu */}
-            <div className="hidden md:flex items-center gap-6 lg:gap-8">
+            <div className="hidden md:flex items-center gap-6 lg:gap-8 mx-auto">
               {navItems.map((item) => (
                 <button
                   key={item.id}
