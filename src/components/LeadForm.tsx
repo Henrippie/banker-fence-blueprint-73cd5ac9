@@ -108,7 +108,7 @@ const LeadForm = () => {
     }
 
     // Formatar mensagem para WhatsApp
-    const phoneNumber = "5511264555553";
+    const phoneNumber = "551126455553";
     let whatsappMessage = `*Solicitação de Diagnóstico Gratuito*\n\n`;
     whatsappMessage += `*Nome:* ${formData.name}\n`;
     whatsappMessage += `*WhatsApp:* ${formData.phone}\n`;
