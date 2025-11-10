@@ -3,8 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#1a1a1a" />
+    <meta name="theme-color" content="#0A1E3F" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0A1E3F" media="(prefers-color-scheme: dark)" />
     <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
     
     <!-- Primary Meta Tags -->
     <title>Cerca Elétrica Profissional SP | Banker Sistemas - Instalação e Manutenção</title>
@@ -13,11 +16,11 @@
     <meta name="keywords" content="cerca elétrica, segurança eletrônica, instalação cerca elétrica São Paulo, manutenção cerca elétrica, segurança residencial, segurança empresarial, Banker Sistemas" />
     <meta name="author" content="Banker Sistemas" />
     <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://bankersistemas.com" />
+    <link rel="canonical" href="https://lp.bankersistemas.com/cerca" />
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://bankersistemas.com" />
+    <meta property="og:url" content="https://lp.bankersistemas.com/cerca" />
     <meta property="og:title" content="Cerca Elétrica Profissional | Banker Sistemas - Proteção 24h" />
     <meta property="og:description" content="Segurança que assusta invasores antes mesmo de entrar no seu terreno. Instalação rápida e suporte especializado completo em São Paulo." />
     <meta property="og:image" content="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=1200" />
@@ -26,7 +29,7 @@
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="https://bankersistemas.com" />
+    <meta name="twitter:url" content="https://lp.bankersistemas.com/cerca" />
     <meta name="twitter:title" content="Cerca Elétrica Profissional | Banker Sistemas" />
     <meta name="twitter:description" content="Segurança que assusta invasores antes mesmo de entrar no seu terreno. +1500 imóveis protegidos." />
     <meta name="twitter:image" content="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=1200" />
@@ -34,16 +37,18 @@
     <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://images.unsplash.com">
-    <link rel="dns-prefetch" href="https://images.unsplash.com">
     
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Preload critical fonts -->
+    <link rel="preload" href="https://fonts.gstatic.com/s/inter/v18/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZJhiI2B.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459WlhyyTh89Y.woff2" as="font" type="font/woff2" crossorigin>
+    
+    <!-- Fonts with display swap for better performance -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"></noscript>
     
     <!-- Preload critical images -->
-    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=800" media="(max-width: 768px)" />
-    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=1200" media="(min-width: 769px)" />
-    <link rel="preload" as="image" href="/src/assets/banker-logo.png" />
+    <link rel="preload" fetchpriority="high" as="image" href="/src/assets/cerca-eletrica-2.png" type="image/png" />
+    <link rel="preload" fetchpriority="high" as="image" href="/src/assets/banker-logo.png" type="image/png" />
     
     <!-- Structured Data / Schema.org -->
     <script type="application/ld+json">
@@ -52,7 +57,7 @@
       "@type": "LocalBusiness",
       "name": "Banker Sistemas",
       "description": "Empresa especializada em segurança eletrônica e instalação de cerca elétrica profissional em São Paulo",
-      "url": "https://bankersistemas.com",
+      "url": "https://lp.bankersistemas.com/cerca",
       "logo": "https://bankersistemas.com/src/assets/banker-logo.png",
       "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=1200",
       "telephone": "+55-11-XXXXX-XXXX",
@@ -135,6 +140,26 @@
 
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <script type="module" src="/src/main.tsx" defer></script>
+    
+    <!-- Inline critical font fallback CSS -->
+    <style>
+      @font-face {
+        font-family: 'Inter-fallback';
+        src: local('Arial');
+        ascent-override: 90%;
+        descent-override: 22%;
+        line-gap-override: 0%;
+        size-adjust: 107%;
+      }
+      @font-face {
+        font-family: 'Montserrat-fallback';
+        src: local('Arial');
+        ascent-override: 85%;
+        descent-override: 20%;
+        line-gap-override: 0%;
+        size-adjust: 112%;
+      }
+    </style>
   </body>
 </html>
