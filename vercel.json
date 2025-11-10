@@ -4,11 +4,8 @@
   "trailingSlash": false,
 
   "rewrites": [
+    { "source": "/cerca-eletrica", "destination": "/landings/cerca-eletrica.html" },
     { "source": "/:slug", "destination": "/landings/:slug.html" }
-  ],
-
-  "redirects": [
-    { "source": "/", "destination": "/cerca-eletrica", "permanent": false }
   ],
 
   "headers": [
