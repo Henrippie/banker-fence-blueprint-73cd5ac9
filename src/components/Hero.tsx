@@ -25,8 +25,6 @@ const Hero = () => {
               width="200"
               height="64"
               loading="eager"
-              fetchPriority="high"
-              decoding="sync"
             />
             
             <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 leading-tight">
@@ -53,11 +51,6 @@ const Hero = () => {
               src={cercaEletrica2}
               alt="Cerca elétrica profissional instalada em muro comercial - proteção e segurança"
               className="relative rounded-3xl shadow-2xl w-full h-auto"
-              width="800"
-              height="600"
-              loading="eager"
-              fetchPriority="high"
-              decoding="sync"
             />
           </div>
         </div>
