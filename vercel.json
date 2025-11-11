@@ -1,24 +1,21 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "rewrites": [
-    {
-      "source": "/cerca-eletrica",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/cerca-eletrica/assets/:path*",
-      "destination": "/assets/:path*"
-    },
-    {
-      "source": "/cerca-eletrica/:path*",
-      "destination": "/:path*"
-    }
+    { "source": "/cerca-eletrica", "destination": "/index.html" },
+
+    { "source": "/cerca-eletrica/assets/:path*", "destination": "/assets/:path*" },
+    { "source": "/cerca-eletrica/static/:path*", "destination": "/static/:path*" },
+    { "source": "/cerca-eletrica/public/:path*", "destination": "/public/:path*" },
+    { "source": "/cerca-eletrica/img/:path*", "destination": "/img/:path*" },
+    { "source": "/cerca-eletrica/images/:path*", "destination": "/images/:path*" },
+    { "source": "/cerca-eletrica/fonts/:path*", "destination": "/fonts/:path*" },
+    { "source": "/cerca-eletrica/css/:path*", "destination": "/css/:path*" },
+    { "source": "/cerca-eletrica/js/:path*", "destination": "/js/:path*" },
+    { "source": "/cerca-eletrica/_next/:path*", "destination": "/_next/:path*" },
+
+    { "source": "/cerca-eletrica/:path*", "destination": "/:path*" }
   ],
   "redirects": [
-    {
-      "source": "/",
-      "destination": "/cerca-eletrica",
-      "permanent": false
-    }
+    { "source": "/", "destination": "/cerca-eletrica", "permanent": false }
   ]
 }
