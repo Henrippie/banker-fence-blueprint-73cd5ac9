@@ -1,6 +1,24 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "rewrites": [
-    { "source": "/(.*)", "destination": "/" }
+    {
+      "source": "/cerca-eletrica",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/cerca-eletrica/assets/:path*",
+      "destination": "/assets/:path*"
+    },
+    {
+      "source": "/cerca-eletrica/:path*",
+      "destination": "/:path*"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/cerca-eletrica",
+      "permanent": false
+    }
   ]
 }
