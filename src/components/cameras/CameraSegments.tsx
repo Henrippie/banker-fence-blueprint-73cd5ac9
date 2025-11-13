@@ -1,13 +1,12 @@
 import { Home, Building2, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
 const CameraSegments = () => {
   const scrollToForm = () => {
-    document.getElementById('form-section')?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('form-section')?.scrollIntoView({
+      behavior: 'smooth'
+    });
   };
-
-  return (
-    <section className="section-spacing bg-background">
+  return <section className="section-spacing bg-background">
       <div className="container-section">
         <h3 className="heading-lg text-center text-primary mb-12">
           Para Quem é o Sistema de CFTV
@@ -21,7 +20,7 @@ const CameraSegments = () => {
                 <Home className="w-8 h-8 text-accent" />
               </div>
               <h4 className="text-2xl font-bold text-foreground">
-                🏠 Residências e Condomínios
+                Residências e Condomínios
               </h4>
             </div>
             
@@ -54,7 +53,7 @@ const CameraSegments = () => {
                 <Building2 className="w-8 h-8 text-accent" />
               </div>
               <h4 className="text-2xl font-bold text-foreground">
-                🏢 Empresas e Comércios
+                 Empresas e Comércios
               </h4>
             </div>
             
@@ -82,17 +81,11 @@ const CameraSegments = () => {
         </div>
         
         <div className="text-center mt-12">
-          <Button 
-            size="lg"
-            onClick={scrollToForm}
-            className="bg-accent text-accent-foreground hover:bg-accent/90 shadow-button text-base md:text-lg px-10 py-7 transition-all duration-300 hover:scale-105"
-          >
+          <Button size="lg" onClick={scrollToForm} className="bg-accent text-accent-foreground hover:bg-accent/90 shadow-button text-base md:text-lg px-10 py-7 transition-all duration-300 hover:scale-105">
             Solicitar Orçamento Gratuito Agora
           </Button>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default CameraSegments;
