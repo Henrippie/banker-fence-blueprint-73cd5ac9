@@ -21,9 +21,7 @@ const Hero = () => {
             <img 
               src={bankerLogo} 
               alt="Banker Sistemas - Segurança Eletrônica" 
-              className="h-12 md:h-16 mb-6 mx-auto lg:mx-0"
-              width="200"
-              height="64"
+              className="h-10 md:h-13 mb-6 mx-auto lg:mx-0 object-contain"
               loading="eager"
             />
             
