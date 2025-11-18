@@ -1,4 +1,4 @@
-import { MessageCircle } from "lucide-react";
+import whatsappImage from "@/assets/whatsapp-button.png";
 
 const WhatsAppButton = () => {
   const phoneNumber = "551126455553";
@@ -13,13 +13,14 @@ const WhatsAppButton = () => {
     <button
       id="whatsapp-button"
       onClick={handleClick}
-      className="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-50 w-14 h-14 md:w-16 md:h-16 bg-[#25D366] hover:bg-[#20BA5A] active:bg-[#1BA54E] text-white rounded-full shadow-2xl flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95 animate-fade-in touch-manipulation cursor-pointer"
+      className="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-50 w-16 h-16 md:w-20 md:h-20 transition-all duration-300 hover:scale-110 active:scale-95 animate-fade-in touch-manipulation cursor-pointer"
       aria-label="Falar no WhatsApp"
     >
-      <div className="pointer-events-none flex items-center justify-center w-full h-full relative">
-        <MessageCircle className="w-7 h-7 md:w-8 md:h-8" />
-        <span className="absolute -top-1 -right-1 w-3 h-3 md:w-4 md:h-4 bg-destructive rounded-full animate-pulse" />
-      </div>
+      <img 
+        src={whatsappImage} 
+        alt="WhatsApp" 
+        className="w-full h-full object-contain pointer-events-none"
+      />
     </button>
   );
 };
