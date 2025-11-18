@@ -11,7 +11,7 @@ const WhatsAppButton = () => {
 
   return (
     <button
-      id="whatsappbutton"
+      id="whatsapp-button"
       onClick={handleClick}
       className="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-50 w-14 h-14 md:w-16 md:h-16 bg-[#25D366] hover:bg-[#20BA5A] active:bg-[#1BA54E] text-white rounded-full shadow-2xl flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95 animate-fade-in touch-manipulation cursor-pointer"
       aria-label="Falar no WhatsApp"
