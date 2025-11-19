@@ -25,10 +25,62 @@ const Cameras = () => {
   return (
     <>
       <Helmet>
-        <title>Câmeras de Segurança CFTV | Bankers Sistemas</title>
-        <meta name="description" content="Instalação profissional de câmeras de segurança CFTV com acesso remoto via celular. Monitoramento 24h, imagens HD e gravação em tempo real." />
-        <meta name="keywords" content="câmeras de segurança, CFTV, vigilância, monitoramento, instalação de câmeras, segurança eletrônica" />
+        <title>Câmeras de Segurança CFTV | Instalação Profissional em SP | Bankers Sistemas</title>
+        <meta name="description" content="Instalação profissional de câmeras de segurança CFTV com acesso remoto via celular. Monitoramento 24h, imagens HD, visão noturna e suporte especializado. Mais de 1.500 imóveis protegidos em São Paulo." />
+        <meta name="keywords" content="câmeras de segurança, CFTV, instalação de câmeras SP, monitoramento 24h, vigilância eletrônica, câmeras com acesso remoto, visão noturna, segurança residencial, segurança empresarial" />
         <link rel="canonical" href="https://bankerssistemas.com.br/cameras" />
+        <link rel="preload" as="image" href="/src/assets/banker-logo.png" />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content="Câmeras de Segurança CFTV | Instalação Profissional | Bankers Sistemas" />
+        <meta property="og:description" content="Instalação profissional de câmeras de segurança CFTV com acesso remoto. Monitoramento 24h, visão noturna e suporte especializado em SP." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://bankerssistemas.com.br/cameras" />
+        <meta property="og:image" content="https://bankerssistemas.com.br/src/assets/banker-logo.png" />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Câmeras de Segurança CFTV | Bankers Sistemas" />
+        <meta name="twitter:description" content="Instalação profissional de câmeras CFTV com monitoramento 24h e acesso remoto." />
+        
+        {/* Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Instalação de Câmeras de Segurança CFTV",
+            "provider": {
+              "@type": "LocalBusiness",
+              "name": "Banker Sistemas",
+              "image": "https://bankerssistemas.com.br/src/assets/banker-logo.png",
+              "telephone": "+55-11-99999-9999",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "São Paulo",
+                "addressRegion": "SP",
+                "addressCountry": "BR"
+              }
+            },
+            "areaServed": {
+              "@type": "State",
+              "name": "São Paulo"
+            },
+            "description": "Instalação profissional de câmeras de segurança CFTV com acesso remoto via celular, monitoramento 24h, imagens HD e visão noturna",
+            "offers": {
+              "@type": "Offer",
+              "availability": "https://schema.org/InStock",
+              "priceSpecification": {
+                "@type": "PriceSpecification",
+                "priceCurrency": "BRL"
+              }
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.9",
+              "reviewCount": "1500"
+            }
+          })}
+        </script>
       </Helmet>
       
       <main className="min-h-screen">
