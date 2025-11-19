@@ -1,3 +1,4 @@
+import { HelpCircle } from "lucide-react";
 import {
   Accordion,
   AccordionContent,
@@ -34,29 +35,44 @@ const CameraFAQ = () => {
   ];
 
   return (
-    <section className="section-spacing bg-background">
+    <section className="section-spacing bg-gradient-to-b from-background to-muted/30">
       <div className="container-section">
-        <h3 className="heading-lg text-center text-primary mb-4">
-          ❓ Perguntas Frequentes
-        </h3>
-        <p className="text-center text-muted-foreground text-lg mb-12 max-w-2xl mx-auto">
-          Tire suas dúvidas sobre o sistema de câmeras de segurança
-        </p>
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary font-medium text-sm mb-4">
+            <HelpCircle className="w-4 h-4" />
+            <span>Tire suas Dúvidas</span>
+          </div>
+          <h3 className="heading-lg text-primary mb-4">
+            Perguntas Frequentes
+          </h3>
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+            Respostas para as principais dúvidas sobre sistemas de câmeras CFTV
+          </p>
+        </div>
         
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           <Accordion type="single" collapsible className="space-y-4">
             {faqs.map((faq, index) => (
               <AccordionItem 
                 key={index} 
                 value={`item-${index}`}
-                className="glass-card px-6 rounded-2xl border-none"
+                className="border-none"
               >
-                <AccordionTrigger className="text-left text-lg font-semibold text-foreground hover:text-accent hover:no-underline py-6">
-                  {faq.question}
-                </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground text-base pb-6">
-                  {faq.answer}
-                </AccordionContent>
+                <div className="card-premium rounded-3xl overflow-hidden">
+                  <AccordionTrigger className="text-left text-lg font-semibold text-foreground hover:text-accent hover:no-underline px-8 py-6 [&[data-state=open]]:text-accent">
+                    <span className="flex items-center gap-4">
+                      <span className="flex-shrink-0 w-8 h-8 rounded-lg bg-accent/10 flex items-center justify-center text-accent font-bold text-sm">
+                        {index + 1}
+                      </span>
+                      <span>{faq.question}</span>
+                    </span>
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground text-base px-8 pb-8 pt-2 leading-relaxed">
+                    <div className="pl-12">
+                      {faq.answer}
+                    </div>
+                  </AccordionContent>
+                </div>
               </AccordionItem>
             ))}
           </Accordion>

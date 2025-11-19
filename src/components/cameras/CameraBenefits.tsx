@@ -1,53 +1,93 @@
-import { Shield, Zap, CheckCircle, Headphones } from "lucide-react";
+import { Shield, Zap, CheckCircle, Headphones, Award, Clock } from "lucide-react";
 
 const CameraBenefits = () => {
   const benefits = [
     {
-      icon: <CheckCircle className="w-12 h-12 text-accent" />,
-      title: "Instalação Rápida e Segura",
-      description: "Técnicos especializados garantem uma instalação profissional sem improvisações."
+      icon: <Clock className="w-10 h-10" />,
+      title: "Instalação Rápida",
+      description: "Técnicos especializados garantem instalação profissional em até 24 horas."
     },
     {
-      icon: <Shield className="w-12 h-12 text-accent" />,
+      icon: <Shield className="w-10 h-10" />,
       title: "Tecnologia Confiável",
-      description: "Produtos líderes de mercado e equipamentos certificados para máxima durabilidade."
+      description: "Equipamentos certificados e líderes de mercado para máxima durabilidade."
     },
     {
-      icon: <Zap className="w-12 h-12 text-accent" />,
-      title: "Monitoramento Contínuo",
-      description: "Opções com baterias (Nobreaks) que mantêm o sistema funcionando mesmo se faltar energia."
+      icon: <Zap className="w-10 h-10" />,
+      title: "Backup de Energia",
+      description: "Nobreaks mantêm o sistema funcionando mesmo durante quedas de energia."
     },
     {
-      icon: <Headphones className="w-12 h-12 text-accent" />,
-      title: "Atendimento Personalizado",
-      description: "Suporte antes, durante e depois da instalação para garantir seu acesso remoto."
+      icon: <Headphones className="w-10 h-10" />,
+      title: "Suporte Dedicado",
+      description: "Atendimento personalizado antes, durante e depois da instalação."
+    },
+    {
+      icon: <Award className="w-10 h-10" />,
+      title: "Garantia Total",
+      description: "Proteção completa com garantia dos equipamentos e serviços."
+    },
+    {
+      icon: <CheckCircle className="w-10 h-10" />,
+      title: "Acesso Remoto",
+      description: "Monitore de qualquer lugar via aplicativo no smartphone."
     }
   ];
 
   return (
-    <section className="section-spacing bg-background">
+    <section className="section-spacing bg-gradient-to-b from-background to-muted/30">
       <div className="container-section">
-        <h3 className="heading-lg text-center text-primary mb-12">
-          Por que escolher a Banker Sistemas?
-        </h3>
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 text-accent font-medium text-sm mb-4">
+            <Shield className="w-4 h-4" />
+            <span>Vantagens Exclusivas</span>
+          </div>
+          <h3 className="heading-lg text-primary mb-4">
+            Por que escolher a Banker Sistemas?
+          </h3>
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+            Experiência comprovada em segurança eletrônica com atendimento diferenciado
+          </p>
+        </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {benefits.map((benefit, index) => (
             <div 
               key={index}
-              className="group glass-card p-6 rounded-2xl text-center hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+              className="group card-premium p-8 rounded-3xl text-center transition-all duration-500"
+              style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="mb-4 inline-block card-icon-glow">
+              <div className="mb-6 inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br from-accent/20 to-accent/10 text-accent card-icon-glow">
                 {benefit.icon}
               </div>
               <h4 className="text-xl font-semibold text-foreground mb-3">
                 {benefit.title}
               </h4>
-              <p className="text-muted-foreground">
+              <p className="text-muted-foreground leading-relaxed">
                 {benefit.description}
               </p>
             </div>
           ))}
+        </div>
+
+        {/* Trust Indicators */}
+        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+          <div className="p-6 rounded-2xl bg-white/50 backdrop-blur-sm border border-white/20">
+            <div className="text-3xl font-bold text-accent mb-2">15+</div>
+            <div className="text-sm text-muted-foreground">Anos de Experiência</div>
+          </div>
+          <div className="p-6 rounded-2xl bg-white/50 backdrop-blur-sm border border-white/20">
+            <div className="text-3xl font-bold text-accent mb-2">2000+</div>
+            <div className="text-sm text-muted-foreground">Clientes Satisfeitos</div>
+          </div>
+          <div className="p-6 rounded-2xl bg-white/50 backdrop-blur-sm border border-white/20">
+            <div className="text-3xl font-bold text-accent mb-2">100%</div>
+            <div className="text-sm text-muted-foreground">Garantia</div>
+          </div>
+          <div className="p-6 rounded-2xl bg-white/50 backdrop-blur-sm border border-white/20">
+            <div className="text-3xl font-bold text-accent mb-2">24/7</div>
+            <div className="text-sm text-muted-foreground">Suporte</div>
+          </div>
         </div>
       </div>
     </section>
