@@ -28,8 +28,16 @@ const Cameras = () => {
         <title>Câmeras de Segurança CFTV | Instalação Profissional em SP | Bankers Sistemas</title>
         <meta name="description" content="Instalação profissional de câmeras de segurança CFTV com acesso remoto via celular. Monitoramento 24h, imagens HD, visão noturna e suporte especializado. Mais de 1.500 imóveis protegidos em São Paulo." />
         <meta name="keywords" content="câmeras de segurança, CFTV, instalação de câmeras SP, monitoramento 24h, vigilância eletrônica, câmeras com acesso remoto, visão noturna, segurança residencial, segurança empresarial" />
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="author" content="Banker Sistemas" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
         <link rel="canonical" href="https://bankerssistemas.com.br/cameras" />
-        <link rel="preload" as="image" href="/src/assets/banker-logo.png" />
+        
+        {/* Preload critical assets */}
+        <link rel="preload" as="image" href="/src/assets/banker-logo.png" fetchPriority="high" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
         
         {/* Open Graph */}
         <meta property="og:title" content="Câmeras de Segurança CFTV | Instalação Profissional | Bankers Sistemas" />
@@ -37,13 +45,18 @@ const Cameras = () => {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://bankerssistemas.com.br/cameras" />
         <meta property="og:image" content="https://bankerssistemas.com.br/src/assets/banker-logo.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:locale" content="pt_BR" />
+        <meta property="og:site_name" content="Banker Sistemas" />
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Câmeras de Segurança CFTV | Bankers Sistemas" />
         <meta name="twitter:description" content="Instalação profissional de câmeras CFTV com monitoramento 24h e acesso remoto." />
+        <meta name="twitter:image" content="https://bankerssistemas.com.br/src/assets/banker-logo.png" />
         
-        {/* Structured Data */}
+        {/* Structured Data - Service */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -59,13 +72,15 @@ const Cameras = () => {
                 "addressLocality": "São Paulo",
                 "addressRegion": "SP",
                 "addressCountry": "BR"
-              }
+              },
+              "priceRange": "$$"
             },
             "areaServed": {
               "@type": "State",
               "name": "São Paulo"
             },
             "description": "Instalação profissional de câmeras de segurança CFTV com acesso remoto via celular, monitoramento 24h, imagens HD e visão noturna",
+            "serviceType": "Instalação de Câmeras CFTV",
             "offers": {
               "@type": "Offer",
               "availability": "https://schema.org/InStock",
@@ -77,8 +92,66 @@ const Cameras = () => {
             "aggregateRating": {
               "@type": "AggregateRating",
               "ratingValue": "4.9",
-              "reviewCount": "1500"
+              "reviewCount": "1500",
+              "bestRating": "5",
+              "worstRating": "1"
             }
+          })}
+        </script>
+        
+        {/* Structured Data - BreadcrumbList */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://bankerssistemas.com.br"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Câmeras de Segurança",
+                "item": "https://bankerssistemas.com.br/cameras"
+              }
+            ]
+          })}
+        </script>
+        
+        {/* Structured Data - FAQPage */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Quanto tempo leva a instalação das câmeras?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A instalação é rápida e profissional, geralmente concluída em um dia útil, dependendo do número de câmeras."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "É possível acessar as câmeras pelo celular?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Sim! Oferecemos acesso remoto via aplicativo para Android e iOS, permitindo monitoramento em tempo real de qualquer lugar."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "As câmeras funcionam à noite?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Sim, todas as nossas câmeras possuem visão noturna infravermelha, garantindo imagens nítidas mesmo em total escuridão."
+                }
+              }
+            ]
           })}
         </script>
       </Helmet>
