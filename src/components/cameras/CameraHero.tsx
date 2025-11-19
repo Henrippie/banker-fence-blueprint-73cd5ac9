@@ -1,5 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import OptimizedImage from "@/components/OptimizedImage";
 import bankerLogo from "@/assets/banker-logo.png";
 const CameraHero = () => {
   const scrollToForm = () => {
@@ -16,7 +17,14 @@ const CameraHero = () => {
       <div className="container-section section-spacing relative z-10">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <div className="text-primary-foreground animate-fade-in text-center lg:text-left">
-            <img src={bankerLogo} alt="Banker Sistemas - Segurança Eletrônica" className="h-12 md:h-16 mb-6 mx-auto lg:mx-0 object-contain" loading="eager" />
+            <OptimizedImage 
+              src={bankerLogo} 
+              alt="Banker Sistemas - Segurança Eletrônica - Instalação de Câmeras CFTV" 
+              className="h-12 md:h-16 mb-6 mx-auto lg:mx-0 object-contain" 
+              priority={true}
+              width={150}
+              height={64}
+            />
             
             <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 leading-tight">
               Proteja seu Patrimônio e Monitore Tudo na Palma da Sua Mão <span className="text-secondary">Monitore Tudo na Palma da Sua Mão</span>
