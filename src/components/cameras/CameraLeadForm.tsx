@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { Check } from "lucide-react";
+import { Check, Shield } from "lucide-react";
 import { z } from "zod";
 
 const formSchema = z.object({
@@ -91,16 +91,28 @@ _Solicitação de diagnóstico gratuito de CFTV_`;
   };
 
   return (
-    <section className="section-spacing bg-gradient-to-br from-primary/5 to-accent/5">
-      <div className="container-section">
+    <section className="section-spacing bg-gradient-to-b from-muted/30 to-background relative overflow-hidden">
+      {/* Background Decoration */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-accent rounded-full blur-[120px]" />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-primary rounded-full blur-[120px]" />
+      </div>
+
+      <div className="container-section relative z-10">
         <div className="max-w-4xl mx-auto">
-          <div className="glass-card p-8 md:p-12 rounded-3xl">
-            <h3 className="heading-lg text-center text-primary mb-4">
-              Solicite um Diagnóstico de Segurança Gratuito
-            </h3>
-            <p className="text-center text-muted-foreground text-lg mb-8">
-              Preencha o formulário e receba:
-            </p>
+          <div className="card-premium p-10 md:p-16 rounded-3xl">
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 text-accent font-medium text-sm mb-6">
+                <Shield className="w-4 h-4" />
+                <span>100% Gratuito e Sem Compromisso</span>
+              </div>
+              <h3 className="heading-lg text-primary mb-4">
+                Solicite um Diagnóstico de Segurança
+              </h3>
+              <p className="text-muted-foreground text-lg">
+                Preencha o formulário e receba gratuitamente:
+              </p>
+            </div>
             
             <div className="grid md:grid-cols-2 gap-6 mb-8">
               <div className="flex items-start gap-3">
