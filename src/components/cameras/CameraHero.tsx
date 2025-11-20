@@ -1,7 +1,8 @@
-import { ArrowRight, Shield, Eye, CheckCircle } from "lucide-react";
+import { ArrowRight, Shield, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import OptimizedImage from "@/components/OptimizedImage";
 import bankerLogo from "@/assets/banker-logo.png";
+import cameraCCTVHero from "@/assets/camera-cctv-hero.jpg";
 
 const CameraHero = () => {
   const scrollToForm = () => {
@@ -95,12 +96,18 @@ const CameraHero = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent" />
               
               {/* Camera Feed Mockup */}
-              <div className="relative aspect-video bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl flex flex-col items-center justify-center overflow-hidden border border-white/10">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.3)_100%)]" />
+              <div className="relative aspect-video rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
+                <OptimizedImage 
+                  src={cameraCCTVHero}
+                  alt="Sistema de Câmera de Segurança CFTV - Monitoramento Profissional"
+                  className="w-full h-full object-cover"
+                  priority={true}
+                  width={800}
+                  height={450}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                 
-                <Eye className="w-20 h-20 text-secondary mb-4 icon-float relative z-10" />
-                
-                <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-red-500/90 backdrop-blur-sm text-white text-sm font-medium relative z-10">
+                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-2 px-4 py-2 rounded-full bg-red-500/90 backdrop-blur-sm text-white text-sm font-medium z-10">
                   <div className="w-2 h-2 bg-white rounded-full animate-pulse" />
                   <span>Monitoramento ao vivo</span>
                 </div>
