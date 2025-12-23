@@ -24,26 +24,26 @@ const MonitoringCTA = () => {
           </div>
 
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            Garanta <span className="text-secondary">HOJE</span> seu sistema de
-            <span className="block">monitoramento profissional</span>
+            Quero um <span className="text-secondary">orçamento</span>
+            <span className="block">de Monitoramento 24hs</span>
           </h2>
 
           <p className="text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
-            Não espere acontecer. Proteja sua família e seu patrimônio com a tecnologia mais avançada do mercado.
+            Mantenha contato imediato com as autoridades de segurança. Nossa equipe altamente treinada age de forma rápida frente a qualquer ocorrência.
           </p>
 
           <div className="flex flex-wrap justify-center gap-6 mb-10">
             <div className="flex items-center gap-2 text-primary-foreground/90">
               <CheckCircle className="w-5 h-5 text-secondary" />
-              <span>Instalação em 24h</span>
+              <span>Central 24/7</span>
             </div>
             <div className="flex items-center gap-2 text-primary-foreground/90">
               <CheckCircle className="w-5 h-5 text-secondary" />
-              <span>Orçamento gratuito</span>
+              <span>Apoio Móvel</span>
             </div>
             <div className="flex items-center gap-2 text-primary-foreground/90">
               <CheckCircle className="w-5 h-5 text-secondary" />
-              <span>Central 24h</span>
+              <span>Backup GPRS</span>
             </div>
           </div>
 

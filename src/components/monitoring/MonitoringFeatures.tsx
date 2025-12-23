@@ -1,36 +1,54 @@
-import { ShieldCheck, Video, Bell, Clock, Smartphone, Lock } from "lucide-react";
+import { ShieldCheck, Video, Bell, Clock, Smartphone, Lock, Car, FileText, Wrench } from "lucide-react";
 
 const MonitoringFeatures = () => {
   const features = [
     {
       icon: ShieldCheck,
-      title: "Detecção antecipada",
-      subtitle: "sem risco de sabotagem",
+      title: "Central de Monitoramento 24hs",
+      subtitle: "24 horas, 7 dias por semana",
       items: [
-        "Placa de aviso faz o invasor pensar duas vezes",
-        "Câmeras e sensores avançados sem fios",
-        "Em caso de violação, o alarme dispara imediatamente"
+        "Nossa estrutura trabalha 24/7 para dar apoio a ocorrências",
+        "Atendimento a intrusões, disparos e solicitações de auxílio",
+        "Contato imediato com autoridades de segurança"
+      ]
+    },
+    {
+      icon: Car,
+      title: "Apoio Móvel",
+      subtitle: "Suporte motorizado ao cliente",
+      items: [
+        "Enviado ao endereço em casos de ocorrências",
+        "Apoio em disparos, intrusões e coações",
+        "Resposta a sinais de pânico - Serviço adicional"
       ]
     },
     {
       icon: Video,
-      title: "Intervenção humana imediata",
-      subtitle: "pela nossa Central de Monitoramento 24h",
+      title: "Monitoramento de Imagens",
+      subtitle: "Acesso em caso de disparos",
       items: [
-        "Recebemos o sinal e acessamos as câmeras",
-        "Profissionais treinados 24/7",
-        "Verificação em tempo real da situação"
+        "Visualização rápida da gravidade da situação",
+        "Aumento significativo do tempo de resposta",
+        "Sistema de câmeras integrado à central"
       ]
-    },
+    }
+  ];
+
+  const additionalServices = [
     {
       icon: Bell,
-      title: "Aviso à polícia em até 60 segundos",
-      subtitle: "ação rápida para garantir sua proteção",
-      items: [
-        "Resposta rápida e eficaz",
-        "Notificação imediata às autoridades",
-        "Suporte até chegada de ajuda"
-      ]
+      title: "Backup GPRS",
+      description: "Sistema de comunicação complementar utilizado como backup em caso de cortes propositais e ausência de energia. Mantém a residência segura nos momentos mais críticos."
+    },
+    {
+      icon: FileText,
+      title: "Relatórios",
+      description: "Disponibilizamos relatórios mensais contendo informações de eventos ocorridos no sistema de alarme como disparos, armes, desarmes etc."
+    },
+    {
+      icon: Wrench,
+      title: "Pedidos de Manutenção",
+      description: "Pode-se solicitar manutenção 24hs por dia por meio do próprio equipamento instalado, sem a necessidade de ligações e outros procedimentos."
     }
   ];
 
@@ -40,12 +58,15 @@ const MonitoringFeatures = () => {
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-4">
             <ShieldCheck className="w-4 h-4 text-primary" />
-            <span className="text-sm font-medium text-primary">Proteção Completa</span>
+            <span className="text-sm font-medium text-primary">Proteção Profissional</span>
           </div>
           <h2 className="heading-xl text-foreground mb-4">
-            Proteja sua residência ou empresa com o
-            <span className="block gradient-text">Sistema de Alarme com Videomonitoramento</span>
+            Central de Monitoramento
+            <span className="block gradient-text">24 horas por dia</span>
           </h2>
+          <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
+            Mantemos contato imediato com as autoridades de segurança e agimos de forma rápida frente a qualquer ocorrência.
+          </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
@@ -77,15 +98,34 @@ const MonitoringFeatures = () => {
           ))}
         </div>
 
+        {/* Additional Services */}
+        <div className="mt-16 grid md:grid-cols-3 gap-6">
+          {additionalServices.map((service, index) => (
+            <div 
+              key={index}
+              className="flex items-start gap-4 p-6 rounded-2xl bg-muted/50 border border-border"
+            >
+              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                <service.icon className="w-6 h-6 text-primary" />
+              </div>
+              <div>
+                <h4 className="font-bold text-foreground mb-2">{service.title}</h4>
+                <p className="text-sm text-muted-foreground">{service.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
         {/* App Control Section */}
         <div className="mt-20 grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <h3 className="text-3xl font-bold text-foreground mb-4">
-              Videomonitoramento e controle na
+              Controle total na
               <span className="block gradient-text">palma da sua mão</span>
             </h3>
             <p className="text-muted-foreground mb-8 text-lg leading-relaxed">
-              Gerencie tudo o que acontece no seu imóvel direto pelo celular. Controle tudo pelo app, arme e desarme, veja quem tem acesso ao seu imóvel e tenha o controle das câmeras em tempo real.
+              Gerencie tudo o que acontece no seu imóvel direto pelo celular. Arme e desarme o sistema, 
+              veja quem tem acesso ao seu imóvel e tenha o controle das câmeras em tempo real.
             </p>
             
             <div className="grid grid-cols-2 gap-4">
@@ -113,8 +153,8 @@ const MonitoringFeatures = () => {
               <div className="flex items-start gap-3 p-4 rounded-xl bg-muted/50">
                 <Clock className="w-5 h-5 text-primary mt-1" />
                 <div>
-                  <p className="font-semibold text-foreground text-sm">Gravação HD</p>
-                  <p className="text-xs text-muted-foreground">Alta resolução</p>
+                  <p className="font-semibold text-foreground text-sm">Relatórios mensais</p>
+                  <p className="text-xs text-muted-foreground">Eventos detalhados</p>
                 </div>
               </div>
             </div>

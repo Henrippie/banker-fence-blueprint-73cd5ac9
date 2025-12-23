@@ -1,42 +1,42 @@
-import { Camera, Bell, Shield, Smartphone, Radio, Lock, Eye, Zap } from "lucide-react";
+import { Camera, Bell, Shield, Smartphone, Radio, Lock, Eye, Car, FileText, Wrench, Zap, Wifi } from "lucide-react";
 
 const MonitoringProducts = () => {
   const products = [
     {
       icon: Shield,
-      title: "Placas Dissuasórias",
-      description: "Visíveis no exterior do imóvel, é a primeira barreira de proteção contra intrusão",
-      detail: "A placa mostra ao invasor que o imóvel está protegido por alarme monitorado profissional"
+      title: "Central de Monitoramento 24hs",
+      description: "Nossa estrutura trabalha 24/7 para dar apoio a ocorrências",
+      detail: "Atendimento a intrusões, disparos e solicitações de auxílio enviadas por nossos clientes"
     },
     {
-      icon: Radio,
-      title: "Painel de Controle - SOS",
-      description: "Recebe e analisa todos os sinais para enviá-los à Central",
-      detail: "Conectado à Central 24h, com botão SOS e comunicação em caso de emergências"
+      icon: Car,
+      title: "Apoio Móvel",
+      description: "Suporte motorizado enviado ao endereço do cliente",
+      detail: "Apoio em casos de disparos, intrusões, coações e sinais de pânico - Serviço adicional"
     },
     {
       icon: Eye,
-      title: "Fotodetectores",
-      description: "Capturam imagens para verificação em segundos",
-      detail: "Acesso da central somente em caso de disparo, controle próprio com acesso às imagens"
+      title: "Monitoramento de Imagens",
+      description: "Sistema de câmeras acessado em caso de disparos",
+      detail: "Visualização rápida da gravidade da situação e aumento do tempo de resposta"
     },
     {
-      icon: Lock,
-      title: "Detector de Acesso",
-      description: "Com tecnologia Shock Sensor",
-      detail: "Protege portas e janelas detectando vibrações, golpes e abertura antes do invasor entrar"
+      icon: Wifi,
+      title: "Backup GPRS",
+      description: "Comunicação complementar como backup",
+      detail: "Mantém a residência segura em caso de cortes propositais e ausência de energia"
     },
     {
-      icon: Camera,
-      title: "Câmeras HD",
-      description: "Videomonitoramento interno e externo",
-      detail: "Imagens Full HD armazenadas com acesso direto às imagens pelo App"
+      icon: FileText,
+      title: "Relatórios",
+      description: "Relatórios mensais de eventos do sistema",
+      detail: "Informações de disparos, armes, desarmes e outros eventos ocorridos"
     },
     {
-      icon: Smartphone,
-      title: "Controle de Acesso",
-      description: "Reforça a proteção na entrada",
-      detail: "Controle e registro de entrada e saída com chaves inteligentes"
+      icon: Wrench,
+      title: "Pedidos de Manutenção",
+      description: "Manutenção 24hs por dia",
+      detail: "Solicitação pelo próprio equipamento instalado, sem ligações"
     },
     {
       icon: Bell,
@@ -47,8 +47,8 @@ const MonitoringProducts = () => {
     {
       icon: Zap,
       title: "Resposta Imediata",
-      description: "Proteção mesmo quando você está fora",
-      detail: "Com o sistema ativado, você e sua família estão protegidos pela Central 24h"
+      description: "Ação rápida frente a qualquer ocorrência",
+      detail: "Contato imediato com as autoridades de segurança para sua proteção"
     }
   ];
 
@@ -57,12 +57,12 @@ const MonitoringProducts = () => {
       <div className="container-section">
         <div className="text-center mb-16">
           <h2 className="heading-xl mb-4">
-            Sistema de Alarme com Videomonitoramento para
-            <span className="block text-secondary">detecção e atuação antecipada</span>
+            Serviços inclusos no
+            <span className="block text-secondary">Monitoramento 24hs</span>
           </h2>
           <p className="text-lg text-primary-foreground/80 max-w-3xl mx-auto">
-            Só a tecnologia do melhor sistema de monitoramento é capaz de detectar uma potencial invasão e atuar em segundos. 
-            Cada elemento trabalha de forma independente, sem fios, priorizando a sua segurança.
+            Por meio de equipes altamente treinadas, prestamos assessoria dia e noite para manter a segurança 
+            de sua residência ou empresa, mantendo contato imediato com as autoridades de segurança.
           </p>
         </div>
 
