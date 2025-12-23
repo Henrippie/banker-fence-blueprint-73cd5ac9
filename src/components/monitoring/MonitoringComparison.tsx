@@ -27,12 +27,12 @@ const MonitoringComparison = () => {
       <div className="container-section">
         <div className="text-center mb-12">
           <h2 className="heading-xl text-foreground mb-4">
-            Por que o alarme com videomonitoramento é a
-            <span className="block gradient-text">única solução eficaz</span>
+            Por que escolher o
+            <span className="block gradient-text">Monitoramento 24hs Banker</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
-            Ter um sistema de alarme com videomonitoramento permite detectar intrusões antes que ocorram, 
-            evitando danos e outros inconvenientes. Só com câmeras de vigilância, você não conseguiria tudo isso.
+            O serviço de Monitoramento 24hs é um complemento vital ao sistema de segurança. 
+            Com equipes altamente treinadas, prestamos assessoria dia e noite para manter a segurança de sua residência ou empresa.
           </p>
         </div>
 

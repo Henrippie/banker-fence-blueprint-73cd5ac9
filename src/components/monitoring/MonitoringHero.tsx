@@ -75,35 +75,35 @@ const MonitoringHero = () => {
             />
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 leading-tight">
-              Sistema de Alarme com
+              Monitoramento
               <span className="block mt-2 gradient-text bg-gradient-to-r from-secondary via-secondary to-accent bg-clip-text text-transparent">
-                Videomonitoramento 24h
+                24 Horas
               </span>
             </h1>
 
             <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-destructive/90 backdrop-blur-sm border border-destructive mb-6">
               <span className="text-lg md:text-xl font-bold text-destructive-foreground">
-                Até 40% de desconto
+                Proteção Dia e Noite
               </span>
             </div>
 
             <p className="text-lg md:text-xl mb-8 text-primary-foreground/90 leading-relaxed max-w-2xl">
-              A tranquilidade para sua <strong>residência</strong> ou <strong>empresa</strong> que só um sistema profissional de monitoramento pode entregar. Central 24h com resposta imediata.
+              O serviço de Monitoramento 24hs é um complemento vital ao sistema de segurança, onde nossa empresa, por meio de equipes altamente treinadas, presta assessoria dia e noite para manter a segurança de sua <strong>residência</strong> ou <strong>empresa</strong>.
             </p>
 
             {/* Trust badges */}
             <div className="flex flex-wrap gap-6 mb-8">
               <div className="flex items-center gap-2 text-primary-foreground/90">
                 <Shield className="w-5 h-5 text-secondary" />
-                <span className="text-sm font-medium">Central 24h</span>
+                <span className="text-sm font-medium">Central 24/7</span>
               </div>
               <div className="flex items-center gap-2 text-primary-foreground/90">
                 <Clock className="w-5 h-5 text-secondary" />
-                <span className="text-sm font-medium">Resposta em 60s</span>
+                <span className="text-sm font-medium">Apoio Móvel</span>
               </div>
               <div className="flex items-center gap-2 text-primary-foreground/90">
                 <Eye className="w-5 h-5 text-secondary" />
-                <span className="text-sm font-medium">Videomonitoramento</span>
+                <span className="text-sm font-medium">Backup GPRS</span>
               </div>
             </div>
 

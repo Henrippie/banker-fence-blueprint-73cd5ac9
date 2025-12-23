@@ -1,42 +1,42 @@
-import { Home, Building2, Trees, PawPrint, Baby, Key } from "lucide-react";
+import { Home, Building2, Store, Factory, Warehouse, Hotel } from "lucide-react";
 
 const MonitoringSegments = () => {
   const segments = [
     {
-      icon: Trees,
-      title: "Com áreas externas",
-      subtitle: "Proteja seu terraço, pátio ou jardim",
-      description: "Nosso sistema cria um escudo de proteção em todos os pontos de acesso vulneráveis."
+      icon: Home,
+      title: "Residências",
+      subtitle: "Proteção para sua família",
+      description: "Sistema completo de monitoramento que mantém sua casa protegida 24 horas por dia, 7 dias por semana."
     },
     {
       icon: Building2,
-      title: "Apartamentos",
-      subtitle: "Proteção reforçada na porta da frente",
-      description: "Detectores de acesso protegem a porta e janelas vulneráveis com tecnologia avançada."
+      title: "Empresas",
+      subtitle: "Segurança corporativa",
+      description: "Proteção profissional para seu negócio com monitoramento contínuo e resposta imediata a ocorrências."
     },
     {
-      icon: Home,
-      title: "Segunda casa",
-      subtitle: "Proteção 24/7",
-      description: "Se alguém tentar invadir, detectamos e respondemos imediatamente."
+      icon: Store,
+      title: "Comércios",
+      subtitle: "Proteção para seu estabelecimento",
+      description: "Sistema de alarme integrado que protege seu comércio contra intrusões e furtos."
     },
     {
-      icon: Key,
-      title: "Aluguel",
-      subtitle: "Mudamos seu alarme quando você se muda",
-      description: "O sistema se adapta às suas necessidades e te acompanha onde quer que você vá."
+      icon: Factory,
+      title: "Indústrias",
+      subtitle: "Segurança industrial",
+      description: "Monitoramento completo de áreas industriais com tecnologia avançada e apoio móvel."
     },
     {
-      icon: PawPrint,
-      title: "Animais de estimação",
-      subtitle: "100% compatível com pets",
-      description: "Escudo protetor nas portas e janelas para que pessoas e animais se movimentem livremente."
+      icon: Warehouse,
+      title: "Galpões",
+      subtitle: "Proteção de grandes áreas",
+      description: "Sistema especializado para proteção de depósitos e centros de distribuição."
     },
     {
-      icon: Baby,
-      title: "Crianças pequenas",
-      subtitle: "Segurança para toda família",
-      description: "Sistema inteligente que se adapta à rotina da sua família com total segurança."
+      icon: Hotel,
+      title: "Condomínios",
+      subtitle: "Segurança coletiva",
+      description: "Solução integrada para condomínios residenciais e comerciais com central 24h."
     }
   ];
 
@@ -45,11 +45,12 @@ const MonitoringSegments = () => {
       <div className="container-section">
         <div className="text-center mb-16">
           <h2 className="heading-xl text-foreground mb-4">
-            Descubra o sistema que combina com você,
-            <span className="block gradient-text">seja quem for</span>
+            Monitoramento para
+            <span className="block gradient-text">todos os segmentos</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Temos um sistema personalizado, projetado para atender às características do seu imóvel e às necessidades da sua família.
+            Nossa empresa presta assessoria dia e noite para manter a segurança de sua residência ou empresa, 
+            com equipes altamente treinadas.
           </p>
         </div>
 
