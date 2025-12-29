@@ -11,7 +11,6 @@ import {
 // Lazy load components
 const MonitoringHero = lazy(() => import("@/components/monitoring/MonitoringHero"));
 const MonitoringFeatures = lazy(() => import("@/components/monitoring/MonitoringFeatures"));
-const MonitoringProducts = lazy(() => import("@/components/monitoring/MonitoringProducts"));
 const MonitoringComparison = lazy(() => import("@/components/monitoring/MonitoringComparison"));
 const MonitoringSegments = lazy(() => import("@/components/monitoring/MonitoringSegments"));
 const CameraLeadForm = lazy(() => import("@/components/cameras/CameraLeadForm"));
@@ -115,14 +114,6 @@ const Monitoramento = () => {
         
         <Suspense fallback={<HeroSkeleton />}>
           <MonitoringHero />
-        </Suspense>
-        
-        <Suspense fallback={<BenefitsSkeleton />}>
-          <MonitoringFeatures />
-        </Suspense>
-        
-        <Suspense fallback={<BenefitsSkeleton />}>
-          <MonitoringProducts />
         </Suspense>
         
         <Suspense fallback={<BenefitsSkeleton />}>

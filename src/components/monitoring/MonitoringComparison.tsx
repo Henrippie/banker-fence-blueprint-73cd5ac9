@@ -23,14 +23,14 @@ const MonitoringComparison = () => {
   ];
 
   return (
-    <section className="section-spacing bg-muted/30">
+    <section className="section-spacing bg-gradient-to-br from-primary via-primary to-accent text-primary-foreground">
       <div className="container-section">
         <div className="text-center mb-12">
-          <h2 className="heading-xl text-foreground mb-4">
+          <h2 className="heading-xl mb-4">
             Por que escolher o
-            <span className="block gradient-text">Monitoramento 24hs Banker</span>
+            <span className="block text-secondary">Monitoramento 24hs Banker?</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
+          <p className="text-lg text-primary-foreground/80 max-w-3xl mx-auto">
             O serviço de Monitoramento 24hs é um complemento vital ao sistema de segurança. 
             Com equipes altamente treinadas, prestamos assessoria dia e noite para manter a segurança de sua residência ou empresa.
           </p>
@@ -38,17 +38,17 @@ const MonitoringComparison = () => {
 
         {/* Comparison Table */}
         <div className="max-w-4xl mx-auto">
-          <div className="bg-card rounded-3xl shadow-xl overflow-hidden border border-border">
+          <div className="rounded-3xl shadow-2xl overflow-hidden bg-white/10 backdrop-blur-sm border border-white/20">
             {/* Header */}
-            <div className="grid grid-cols-3 bg-primary text-primary-foreground">
-              <div className="p-6 flex items-center justify-center border-r border-white/20">
-                <span className="font-bold text-center">Somente Câmeras</span>
+            <div className="grid grid-cols-3">
+              <div className="p-4 md:p-6 flex items-center justify-center border-r border-white/20 bg-white/5">
+                <span className="font-bold text-sm md:text-base text-center">Somente Câmeras</span>
               </div>
-              <div className="p-6 flex items-center justify-center border-r border-white/20">
-                <span className="font-semibold text-sm text-center">Características</span>
+              <div className="p-4 md:p-6 flex items-center justify-center border-r border-white/20 bg-white/5">
+                <span className="font-semibold text-xs md:text-sm text-center text-primary-foreground/80">Características</span>
               </div>
-              <div className="p-6 flex items-center justify-center bg-secondary text-secondary-foreground">
-                <span className="font-bold text-center">Sistema Banker</span>
+              <div className="p-4 md:p-6 flex items-center justify-center bg-secondary text-secondary-foreground">
+                <span className="font-bold text-sm md:text-base text-center">Sistema Banker</span>
               </div>
             </div>
 
@@ -56,27 +56,27 @@ const MonitoringComparison = () => {
             {comparisons.map((item, index) => (
               <div 
                 key={index} 
-                className={`grid grid-cols-3 ${index % 2 === 0 ? 'bg-muted/30' : 'bg-card'} border-b border-border last:border-b-0`}
+                className={`grid grid-cols-3 ${index % 2 === 0 ? 'bg-white/5' : 'bg-transparent'} border-t border-white/10`}
               >
-                <div className="p-4 flex items-center justify-center border-r border-border">
+                <div className="p-3 md:p-4 flex items-center justify-center border-r border-white/10">
                   {item.camera === true ? (
-                    <div className="w-8 h-8 rounded-full bg-success/20 flex items-center justify-center">
-                      <Check className="w-5 h-5 text-success" />
+                    <div className="w-8 h-8 rounded-full bg-green-500/20 flex items-center justify-center">
+                      <Check className="w-5 h-5 text-green-400" />
                     </div>
                   ) : item.camera === "opcional" ? (
-                    <span className="text-xs text-muted-foreground bg-muted px-2 py-1 rounded">Opcional</span>
+                    <span className="text-xs text-primary-foreground/60 bg-white/10 px-2 py-1 rounded">Opcional</span>
                   ) : (
-                    <div className="w-8 h-8 rounded-full bg-destructive/20 flex items-center justify-center">
-                      <X className="w-5 h-5 text-destructive" />
+                    <div className="w-8 h-8 rounded-full bg-red-500/20 flex items-center justify-center">
+                      <X className="w-5 h-5 text-red-400" />
                     </div>
                   )}
                 </div>
-                <div className="p-4 flex items-center justify-center text-center border-r border-border">
-                  <span className="text-sm text-foreground">{item.feature}</span>
+                <div className="p-3 md:p-4 flex items-center justify-center text-center border-r border-white/10">
+                  <span className="text-xs md:text-sm text-primary-foreground/90">{item.feature}</span>
                 </div>
-                <div className="p-4 flex items-center justify-center bg-secondary/5">
-                  <div className="w-8 h-8 rounded-full bg-success/20 flex items-center justify-center">
-                    <Check className="w-5 h-5 text-success" />
+                <div className="p-3 md:p-4 flex items-center justify-center bg-secondary/10">
+                  <div className="w-8 h-8 rounded-full bg-green-500/20 flex items-center justify-center">
+                    <Check className="w-5 h-5 text-green-400" />
                   </div>
                 </div>
               </div>
@@ -88,10 +88,10 @@ const MonitoringComparison = () => {
           <Button 
             size="lg" 
             onClick={scrollToForm}
-            className="bg-secondary text-secondary-foreground hover:bg-secondary/90 shadow-[0_12px_32px_rgba(244,197,66,0.4)] text-lg px-12 py-8 group"
+            className="bg-secondary text-secondary-foreground hover:bg-secondary/90 shadow-button text-base md:text-lg px-8 md:px-10 py-6 md:py-7 transition-all duration-300 hover:scale-105 active:scale-95 touch-manipulation w-full sm:w-auto"
           >
             Solicitar Orçamento Gratuito
-            <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            <ArrowRight className="ml-2 w-5 h-5" />
           </Button>
         </div>
       </div>
