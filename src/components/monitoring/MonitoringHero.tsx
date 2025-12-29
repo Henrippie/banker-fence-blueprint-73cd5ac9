@@ -1,35 +1,8 @@
-import { ArrowRight, Shield, Phone, Clock, Eye, CheckCircle } from "lucide-react";
+import { ArrowRight, Shield, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { useState } from "react";
-import OptimizedImage from "@/components/OptimizedImage";
 import bankerLogo from "@/assets/banker-logo.png";
 
 const MonitoringHero = () => {
-  const [phone, setPhone] = useState("");
-
-  const formatPhone = (value: string) => {
-    const numbers = value.replace(/\D/g, "");
-    if (numbers.length <= 2) return `(${numbers}`;
-    if (numbers.length <= 7) return `(${numbers.slice(0, 2)}) ${numbers.slice(2)}`;
-    return `(${numbers.slice(0, 2)}) ${numbers.slice(2, 7)}-${numbers.slice(7, 11)}`;
-  };
-
-  const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const formatted = formatPhone(e.target.value);
-    if (formatted.replace(/\D/g, "").length <= 11) {
-      setPhone(formatted);
-    }
-  };
-
-  const handleSubmit = () => {
-    const phoneNumber = phone.replace(/\D/g, "");
-    if (phoneNumber.length >= 10) {
-      const message = `Olá! Gostaria de solicitar um orçamento para sistema de monitoramento 24h. Meu telefone: ${phone}`;
-      window.open(`https://wa.me/5511999999999?text=${encodeURIComponent(message)}`, '_blank');
-    }
-  };
-
   const scrollToForm = () => {
     document.getElementById('form-section')?.scrollIntoView({
       behavior: 'smooth'
@@ -38,145 +11,91 @@ const MonitoringHero = () => {
 
   return (
     <header className="relative overflow-hidden bg-gradient-to-br from-primary via-primary to-accent min-h-screen flex items-center">
-      {/* Background Image Overlay */}
-      <div className="absolute inset-0">
-        <div 
-          className="absolute inset-0 bg-cover bg-center opacity-30"
-          style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')"
-          }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/95 to-primary/80" />
+      <div className="absolute inset-0 opacity-10" aria-hidden="true">
+        <div className="absolute top-20 left-10 w-72 h-72 bg-secondary rounded-full blur-[120px]" />
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent rounded-full blur-[120px]" />
       </div>
       
-      {/* Animated Elements */}
-      <div className="absolute inset-0 opacity-20" aria-hidden="true">
-        <div className="absolute top-20 left-10 w-96 h-96 bg-secondary rounded-full blur-[120px] animate-pulse" />
-        <div className="absolute bottom-20 right-10 w-[500px] h-[500px] bg-accent rounded-full blur-[140px] animate-pulse" style={{ animationDelay: '1s' }} />
-      </div>
-      
-      {/* Grid Pattern */}
-      <div className="absolute inset-0 opacity-5" style={{
-        backgroundImage: 'linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px)',
-        backgroundSize: '50px 50px'
-      }} />
-
       <div className="container-section section-spacing relative z-10">
-        <div className="grid lg:grid-cols-5 gap-12 items-center">
-          {/* Left Content - 3 columns */}
-          <div className="lg:col-span-3 text-primary-foreground animate-fade-in">
-            <OptimizedImage 
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          <div className="text-primary-foreground animate-fade-in text-center lg:text-left">
+            <img 
               src={bankerLogo} 
-              alt="Banker Sistemas - Monitoramento 24h" 
-              className="h-14 md:h-20 mb-8 object-contain drop-shadow-2xl" 
-              priority={true}
-              width={180}
-              height={80}
+              alt="Banker Sistemas - Monitoramento 24 Horas" 
+              className="h-10 md:h-20 mb-6 mx-auto lg:mx-0 object-contain"
+              loading="eager"
             />
-
-            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 leading-tight">
-              Monitoramento
-              <span className="block mt-2 gradient-text bg-gradient-to-r from-secondary via-secondary to-accent bg-clip-text text-transparent">
-                24 Horas
-              </span>
-            </h1>
-
-            <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-destructive/90 backdrop-blur-sm border border-destructive mb-6">
-              <span className="text-lg md:text-xl font-bold text-destructive-foreground">
-                Proteção Dia e Noite
-              </span>
+            
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/20 backdrop-blur-sm border border-secondary/30 mb-6">
+              <Shield className="w-4 h-4 text-secondary" />
+              <span className="text-sm font-medium text-secondary">Proteção 24 Horas</span>
             </div>
-
-            <p className="text-lg md:text-xl mb-8 text-primary-foreground/90 leading-relaxed max-w-2xl">
-              O serviço de Monitoramento 24hs é um complemento vital ao sistema de segurança, onde nossa empresa, por meio de equipes altamente treinadas, presta assessoria dia e noite para manter a segurança de sua <strong>residência</strong> ou <strong>empresa</strong>.
+            
+            <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 leading-tight">
+              Monitoramento de Alarme <span className="text-secondary">24 Horas por Dia</span>
+            </h1>
+            
+            <p className="text-lg md:text-xl mb-8 text-primary-foreground/90 max-w-xl mx-auto lg:mx-0">
+              Equipes altamente treinadas prestam assessoria dia e noite para manter a segurança de sua residência ou empresa, com contato imediato com as autoridades.
             </p>
 
-            {/* Trust badges */}
-            <div className="flex flex-wrap gap-6 mb-8">
-              <div className="flex items-center gap-2 text-primary-foreground/90">
-                <Shield className="w-5 h-5 text-secondary" />
-                <span className="text-sm font-medium">Central 24/7</span>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+              <div className="flex items-center gap-3 text-primary-foreground/90">
+                <CheckCircle className="w-5 h-5 text-secondary flex-shrink-0" />
+                <span className="text-sm">Central 24/7</span>
               </div>
-              <div className="flex items-center gap-2 text-primary-foreground/90">
-                <Clock className="w-5 h-5 text-secondary" />
-                <span className="text-sm font-medium">Apoio Móvel</span>
+              <div className="flex items-center gap-3 text-primary-foreground/90">
+                <CheckCircle className="w-5 h-5 text-secondary flex-shrink-0" />
+                <span className="text-sm">Apoio Móvel</span>
               </div>
-              <div className="flex items-center gap-2 text-primary-foreground/90">
-                <Eye className="w-5 h-5 text-secondary" />
-                <span className="text-sm font-medium">Backup GPRS</span>
+              <div className="flex items-center gap-3 text-primary-foreground/90">
+                <CheckCircle className="w-5 h-5 text-secondary flex-shrink-0" />
+                <span className="text-sm">Backup GPRS</span>
+              </div>
+              <div className="flex items-center gap-3 text-primary-foreground/90">
+                <CheckCircle className="w-5 h-5 text-secondary flex-shrink-0" />
+                <span className="text-sm">Resposta Imediata</span>
               </div>
             </div>
-
+            
             <Button 
               size="lg" 
-              onClick={scrollToForm} 
-              className="bg-secondary text-secondary-foreground hover:bg-secondary/90 shadow-[0_12px_32px_rgba(244,197,66,0.4)] text-base md:text-lg px-10 md:px-12 py-7 md:py-8 transition-all duration-300 hover:scale-105 lg:hidden w-full sm:w-auto group"
+              onClick={scrollToForm}
+              className="bg-secondary text-secondary-foreground hover:bg-secondary/90 shadow-button text-base md:text-lg px-8 md:px-10 py-6 md:py-7 transition-all duration-300 hover:scale-105 active:scale-95 touch-manipulation w-full sm:w-auto"
             >
-              Solicitar Orçamento
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              Quero meu orçamento gratuito
+              <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
           </div>
-
-          {/* Right Form Card - 2 columns */}
-          <div className="lg:col-span-2">
-            <div className="glass-card rounded-3xl p-8 md:p-10 shadow-2xl">
-              <div className="text-center mb-6">
-                <h2 className="text-xl md:text-2xl font-bold text-foreground mb-2">
-                  CALCULE o orçamento
-                </h2>
-                <p className="text-muted-foreground text-sm">
-                  do Sistema de Monitoramento
-                </p>
-              </div>
-
-              <Button 
-                size="lg" 
-                onClick={scrollToForm}
-                className="w-full bg-destructive hover:bg-destructive/90 text-destructive-foreground text-lg py-7 mb-6 group"
-              >
-                SOLICITAR AGORA
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-
-              <div className="relative my-6">
-                <div className="absolute inset-0 flex items-center">
-                  <div className="w-full border-t border-border" />
+          
+          <div className="relative animate-slide-in">
+            <div className="absolute inset-0 bg-secondary/20 rounded-3xl blur-3xl" aria-hidden="true" />
+            
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border border-white/20 p-6 md:p-8">
+              {/* Stats Grid */}
+              <div className="grid grid-cols-2 gap-4 mb-6">
+                <div className="text-center p-6 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/10">
+                  <div className="text-3xl md:text-4xl font-bold text-secondary">24/7</div>
+                  <div className="text-sm text-primary-foreground/70 mt-1">Monitoramento</div>
                 </div>
-                <div className="relative flex justify-center text-sm">
-                  <span className="bg-card px-4 text-muted-foreground">ou ligamos para você</span>
+                <div className="text-center p-6 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/10">
+                  <div className="text-3xl md:text-4xl font-bold text-secondary">&lt;60s</div>
+                  <div className="text-sm text-primary-foreground/70 mt-1">Tempo de Resposta</div>
+                </div>
+                <div className="text-center p-6 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/10">
+                  <div className="text-3xl md:text-4xl font-bold text-secondary">1500+</div>
+                  <div className="text-sm text-primary-foreground/70 mt-1">Imóveis Protegidos</div>
+                </div>
+                <div className="text-center p-6 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/10">
+                  <div className="text-3xl md:text-4xl font-bold text-secondary">100%</div>
+                  <div className="text-sm text-primary-foreground/70 mt-1">Satisfação</div>
                 </div>
               </div>
 
-              <div className="flex gap-2 mb-4">
-                <Input
-                  type="tel"
-                  placeholder="(11) 99999-9999"
-                  value={phone}
-                  onChange={handlePhoneChange}
-                  className="flex-1 h-12 text-base"
-                />
-                <Button 
-                  onClick={handleSubmit}
-                  className="bg-secondary text-secondary-foreground hover:bg-secondary/90 h-12 px-6"
-                >
-                  Ligaremos já!
-                  <ArrowRight className="ml-1 w-4 h-4" />
-                </Button>
-              </div>
-
-              <p className="text-xs text-muted-foreground text-center mb-6">
-                Ao clicar você aceita nossa Política de Privacidade
-              </p>
-
-              <div className="border-t border-border pt-6">
-                <p className="text-sm text-muted-foreground text-center mb-2">OU LIGUE PARA NÓS</p>
-                <a 
-                  href="tel:08001234567" 
-                  className="flex items-center justify-center gap-2 text-2xl font-bold text-primary hover:text-accent transition-colors"
-                >
-                  <Phone className="w-6 h-6" />
-                  0800 123 4567
-                </a>
+              {/* Live Status */}
+              <div className="flex items-center justify-center gap-2 px-4 py-3 rounded-full bg-green-500/20 backdrop-blur-sm border border-green-500/30">
+                <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+                <span className="text-sm font-medium text-green-400">Central Operando 24h</span>
               </div>
             </div>
           </div>
