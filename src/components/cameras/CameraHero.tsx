@@ -33,7 +33,7 @@ const CameraHero = () => {
             <OptimizedImage 
               src={bankerLogo} 
               alt="Banker Sistemas - Segurança Eletrônica - Instalação de Câmeras CFTV" 
-              className="h-14 md:h-20 mb-8 mx-auto lg:mx-0 object-contain drop-shadow-2xl" 
+              className="h-10 md:h-20 mb-6 mx-auto lg:mx-0 object-contain" 
               priority={true}
               width={180}
               height={80}
