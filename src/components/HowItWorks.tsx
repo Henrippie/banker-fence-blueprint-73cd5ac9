@@ -2,7 +2,7 @@ import { Shield, Zap, Radar } from "lucide-react";
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 import cercaEletrica1 from "@/assets/cerca-eletrica-1.png";
 import choqueRepelente from "@/assets/choque-repelente.jpeg";
-import carroBanker from "@/assets/carro-banker.png";
+import centralMonitoramento from "@/assets/central-de-monitoramento-integrada.jpg";
 
 const steps = [
   {
