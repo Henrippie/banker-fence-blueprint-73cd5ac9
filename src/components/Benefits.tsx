@@ -14,7 +14,7 @@ const benefits = [
     icon: Shield,
     title: "Tecnologia confiável",
     description: "Os melhores sistemas modernos do mercado com alta durabilidade.",
-    image: "https://images.unsplash.com/photo-1558002038-1055907df827?q=80&w=600"
+    image: tecnicoBankerSensor
   },
   {
     icon: Bell,
