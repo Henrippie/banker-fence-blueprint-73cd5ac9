@@ -30,7 +30,7 @@ const Hero = () => {
             </h1>
             
             <p className="text-lg md:text-xl mb-8 text-primary-foreground/90 max-w-xl mx-auto lg:mx-0">
-              Segurança que assusta invasores antes mesmo de entrar no seu terreno com instalação rápida e suporte especializado completo.
+              Segurança que assusta invasores antes mesmo de entrar no seu terreno com instalação rápida e suporte especializado completo. Não seja o alvo mais facil da sua rua!
             </p>
             
             <Button 
