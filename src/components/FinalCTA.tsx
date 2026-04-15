@@ -42,7 +42,7 @@ const FinalCTA = () => {
             onClick={scrollToForm}
             className="bg-secondary text-secondary-foreground hover:bg-secondary/90 shadow-button text-lg px-12 py-7 transition-all duration-300 hover:scale-105"
           >
-            Solicitar orçamento gratuito agora
+            Fale com um atendente agora mesmo
             <ArrowRight className="ml-2 w-5 h-5" />
           </Button>
         </div>

@@ -58,7 +58,7 @@ const MonitoringCTA = () => {
               onClick={scrollToForm}
               className="bg-secondary text-secondary-foreground hover:bg-secondary/90 shadow-button text-base md:text-lg px-8 md:px-10 py-6 md:py-7 transition-all duration-300 hover:scale-105 active:scale-95 touch-manipulation w-full sm:w-auto"
             >
-              Solicitar Orçamento Agora
+              Fale com um atendente agora mesmo
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
           </div>
