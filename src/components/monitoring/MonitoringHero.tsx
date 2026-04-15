@@ -1,6 +1,7 @@
 import { ArrowRight, Shield, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import bankerLogo from "@/assets/banker-logo.png";
+import carroBanker from "@/assets/carro-banker.png";
 
 const MonitoringHero = () => {
   const scrollToForm = () => {
@@ -71,32 +72,32 @@ const MonitoringHero = () => {
           <div className="relative animate-slide-in">
             <div className="absolute inset-0 bg-secondary/20 rounded-3xl blur-3xl" aria-hidden="true" />
             
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border border-white/20 p-6 md:p-8">
-              {/* Stats Grid */}
-              <div className="grid grid-cols-2 gap-4 mb-6">
-                <div className="text-center p-6 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/10">
-                  <div className="text-3xl md:text-4xl font-bold text-secondary">24/7</div>
-                  <div className="text-sm text-primary-foreground/70 mt-1">Monitoramento</div>
-                </div>
-                <div className="text-center p-6 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/10">
-                  <div className="text-3xl md:text-4xl font-bold text-secondary">&lt;60s</div>
-                  <div className="text-sm text-primary-foreground/70 mt-1">Tempo de Resposta</div>
-                </div>
-                <div className="text-center p-6 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/10">
-                  <div className="text-3xl md:text-4xl font-bold text-secondary">1500+</div>
-                  <div className="text-sm text-primary-foreground/70 mt-1">Imóveis Protegidos</div>
-                </div>
-                <div className="text-center p-6 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/10">
-                  <div className="text-3xl md:text-4xl font-bold text-secondary">100%</div>
-                  <div className="text-sm text-primary-foreground/70 mt-1">Satisfação</div>
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+              <img 
+                src={carroBanker} 
+                alt="Viatura Banker Sistemas - Monitoramento 24h" 
+                className="w-full h-auto rounded-3xl object-cover"
+              />
+              
+              {/* Stats overlay */}
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary/95 to-transparent p-6">
+                <div className="grid grid-cols-2 gap-3">
+                  <div className="text-center p-3 rounded-xl bg-white/10 backdrop-blur-sm border border-white/10">
+                    <div className="text-2xl md:text-3xl font-bold text-secondary">24/7</div>
+                    <div className="text-xs text-primary-foreground/70">Monitoramento</div>
+                  </div>
+                  <div className="text-center p-3 rounded-xl bg-white/10 backdrop-blur-sm border border-white/10">
+                    <div className="text-2xl md:text-3xl font-bold text-secondary">&lt;60s</div>
+                    <div className="text-xs text-primary-foreground/70">Tempo de Resposta</div>
+                  </div>
                 </div>
               </div>
+            </div>
 
-              {/* Live Status */}
-              <div className="flex items-center justify-center gap-2 px-4 py-3 rounded-full bg-green-500/20 backdrop-blur-sm border border-green-500/30">
-                <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-                <span className="text-sm font-medium text-green-400">Central Operando 24h</span>
-              </div>
+            {/* Live Status */}
+            <div className="flex items-center justify-center gap-2 px-4 py-3 rounded-full bg-green-500/20 backdrop-blur-sm border border-green-500/30 mt-4">
+              <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+              <span className="text-sm font-medium text-green-400">Central Operando 24h</span>
             </div>
           </div>
         </div>
