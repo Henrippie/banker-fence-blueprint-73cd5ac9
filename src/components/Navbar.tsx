@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import bankerLogo from "@/assets/banker-logo.png";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -46,9 +47,16 @@ const Navbar = () => {
     >
       <div className="glass-morphism-dark backdrop-blur-xl border-b border-white/10 shadow-xl">
         <div className="container-section">
-          <div className="flex items-center justify-center md:justify-between h-16 md:h-20">
+          <div className="flex items-center justify-between h-16 md:h-20">
+            {/* Logo */}
+            <img 
+              src={bankerLogo} 
+              alt="Banker Sistemas" 
+              className="h-8 md:h-10 object-contain"
+            />
+
             {/* Desktop Menu */}
-            <div className="hidden md:flex items-center gap-6 lg:gap-8 mx-auto">
+            <div className="hidden md:flex items-center gap-6 lg:gap-8">
               {navItems.map((item) => (
                 <button
                   key={item.id}
