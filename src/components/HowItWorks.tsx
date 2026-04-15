@@ -16,7 +16,7 @@ const steps = [
     icon: Zap,
     title: "Choque repelente e seguro",
     number: "02",
-    description: "Voltagem controlada que inibe a invasão sem oferecer risco grave às pessoas ou animais seguindo os parametros do inmetro.",
+    description: "Voltagem controlada que inibe a invasão sem oferecer risco grave às pessoas ou animais seguindo os parâmetros de segurança exigidos pelo inmetro.",
     image: choqueRepelente
   },
   {
