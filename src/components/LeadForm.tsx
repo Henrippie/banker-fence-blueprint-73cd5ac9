@@ -274,7 +274,7 @@ const LeadForm = () => {
                   size="lg" 
                   className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/90 shadow-button transition-all duration-300 hover:scale-105 active:scale-95 touch-manipulation py-6"
                 >
-                  Quero meu diagnóstico gratuito
+                  Fale com um atendente agora mesmo
                   <Send className="ml-2 w-5 h-5" />
                 </Button>
                 

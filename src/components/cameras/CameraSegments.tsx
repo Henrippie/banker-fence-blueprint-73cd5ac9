@@ -86,7 +86,7 @@ const CameraSegments = () => {
             onClick={scrollToForm} 
             className="bg-gradient-to-r from-accent to-accent/90 text-accent-foreground hover:from-accent/90 hover:to-accent shadow-[0_12px_32px_rgba(217,88,53,0.4)] text-lg px-12 py-8 transition-all duration-300 hover:scale-105 hover:shadow-[0_16px_48px_rgba(217,88,53,0.5)] group"
           >
-            <span>Solicitar Orçamento Gratuito</span>
+            <span>Fale com um atendente agora mesmo</span>
             <svg className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
             </svg>

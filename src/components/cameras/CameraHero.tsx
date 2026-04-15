@@ -81,7 +81,7 @@ const CameraHero = () => {
               onClick={scrollToForm} 
               className="bg-secondary text-secondary-foreground hover:bg-secondary/90 shadow-[0_12px_32px_rgba(244,197,66,0.4)] text-base md:text-lg px-10 md:px-12 py-7 md:py-8 transition-all duration-300 hover:scale-105 hover:shadow-[0_16px_48px_rgba(244,197,66,0.5)] active:scale-95 touch-manipulation w-full sm:w-auto group"
             >
-              Solicitar Orçamento Gratuito
+              Fale com um atendente agora mesmo
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
           </div>

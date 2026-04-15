@@ -95,7 +95,7 @@ const Maintenance = () => {
                 </li>)}
             </ul>
             <Button onClick={scrollToForm} size="lg" className="w-full sm:w-auto shadow-button hover:scale-105 transition-transform touch-manipulation active:scale-95">
-              Solicitar Manutenção Agora
+              Fale com um atendente agora mesmo
             </Button>
           </div>
         </div>

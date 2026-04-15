@@ -70,7 +70,7 @@ const CameraFinalCTA = () => {
             onClick={scrollToForm} 
             className="bg-secondary text-secondary-foreground hover:bg-secondary/90 shadow-[0_12px_32px_rgba(244,197,66,0.5)] text-xl px-12 py-8 transition-all duration-300 hover:scale-105 hover:shadow-[0_16px_48px_rgba(244,197,66,0.6)] group"
           >
-            <span>Solicitar Orçamento Gratuito Agora</span>
+            <span>Fale com um atendente agora mesmo</span>
             <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-1 transition-transform" />
           </Button>
 
