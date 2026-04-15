@@ -112,7 +112,7 @@ const Maintenance = () => {
                 "Inspeção completa do sistema",
                 "Teste de voltagem e funcionamento",
                 "Substituição de hastes e isoladores",
-                "Atualização de centrais",
+                "Atualização de centrais e equipamentos",
                 "Reparo de fios rompidos",
                 "Limpeza e ajustes gerais",
               ].map((item, index) => (
