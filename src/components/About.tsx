@@ -2,6 +2,7 @@ import { Award, Users, Clock, Shield } from "lucide-react";
 import { useCounterAnimation } from "@/hooks/useCounterAnimation";
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 import OptimizedImage from "./OptimizedImage";
+import tecnicoBanker from "@/assets/tecnico-banker.png";
 const stats = [{
   icon: Users,
   value: 1500,
