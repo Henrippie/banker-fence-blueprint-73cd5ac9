@@ -1,7 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
 import bankerLogo from "@/assets/banker-logo.png";
-import cercaEletrica2 from "@/assets/cerca-eletrica-2.png";
+import heroImage from "@/assets/hero-image.jpg";
 
 const Hero = () => {
   const scrollToForm = () => {
@@ -46,7 +46,7 @@ const Hero = () => {
           <div className="relative animate-slide-in">
             <div className="absolute inset-0 bg-secondary/20 rounded-3xl blur-3xl" aria-hidden="true" />
             <img
-              src={cercaEletrica2}
+              src={heroImage}
               alt="Cerca elétrica profissional instalada em muro comercial - proteção e segurança"
               className="relative rounded-3xl shadow-2xl w-full h-auto"
             />
