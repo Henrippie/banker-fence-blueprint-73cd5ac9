@@ -12,7 +12,7 @@ const formSchema = z.object({
   phone: z.string().regex(/^\(\d{2}\) \d{5}-\d{4}$/, "Telefone inválido. Use o formato (XX) XXXXX-XXXX"),
   email: z.string().trim().email("E-mail inválido").max(255, "E-mail muito longo"),
   cep: z.string().regex(/^\d{5}-\d{3}$/, "CEP inválido. Use o formato XXXXX-XXX"),
-  message: z.string().max(1000, "Mensagem muito longa").optional()
+  message: z.string().max(1000, "Mensagem muito longa").optional(),
 });
 
 const LeadForm = () => {
@@ -21,14 +21,14 @@ const LeadForm = () => {
     phone: "",
     email: "",
     cep: "",
-    message: ""
+    message: "",
   });
-  
+
   const [errors, setErrors] = useState<Record<string, string>>({});
 
   // Máscara para telefone: (XX) XXXXX-XXXX
   const formatPhone = (value: string) => {
-    const numbers = value.replace(/\D/g, '');
+    const numbers = value.replace(/\D/g, "");
     if (numbers.length <= 2) return numbers;
     if (numbers.length <= 7) return `(${numbers.slice(0, 2)}) ${numbers.slice(2)}`;
     return `(${numbers.slice(0, 2)}) ${numbers.slice(2, 7)}-${numbers.slice(7, 11)}`;
@@ -36,7 +36,7 @@ const LeadForm = () => {
 
   // Máscara para CEP: XXXXX-XXX
   const formatCEP = (value: string) => {
-    const numbers = value.replace(/\D/g, '');
+    const numbers = value.replace(/\D/g, "");
     if (numbers.length <= 5) return numbers;
     return `${numbers.slice(0, 5)}-${numbers.slice(5, 8)}`;
   };
@@ -44,14 +44,14 @@ const LeadForm = () => {
   const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const formatted = formatPhone(e.target.value);
     setFormData({ ...formData, phone: formatted });
-    
+
     // Validação em tempo real
     try {
       formSchema.shape.phone.parse(formatted);
-      setErrors(prev => ({ ...prev, phone: "" }));
+      setErrors((prev) => ({ ...prev, phone: "" }));
     } catch (error) {
       if (error instanceof z.ZodError) {
-        setErrors(prev => ({ ...prev, phone: error.errors[0].message }));
+        setErrors((prev) => ({ ...prev, phone: error.errors[0].message }));
       }
     }
   };
@@ -59,14 +59,14 @@ const LeadForm = () => {
   const handleCEPChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const formatted = formatCEP(e.target.value);
     setFormData({ ...formData, cep: formatted });
-    
+
     // Validação em tempo real
     try {
       formSchema.shape.cep.parse(formatted);
-      setErrors(prev => ({ ...prev, cep: "" }));
+      setErrors((prev) => ({ ...prev, cep: "" }));
     } catch (error) {
       if (error instanceof z.ZodError) {
-        setErrors(prev => ({ ...prev, cep: error.errors[0].message }));
+        setErrors((prev) => ({ ...prev, cep: error.errors[0].message }));
       }
     }
   };
@@ -74,21 +74,21 @@ const LeadForm = () => {
   const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
     setFormData({ ...formData, email: value });
-    
+
     // Validação em tempo real
     try {
       formSchema.shape.email.parse(value);
-      setErrors(prev => ({ ...prev, email: "" }));
+      setErrors((prev) => ({ ...prev, email: "" }));
     } catch (error) {
       if (error instanceof z.ZodError) {
-        setErrors(prev => ({ ...prev, email: error.errors[0].message }));
+        setErrors((prev) => ({ ...prev, email: error.errors[0].message }));
       }
     }
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Validação completa com zod
     try {
       formSchema.parse(formData);
@@ -114,15 +114,15 @@ const LeadForm = () => {
     whatsappMessage += `*WhatsApp:* ${formData.phone}\n`;
     whatsappMessage += `*E-mail:* ${formData.email}\n`;
     whatsappMessage += `*CEP:* ${formData.cep}`;
-    
+
     if (formData.message) {
       whatsappMessage += `\n\n*Mensagem:*\n${formData.message}`;
     }
-    
+
     // Redirecionar para WhatsApp
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
-    window.open(url, '_blank');
-    
+    window.open(url, "_blank");
+
     // Limpar formulário
     setFormData({ name: "", phone: "", email: "", cep: "", message: "" });
     toast.success("Redirecionando para o WhatsApp...");
@@ -132,7 +132,7 @@ const LeadForm = () => {
     "Avaliação completa do seu imóvel",
     "Orçamento sem compromisso",
     "Recomendações personalizadas de proteção",
-    "Resposta em até 24 horas"
+    "Resposta em até 15 minutos",
   ];
 
   return (
@@ -141,9 +141,7 @@ const LeadForm = () => {
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-8 md:mb-12 animate-fade-in">
             <h2 className="heading-lg mb-3">Solicite um Diagnóstico Gratuito do Seu Perímetro</h2>
-            <p className="text-muted-foreground text-base md:text-lg mb-6">
-              Preencha o formulário abaixo e receba:
-            </p>
+            <p className="text-muted-foreground text-base md:text-lg mb-6">Preencha o formulário abaixo e receba:</p>
             <ul className="text-left mt-4 space-y-2 inline-block">
               <li className="flex items-center gap-2 text-muted-foreground">
                 <CheckCircle2 className="w-5 h-5 text-success" />
@@ -159,7 +157,7 @@ const LeadForm = () => {
               </li>
             </ul>
           </div>
-          
+
           <div className="grid md:grid-cols-2 gap-6 md:gap-8">
             {/* Benefits */}
             <div className="glass-card p-6 md:p-8 rounded-3xl animate-slide-in">
@@ -172,17 +170,16 @@ const LeadForm = () => {
                   </li>
                 ))}
               </ul>
-              
+
               <div className="mt-8 p-6 glass-morphism rounded-2xl">
                 <p className="text-sm text-muted-foreground leading-relaxed">
                   <strong className="text-accent block mb-1">Atendimento rápido</strong>
-                  Resposta em até 2 horas
                 </p>
               </div>
             </div>
-            
+
             {/* Form */}
-            <div className="glass-card p-6 md:p-8 rounded-3xl animate-fade-in" style={{ animationDelay: '200ms' }}>
+            <div className="glass-card p-6 md:p-8 rounded-3xl animate-fade-in" style={{ animationDelay: "200ms" }}>
               <form onSubmit={handleSubmit} className="space-y-5 md:space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium mb-2">
@@ -198,7 +195,7 @@ const LeadForm = () => {
                     className="w-full"
                   />
                 </div>
-                
+
                 <div>
                   <label htmlFor="phone" className="block text-sm font-medium mb-2">
                     WhatsApp *
@@ -211,13 +208,11 @@ const LeadForm = () => {
                     onChange={handlePhoneChange}
                     maxLength={15}
                     required
-                    className={`w-full ${errors.phone ? 'border-destructive' : ''}`}
+                    className={`w-full ${errors.phone ? "border-destructive" : ""}`}
                   />
-                  {errors.phone && (
-                    <p className="text-xs text-destructive mt-1">{errors.phone}</p>
-                  )}
+                  {errors.phone && <p className="text-xs text-destructive mt-1">{errors.phone}</p>}
                 </div>
-                
+
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium mb-2">
                     E-mail *
@@ -229,13 +224,11 @@ const LeadForm = () => {
                     value={formData.email}
                     onChange={handleEmailChange}
                     required
-                    className={`w-full ${errors.email ? 'border-destructive' : ''}`}
+                    className={`w-full ${errors.email ? "border-destructive" : ""}`}
                   />
-                  {errors.email && (
-                    <p className="text-xs text-destructive mt-1">{errors.email}</p>
-                  )}
+                  {errors.email && <p className="text-xs text-destructive mt-1">{errors.email}</p>}
                 </div>
-                
+
                 <div>
                   <label htmlFor="cep" className="block text-sm font-medium mb-2">
                     CEP *
@@ -248,13 +241,11 @@ const LeadForm = () => {
                     onChange={handleCEPChange}
                     maxLength={9}
                     required
-                    className={`w-full ${errors.cep ? 'border-destructive' : ''}`}
+                    className={`w-full ${errors.cep ? "border-destructive" : ""}`}
                   />
-                  {errors.cep && (
-                    <p className="text-xs text-destructive mt-1">{errors.cep}</p>
-                  )}
+                  {errors.cep && <p className="text-xs text-destructive mt-1">{errors.cep}</p>}
                 </div>
-                
+
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium mb-2">
                     Mensagem (opcional)
@@ -268,19 +259,17 @@ const LeadForm = () => {
                     className="w-full resize-none"
                   />
                 </div>
-                
-                <Button 
-                  type="submit" 
-                  size="lg" 
+
+                <Button
+                  type="submit"
+                  size="lg"
                   className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/90 shadow-button transition-all duration-300 hover:scale-105 active:scale-95 touch-manipulation py-6"
                 >
-                  Fale com um atendente agora mesmo
+                  Quero meu diagnóstico gratuito
                   <Send className="ml-2 w-5 h-5" />
                 </Button>
-                
-                <p className="text-xs text-muted-foreground text-center">
-                  Seus dados estão seguros conosco.
-                </p>
+
+                <p className="text-xs text-muted-foreground text-center">Seus dados estão seguros conosco.</p>
               </form>
             </div>
           </div>
