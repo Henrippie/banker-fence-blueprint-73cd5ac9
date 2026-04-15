@@ -21,7 +21,7 @@ const segments = [
     benefits: [
       "Lojas, escritórios e galpões que precisam proteger estoque e equipamentos.",
       "Empresas que desejam reduzir riscos de invasão e vandalismo.",
-      "Condomínios comerciais e prédios que querem um sistema integrado de cerca eletrica, sistema de alarmes e câmeras de segurança.",
+      "Condomínios comerciais e prédios que querem um sistema integrado de cerca elétrica, sistema de alarmes e câmeras de segurança.",
     ],
     image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800",
   },
