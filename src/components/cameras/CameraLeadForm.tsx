@@ -197,7 +197,7 @@ _Solicitação de diagnóstico gratuito de CFTV_`;
                 size="lg"
                 className="w-full bg-success text-success-foreground hover:bg-success/90 shadow-button text-lg py-7 transition-all duration-300 hover:scale-105"
               >
-                QUERO MEU DIAGNÓSTICO GRATUITO
+                Quero meu diagnóstico gratuito
               </Button>
             </form>
           </div>

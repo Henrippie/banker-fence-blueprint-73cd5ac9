@@ -10,23 +10,23 @@ const CameraFAQ = () => {
   const faqs = [
     {
       question: "A conta de luz aumenta muito?",
-      answer: "Não. O consumo de um sistema de DVR e câmeras é baixíssimo, similar ao de um roteador de internet. O impacto na conta de luz é mínimo."
+      answer: "Não. O consumo de câmeras modernas é muito baixo, equivalente a algumas lâmpadas LED. O impacto na conta é praticamente imperceptível."
     },
     {
       question: "E se faltar energia?",
-      answer: "O sistema desliga. Por isso, recomendamos a instalação de um Nobreak (bateria) que mantém a proteção por várias horas, garantindo gravação contínua mesmo durante quedas de energia."
+      answer: "O sistema pode ser configurado com nobreak ou bateria de backup, mantendo as câmeras funcionando por horas mesmo sem luz."
     },
     {
-      question: "E se alguém cortar os fios?",
-      answer: "Um alarme pode ser disparado quando há perda de sinal. Além disso, em projetos corporativos, usamos sistemas que alertam imediatamente sobre a perda de sinal de uma câmera específica, permitindo ação rápida."
+      question: "Qual a diferença entre câmera IP e câmera analógica?",
+      answer: "As câmeras IP transmitem imagem digital com maior resolução e permitem acesso remoto mais fácil. As analógicas são mais simples e funcionam bem em instalações básicas. Indicamos o melhor tipo após avaliar sua necessidade."
     },
     {
       question: "Onde as imagens ficam gravadas?",
-      answer: "Ficam em um gravador digital (DVR) instalado em local seguro no seu imóvel. Você pode acessá-las localmente ou pela internet através do celular, tablet ou computador, sem pagar mensalidade."
+      answer: "As gravações ficam armazenadas em um DVR/NVR local na sua propriedade. Também é possível configurar backup em nuvem para maior segurança."
     },
     {
       question: "Consigo ver as câmeras de qualquer lugar?",
-      answer: "Sim! Com acesso remoto via aplicativo, você monitora seu imóvel de qualquer lugar do mundo através do smartphone, tablet ou notebook. Basta ter conexão com a internet."
+      answer: "Sim! Com acesso remoto via aplicativo para Android e iOS, você monitora em tempo real de onde estiver, seja pelo celular ou computador."
     },
     {
       question: "As câmeras gravam à noite?",

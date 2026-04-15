@@ -5,32 +5,32 @@ const CameraBenefits = () => {
     {
       icon: <Clock className="w-10 h-10" />,
       title: "Instalação Rápida",
-      description: "Técnicos especializados garantem instalação profissional em até 24 horas."
+      description: "Concluída em até 1 dia útil, sem obra e sem transtorno."
     },
     {
       icon: <Shield className="w-10 h-10" />,
       title: "Tecnologia Confiável",
-      description: "Equipamentos certificados e líderes de mercado para máxima durabilidade."
+      description: "Câmeras HD com visão noturna e acesso remoto via aplicativo."
     },
     {
       icon: <Zap className="w-10 h-10" />,
       title: "Backup de Energia",
-      description: "Nobreaks mantêm o sistema funcionando mesmo durante quedas de energia."
+      description: "Sistema continua funcionando mesmo em caso de queda de energia."
     },
     {
       icon: <Headphones className="w-10 h-10" />,
       title: "Suporte Dedicado",
-      description: "Atendimento personalizado antes, durante e depois da instalação."
+      description: "Equipe técnica disponível para atender sempre que precisar."
     },
     {
       icon: <Award className="w-10 h-10" />,
       title: "Garantia Total",
-      description: "Proteção completa com garantia dos equipamentos e serviços."
+      description: "1 ano de garantia em equipamentos e mão de obra."
     },
     {
       icon: <CheckCircle className="w-10 h-10" />,
       title: "Acesso Remoto",
-      description: "Monitore de qualquer lugar via aplicativo no smartphone."
+      description: "Monitore sua propriedade em tempo real pelo celular, de qualquer lugar."
     }
   ];
 
@@ -73,19 +73,19 @@ const CameraBenefits = () => {
         {/* Trust Indicators */}
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
           <div className="p-6 rounded-2xl bg-white/50 backdrop-blur-sm border border-white/20">
-            <div className="text-3xl font-bold text-accent mb-2">15+</div>
+            <div className="text-3xl font-bold text-accent mb-2">+15</div>
             <div className="text-sm text-muted-foreground">Anos de Experiência</div>
           </div>
           <div className="p-6 rounded-2xl bg-white/50 backdrop-blur-sm border border-white/20">
-            <div className="text-3xl font-bold text-accent mb-2">2000+</div>
+            <div className="text-3xl font-bold text-accent mb-2">+1.500</div>
             <div className="text-sm text-muted-foreground">Clientes Satisfeitos</div>
           </div>
           <div className="p-6 rounded-2xl bg-white/50 backdrop-blur-sm border border-white/20">
-            <div className="text-3xl font-bold text-accent mb-2">100%</div>
+            <div className="text-3xl font-bold text-accent mb-2">1 ano</div>
             <div className="text-sm text-muted-foreground">Garantia</div>
           </div>
           <div className="p-6 rounded-2xl bg-white/50 backdrop-blur-sm border border-white/20">
-            <div className="text-3xl font-bold text-accent mb-2">24/7</div>
+            <div className="text-3xl font-bold text-accent mb-2">24h</div>
             <div className="text-sm text-muted-foreground">Suporte</div>
           </div>
         </div>

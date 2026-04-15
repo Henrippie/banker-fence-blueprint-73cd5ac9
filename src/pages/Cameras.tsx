@@ -25,7 +25,7 @@ const Cameras = () => {
   return (
     <>
       <Helmet>
-        <title>Câmeras de Segurança CFTV | Instalação Profissional em SP | Bankers Sistemas</title>
+        <title>Câmeras de Segurança CFTV | Instalação Profissional em SP | Banker Sistemas</title>
         <meta name="description" content="Instalação profissional de câmeras de segurança CFTV com acesso remoto via celular. Monitoramento 24h, imagens HD, visão noturna e suporte especializado. Mais de 1.500 imóveis protegidos em São Paulo." />
         <meta name="keywords" content="câmeras de segurança, CFTV, instalação de câmeras SP, monitoramento 24h, vigilância eletrônica, câmeras com acesso remoto, visão noturna, segurança residencial, segurança empresarial" />
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
@@ -40,7 +40,7 @@ const Cameras = () => {
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
         
         {/* Open Graph */}
-        <meta property="og:title" content="Câmeras de Segurança CFTV | Instalação Profissional | Bankers Sistemas" />
+        <meta property="og:title" content="Câmeras de Segurança CFTV | Instalação Profissional | Banker Sistemas" />
         <meta property="og:description" content="Instalação profissional de câmeras de segurança CFTV com acesso remoto. Monitoramento 24h, visão noturna e suporte especializado em SP." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://bankerssistemas.com.br/cameras" />
@@ -52,7 +52,7 @@ const Cameras = () => {
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Câmeras de Segurança CFTV | Bankers Sistemas" />
+        <meta name="twitter:title" content="Câmeras de Segurança CFTV | Banker Sistemas" />
         <meta name="twitter:description" content="Instalação profissional de câmeras CFTV com monitoramento 24h e acesso remoto." />
         <meta name="twitter:image" content="https://bankerssistemas.com.br/src/assets/banker-logo.png" />
         

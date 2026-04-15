@@ -39,7 +39,7 @@ const CameraFinalCTA = () => {
           
           {/* Description */}
           <p className="text-xl text-primary-foreground/90 mb-12 leading-relaxed max-w-3xl mx-auto">
-            Trabalhamos com equipamentos certificados e produtos líderes de mercado, garantindo um sistema de câmeras <strong>confiável</strong> e com <strong>alta durabilidade</strong>.
+            Trabalhamos com equipamentos certificados e produtos líderes de mercado, garantindo um sistema de câmeras confiável, com alta durabilidade e performance comprovada.
           </p>
           
           {/* Benefits Grid */}
