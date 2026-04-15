@@ -18,7 +18,7 @@ const benefits = [
   {
     icon: Bell,
     title: "Monitoramento e aviso imediato a policia",
-    description: "Em caso de corte ou violação.",
+    description: "Em caso de corte ou violação, nosso sistema conta com monitoramento 24 horas e alerta imediato à nossa equipe e à polícia",
     image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=600"
   },
   {
