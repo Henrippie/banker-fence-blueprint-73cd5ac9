@@ -78,7 +78,7 @@ const Segments = () => {
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="heading-lg mb-3">Para quem é a Cerca Elétrica da Banker Sistemas</h2>
           <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
-            Se você quer dormir tranquilo sabendo que seu imóvel está protegido seja sua casa ou seu negócio  a cerca elétrica profissional é para você.
+            Seja sua casa ou seu negócio  a cerca elétrica profissional é para você.
           </p>
         </div>
         
