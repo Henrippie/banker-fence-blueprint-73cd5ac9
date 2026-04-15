@@ -13,7 +13,7 @@ const benefits = [
   {
     icon: Shield,
     title: "Tecnologia confiável",
-    description: "As tecnologias mais modernas do mercado que contam com alta durabilidade.",
+    description: "Tecnologia confiável",
     image: tecnicoBankerSensor
   },
   {
