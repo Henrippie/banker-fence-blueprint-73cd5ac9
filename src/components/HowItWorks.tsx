@@ -1,6 +1,7 @@
 import { Shield, Zap, Radar } from "lucide-react";
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 import cercaEletrica1 from "@/assets/cerca-eletrica-1.png";
+import choqueRepelente from "@/assets/choque-repelente.jpeg";
 
 const steps = [
   {
@@ -15,7 +16,7 @@ const steps = [
     title: "Choque repelente e seguro",
     number: "02",
     description: "Voltagem controlada que inibe a invasão sem oferecer risco grave às pessoas ou animais seguindo as regras do imetro.",
-    image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=800"
+    image: choqueRepelente
   },
   {
     icon: Radar,
