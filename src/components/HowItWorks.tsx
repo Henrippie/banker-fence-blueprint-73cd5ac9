@@ -60,6 +60,14 @@ const StepCard = ({ step, index }: { step: typeof steps[0], index: number }) => 
                   </div>
                   <h3 className="text-xl font-semibold mb-4">{step.title}</h3>
                   <p className="text-primary-foreground/80 leading-relaxed text-sm">{step.description}</p>
+                  {'link' in step && step.link && (
+                    <Link 
+                      to={step.link} 
+                      className="inline-block mt-4 px-6 py-2 bg-secondary text-secondary-foreground font-semibold rounded-xl hover:bg-secondary/90 transition-colors text-sm"
+                    >
+                      Saiba mais
+                    </Link>
+                  )}
                 </div>
     </div>
   );
