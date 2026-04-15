@@ -71,7 +71,7 @@ const Benefits = () => {
         <div className="text-center mb-12 md:mb-16 animate-fade-in px-4">
           <h2 className="heading-lg mb-3">Por que escolher a Banker Sistemas?</h2>
           <p className="text-muted-foreground text-base md:text-lg">
-            Mais de 1.500 imóveis protegidos em São Paulo e região confiam na Banker para garantir segurança real, a Banker tambem é monitoramento 24h.
+            Mais de 1.500 imóveis protegidos em São Paulo e região confiam na Banker para garantir segurança real. A Banker tambem é monitoramento 24h, equipes especializadas à disposição de dia e de noite, todos os dias do ano.
           </p>
         </div>
         
