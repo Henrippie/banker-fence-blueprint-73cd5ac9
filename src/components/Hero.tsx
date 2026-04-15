@@ -26,7 +26,7 @@ const Hero = () => {
             />
             
             <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 leading-tight">
-              Proteja sua casa ou empresa com <span className="text-secondary">tecnologia de Cerca Elétrica Profissional</span>
+              Sua casa está realmente protegida ou é só questão de tempo antes de haver mais uma <span className="text-secondary">invasão?</span>
             </h1>
             
             <p className="text-lg md:text-xl mb-8 text-primary-foreground/90 max-w-xl mx-auto lg:mx-0">
