@@ -1,6 +1,7 @@
 import { Shield, Zap, Radar } from "lucide-react";
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 import cercaEletrica1 from "@/assets/cerca-eletrica-1.png";
+import choqueRepelente from "@/assets/choque-repelente.jpeg";
 
 const steps = [
   {
