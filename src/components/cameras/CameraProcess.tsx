@@ -6,25 +6,25 @@ const CameraProcess = () => {
       number: "1",
       icon: <Search className="w-10 h-10" />,
       title: "Diagnóstico",
-      description: "Análise completa dos pontos vulneráveis e mapeamento de ângulos estratégicos."
+      description: "Avaliamos os pontos vulneráveis do seu imóvel gratuitamente."
     },
     {
       number: "2",
       icon: <FileText className="w-10 h-10" />,
-      title: "Proposta",
-      description: "Orçamento detalhado e transparente com as melhores soluções para seu caso."
+      title: "Proposta sob medida",
+      description: "Você recebe um orçamento claro com os equipamentos ideais para seu espaço."
     },
     {
       number: "3",
       icon: <Wrench className="w-10 h-10" />,
-      title: "Instalação",
-      description: "Equipe técnica qualificada realiza instalação profissional e certificada."
+      title: "Instalação profissional",
+      description: "Nossa equipe instala tudo com organização, sem obra pesada."
     },
     {
       number: "4",
       icon: <HeadphonesIcon className="w-10 h-10" />,
-      title: "Suporte",
-      description: "Acompanhamento contínuo e garantia de funcionamento do acesso remoto."
+      title: "Suporte contínuo",
+      description: "Manutenção, ajustes e assistência sempre que precisar."
     }
   ];
 
