@@ -19,7 +19,7 @@ const steps = [
   },
   {
     icon: Radar,
-    title: "Monitoramento automático",
+    title: "Monitoramento 24 horas banker",
     number: "03",
     description: "Qualquer tentativa de corte ou desligamento aciona o alarme e notifica o responsável.",
     image: "https://images.unsplash.com/photo-1558002038-1055907df827?q=80&w=800"
