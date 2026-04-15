@@ -32,7 +32,7 @@ const MonitoringHero = () => {
             </div>
             
             <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 leading-tight">
-              Monitoramento de Alarme <span className="text-secondary">24 Horas por Dia</span>
+               Monitoramento de Alarme 24h <span className="text-secondary">24 Horas por Dia</span>
             </h1>
             
             <p className="text-lg md:text-xl mb-8 text-primary-foreground/90 max-w-xl mx-auto lg:mx-0">

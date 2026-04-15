@@ -40,7 +40,7 @@ const MonitoringSegments = () => {
         <div className="text-center mb-16">
           <h2 className="heading-xl text-foreground mb-4">
             Monitoramento para
-            <span className="block gradient-text">todos os segmentos</span>
+            <span className="block gradient-text">todo tipo de imóvel</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             Nossa empresa presta assessoria dia e noite para manter a segurança de sua residência ou empresa, 

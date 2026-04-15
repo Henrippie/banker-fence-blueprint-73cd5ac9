@@ -50,7 +50,7 @@ const MonitoringFeatures = () => {
         <div className="text-center mb-16">
           <h2 className="heading-xl text-foreground mb-4">
             Serviços inclusos no
-            <span className="block gradient-text">Monitoramento 24hs</span>
+            <span className="block gradient-text">seu plano de monitoramento</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
             Por meio de equipes altamente treinadas, prestamos assessoria dia e noite para manter a segurança 

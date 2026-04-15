@@ -29,7 +29,7 @@ const Monitoramento = () => {
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         <meta name="author" content="Banker Sistemas" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-        <link rel="canonical" href="https://bankerssistemas.com.br/monitoramento" />
+        <link rel="canonical" href="https://bankersistemas.com.br/monitoramento" />
         
         {/* Preload critical assets */}
         <link rel="preload" as="image" href="/src/assets/banker-logo.png" fetchPriority="high" />
@@ -40,8 +40,8 @@ const Monitoramento = () => {
         <meta property="og:title" content="Sistema de Alarme com Monitoramento 24h | Banker Sistemas" />
         <meta property="og:description" content="Sistema de alarme com videomonitoramento 24h. Central profissional com resposta em 60 segundos. Até 40% de desconto!" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://bankerssistemas.com.br/monitoramento" />
-        <meta property="og:image" content="https://bankerssistemas.com.br/src/assets/banker-logo.png" />
+        <meta property="og:url" content="https://bankersistemas.com.br/monitoramento" />
+        <meta property="og:image" content="https://bankersistemas.com.br/src/assets/banker-logo.png" />
         <meta property="og:locale" content="pt_BR" />
         <meta property="og:site_name" content="Banker Sistemas" />
         
@@ -59,8 +59,8 @@ const Monitoramento = () => {
             "provider": {
               "@type": "LocalBusiness",
               "name": "Banker Sistemas",
-              "image": "https://bankerssistemas.com.br/src/assets/banker-logo.png",
-              "telephone": "+55-11-99999-9999",
+              "image": "https://bankersistemas.com.br/src/assets/banker-logo.png",
+              "telephone": "+55-11-2645-5553",
               "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "São Paulo",
@@ -96,13 +96,13 @@ const Monitoramento = () => {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://bankerssistemas.com.br"
+                "item": "https://bankersistemas.com.br"
               },
               {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Monitoramento 24h",
-                "item": "https://bankerssistemas.com.br/monitoramento"
+                "item": "https://bankersistemas.com.br/monitoramento"
               }
             ]
           })}
