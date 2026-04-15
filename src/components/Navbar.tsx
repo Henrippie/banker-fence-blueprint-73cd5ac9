@@ -111,6 +111,12 @@ const Navbar = () => {
               >
                 Fale Conosco
               </button>
+              <a
+                href="tel:+551126455553"
+                className="flex items-center justify-center gap-1.5 text-secondary font-semibold py-3 touch-manipulation text-base"
+              >
+                📞 Ligue Agora: (11) 2645-5553
+              </a>
             </div>
           </div>
         )}
