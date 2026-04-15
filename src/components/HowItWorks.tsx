@@ -25,7 +25,8 @@ const steps = [
     title: "Monitoramento 24 horas banker",
     number: "03",
     description: "Qualquer tentativa de corte ou desligamento aciona o alarme e notificando nossa equipe e a policia.",
-    image: centralMonitoramento
+    image: centralMonitoramento,
+    link: "/monitoramento"
   }
 ];
 
