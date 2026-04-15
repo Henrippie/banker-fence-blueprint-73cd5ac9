@@ -1,5 +1,6 @@
 import { Clock, Shield, Bell, Users } from "lucide-react";
 import OptimizedImage from "./OptimizedImage";
+import tecnicoBankerSensor from "@/assets/tecnico-banker-sensor.png";
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 
 const benefits = [
