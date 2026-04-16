@@ -40,7 +40,7 @@ const FinalCTA = () => {
           <Button 
             size="lg" 
             onClick={scrollToForm}
-            className="bg-secondary text-secondary-foreground hover:bg-secondary/90 shadow-button text-lg px-12 py-7 transition-all duration-300 hover:scale-105"
+            className="bg-secondary text-secondary-foreground hover:bg-secondary/90 shadow-button text-base sm:text-lg px-6 sm:px-12 py-5 sm:py-7 transition-all duration-300 hover:scale-105 w-full sm:w-auto"
           >
             Fale com um atendente agora mesmo
             <ArrowRight className="ml-2 w-5 h-5" />
