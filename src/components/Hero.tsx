@@ -25,7 +25,7 @@ const Hero = () => {
               loading="eager"
             />
             
-            <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 leading-tight">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 leading-tight">
               Sua casa está realmente protegida ou é só questão de tempo antes de haver mais uma <span className="text-secondary">invasão?</span>
             </h1>
             
@@ -36,7 +36,7 @@ const Hero = () => {
             <Button 
               size="lg" 
               onClick={scrollToForm}
-              className="bg-secondary text-secondary-foreground hover:bg-secondary/90 shadow-button text-base md:text-lg px-8 md:px-10 py-6 md:py-7 transition-all duration-300 hover:scale-105 active:scale-95 touch-manipulation w-full sm:w-auto"
+              className="bg-secondary text-secondary-foreground hover:bg-secondary/90 shadow-button text-sm sm:text-base md:text-lg px-6 sm:px-8 md:px-10 py-5 sm:py-6 md:py-7 transition-all duration-300 hover:scale-105 active:scale-95 touch-manipulation w-full sm:w-auto"
             >
               Fale com um atendente agora mesmo
               <ArrowRight className="ml-2 w-5 h-5" />
