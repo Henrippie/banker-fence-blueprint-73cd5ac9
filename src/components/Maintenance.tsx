@@ -94,20 +94,22 @@ const Maintenance = () => {
         </div>
 
         <div
-          className={`relative overflow-hidden rounded-2xl transition-all duration-700 delay-300 ${isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+          className={`overflow-hidden rounded-2xl transition-all duration-700 delay-300 ${isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
         >
-          <img
-            src={cercaEletrica1}
-            alt="Sistema de cerca elétrica residencial instalado em muro com isoladores brancos"
-            className="w-full h-[300px] md:h-[400px] object-cover"
-          />
-          <div
-            className="absolute inset-0 bg-gradient-to-t from-background/95 via-background/80 to-transparent"
-            aria-hidden="true"
-          />
-          <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 bg-background/50 backdrop-blur-sm">
-            <h3 className="text-2xl md:text-3xl font-bold mb-4 text-foreground">Serviços de Manutenção Incluem:</h3>
-            <ul className="grid sm:grid-cols-2 gap-3 mb-6">
+          <div className="relative">
+            <img
+              src={cercaEletrica1}
+              alt="Sistema de cerca elétrica residencial instalado em muro com isoladores brancos"
+              className="w-full h-[200px] md:h-[400px] object-cover"
+            />
+            <div
+              className="absolute inset-0 bg-gradient-to-t from-background/95 via-background/60 to-transparent"
+              aria-hidden="true"
+            />
+          </div>
+          <div className="p-4 sm:p-6 md:p-8 bg-muted/50 backdrop-blur-sm">
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4 text-foreground">Serviços de Manutenção Incluem:</h3>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3 mb-6">
               {[
                 "Inspeção completa do sistema",
                 "Teste de voltagem e funcionamento",
@@ -117,7 +119,7 @@ const Maintenance = () => {
                 "Limpeza e ajustes gerais",
               ].map((item, index) => (
                 <li key={index} className="flex items-center gap-2 text-foreground">
-                  <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
+                  <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0" />
                   <span className="text-sm md:text-base font-medium">{item}</span>
                 </li>
               ))}
