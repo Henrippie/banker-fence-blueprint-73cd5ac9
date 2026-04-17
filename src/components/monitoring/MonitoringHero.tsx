@@ -37,7 +37,7 @@ const MonitoringHero = () => {
             </h1>
             
             <p className="text-lg md:text-xl mb-8 text-primary-foreground/90 max-w-xl mx-auto lg:mx-0">
-              Equipes altamente treinadas prestam assessoria dia e noite para manter a segurança de sua residência ou empresa, com contato imediato com as autoridades.
+              Equipes altamente treinadas prestam assessoria dia e noite para manter a segurança de sua residência ou empresa, com contato imediato com a policia.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
