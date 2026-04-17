@@ -31,7 +31,7 @@ const MonitoringCTA = () => {
           <div className="text-center lg:text-left text-primary-foreground order-1 lg:order-2">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
               Proteja seu patrimônio com
-              <span className="block text-secondary">Monitoramento 24 Horas</span>
+              <span className="block text-secondary">Monitoramento 24 Horas Banker</span>
             </h2>
 
             <p className="text-lg md:text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto lg:mx-0">
