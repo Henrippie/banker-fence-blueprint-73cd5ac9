@@ -11,7 +11,7 @@ const MonitoringComparison = () => {
   const comparisons = [
     { feature: "Monitoramento 24h banker ", camera: false, alarm: true },
     { feature: "Atuação imediata (resposta em menos de 60s)", camera: false, alarm: true },
-    { feature: "Detecção antecipada antes da invasão", camera: false, alarm: true },
+    { feature: "Detecção antecipada da invasão", camera: false, alarm: true },
     { feature: "Acesso a imagens em tempo real", camera: true, alarm: true },
     { feature: "Placa de inibição/dissuasão", camera: true, alarm: true },
     { feature: "Fala/Escuta diretamente do local", camera: "opcional", alarm: true },
