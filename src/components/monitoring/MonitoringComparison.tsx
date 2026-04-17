@@ -13,7 +13,7 @@ const MonitoringComparison = () => {
     { feature: "Atuação imediata (resposta em menos de 60s)", camera: false, alarm: true },
     { feature: "Detecção antecipada da invasão", camera: false, alarm: true },
     { feature: "Acesso a imagens em tempo real", camera: true, alarm: true },
-    { feature: "Placa de inibição/dissuasão", camera: true, alarm: true },
+    { feature: "Placa de inibição/dissuasão", camera: false, alarm: true },
     { feature: "Fala/Escuta diretamente do local", camera: "opcional", alarm: true },
     { feature: "Botão SOS para emergências", camera: false, alarm: true },
     { feature: "Histórico de acesso", camera: false, alarm: true },
