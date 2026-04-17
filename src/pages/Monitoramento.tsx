@@ -35,6 +35,7 @@ const Monitoramento = () => {
         <link rel="preload" as="image" href="/src/assets/banker-logo.png" fetchPriority="high" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://wa.me" />
         
         {/* Open Graph */}
         <meta property="og:title" content="Sistema de Alarme com Monitoramento 24h | Banker Sistemas" />
