@@ -42,10 +42,10 @@ const MonitoringComparison = () => {
             {/* Header */}
             <div className="grid grid-cols-3">
               <div className="p-4 md:p-6 flex items-center justify-center border-r border-white/20 bg-white/5">
-                <span className="font-bold text-sm md:text-base text-center">Somente Câmeras</span>
+                <span className="font-semibold text-xs md:text-sm text-center text-primary-foreground/80">Características</span>
               </div>
               <div className="p-4 md:p-6 flex items-center justify-center border-r border-white/20 bg-white/5">
-                <span className="font-semibold text-xs md:text-sm text-center text-primary-foreground/80">Características</span>
+                <span className="font-bold text-sm md:text-base text-center">Somente Câmeras</span>
               </div>
               <div className="p-4 md:p-6 flex items-center justify-center bg-secondary text-secondary-foreground">
                 <span className="font-bold text-sm md:text-base text-center">Sistema Banker</span>
@@ -58,6 +58,9 @@ const MonitoringComparison = () => {
                 key={index} 
                 className={`grid grid-cols-3 ${index % 2 === 0 ? 'bg-white/5' : 'bg-transparent'} border-t border-white/10`}
               >
+                <div className="p-3 md:p-4 flex items-center justify-center text-center border-r border-white/10">
+                  <span className="text-xs md:text-sm text-primary-foreground/90">{item.feature}</span>
+                </div>
                 <div className="p-3 md:p-4 flex items-center justify-center border-r border-white/10">
                   {item.camera === true ? (
                     <div className="w-8 h-8 rounded-full bg-green-500/20 flex items-center justify-center">
@@ -70,9 +73,6 @@ const MonitoringComparison = () => {
                       <X className="w-5 h-5 text-red-400" />
                     </div>
                   )}
-                </div>
-                <div className="p-3 md:p-4 flex items-center justify-center text-center border-r border-white/10">
-                  <span className="text-xs md:text-sm text-primary-foreground/90">{item.feature}</span>
                 </div>
                 <div className="p-3 md:p-4 flex items-center justify-center bg-secondary/10">
                   <div className="w-8 h-8 rounded-full bg-green-500/20 flex items-center justify-center">
