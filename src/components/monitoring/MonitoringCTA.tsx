@@ -49,7 +49,7 @@ const MonitoringCTA = () => {
               </div>
               <div className="flex items-center gap-2 text-primary-foreground/90">
                 <CheckCircle className="w-5 h-5 text-secondary" />
-                <span>Backup GPRS</span>
+                <span>Backup de internet e energia</span>
               </div>
             </div>
 
