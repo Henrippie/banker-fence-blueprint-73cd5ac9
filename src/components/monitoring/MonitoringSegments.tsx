@@ -37,29 +37,29 @@ const MonitoringSegments = () => {
   return (
     <section className="section-spacing bg-muted/30">
       <div className="container-section">
-        <div className="text-center mb-16">
-          <h2 className="heading-xl text-foreground mb-4">
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4 leading-tight">
             Monitoramento para
             <span className="block gradient-text">todo tipo de imóvel</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground text-base md:text-lg max-w-2xl mx-auto">
             Nossa empresa presta assessoria dia e noite para manter a segurança de sua residência ou empresa, 
             com equipes altamente treinadas.
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
           {segments.map((segment, index) => (
             <div 
               key={index}
-              className="group card-premium rounded-2xl p-8 bg-card border border-border hover:border-secondary/50 hover:shadow-xl transition-all duration-300"
+              className="group card-premium rounded-2xl p-6 md:p-8 bg-card border border-border hover:border-secondary/50 hover:shadow-xl transition-all duration-300"
             >
-              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary to-accent flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary to-accent flex items-center justify-center mb-5 md:mb-6 group-hover:scale-110 transition-transform">
                 <segment.icon className="w-7 h-7 text-primary-foreground" />
               </div>
               
-              <h3 className="text-xl font-bold text-foreground mb-3">{segment.title}</h3>
-              <p className="text-muted-foreground text-sm">{segment.description}</p>
+              <h3 className="text-lg md:text-xl font-bold text-foreground mb-2 md:mb-3">{segment.title}</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">{segment.description}</p>
             </div>
           ))}
         </div>
