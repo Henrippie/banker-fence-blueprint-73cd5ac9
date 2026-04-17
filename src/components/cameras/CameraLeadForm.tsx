@@ -195,9 +195,9 @@ _Solicitação de diagnóstico gratuito de CFTV_`;
               <Button 
                 type="submit" 
                 size="lg"
-                className="w-full bg-success text-success-foreground hover:bg-success/90 shadow-button text-lg py-7 transition-all duration-300 hover:scale-105"
+                className="w-full bg-success text-success-foreground hover:bg-success/90 shadow-button text-sm sm:text-base md:text-lg px-4 py-5 sm:py-6 md:py-7 h-auto whitespace-normal leading-tight transition-all duration-300 hover:scale-105 active:scale-95 touch-manipulation flex items-center justify-center text-center"
               >
-                Fale com um atendente agora mesmo
+                <span className="block text-center">Fale com um atendente agora mesmo</span>
               </Button>
             </form>
           </div>
