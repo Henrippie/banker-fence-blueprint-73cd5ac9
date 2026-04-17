@@ -9,28 +9,28 @@ import {
 const CameraFAQ = () => {
   const faqs = [
     {
-      question: "A conta de luz aumenta muito?",
-      answer: "Não. O consumo de câmeras modernas é muito baixo, equivalente a algumas lâmpadas LED. O impacto na conta é praticamente imperceptível."
+      question: "O que é o monitoramento 24h?",
+      answer: "É um serviço onde nossa central de vigilância acompanha seu sistema de alarme 24 horas por dia. Quando ocorre uma ocorrência, nossa equipe responde em até 60 segundos e toma as ações necessárias."
     },
     {
-      question: "E se faltar energia?",
-      answer: "O sistema pode ser configurado com nobreak ou bateria de backup, mantendo as câmeras funcionando por horas mesmo sem luz."
+      question: "Quanto tempo leva para a central responder?",
+      answer: "Nossa equipe responde em até 60 segundos após o disparo do alarme. Analisamos a situação em tempo real e acionamos os procedimentos de segurança necessários."
     },
     {
-      question: "Qual a diferença entre câmera IP e câmera analógica?",
-      answer: "As câmeras IP transmitem imagem digital com maior resolução e permitem acesso remoto mais fácil. As analógicas são mais simples e funcionam bem em instalações básicas. Indicamos o melhor tipo após avaliar sua necessidade."
+      question: "E se eu acionar o alarme por engano?",
+      answer: "Não há problema! Você pode cancelar o alerta pela central ou pelo aplicativo. Nossa equipe entrará em contato para confirmar a situação antes de acionar qualquer procedimento."
     },
     {
-      question: "Onde as imagens ficam gravadas?",
-      answer: "As gravações ficam armazenadas em um DVR/NVR local na sua propriedade. Também é possível configurar backup em nuvem para maior segurança."
+      question: "O que acontece quando o alarme dispara?",
+      answer: "Nossa central recebe o alerta imediatamente. Os operadores acessam as câmeras em tempo real, avaliam a situação e tomam ação: acionam a sirene, entram em contato com você e, se necessário, acionam a polícia."
     },
     {
-      question: "Consigo ver as câmeras de qualquer lugar?",
-      answer: "Sim! Com acesso remoto via aplicativo para Android e iOS, você monitora em tempo real de onde estiver, seja pelo celular ou computador."
+      question: "O sistema funciona sem internet?",
+      answer: "Sim! Utilizamos conexão 4G/5G como backup automático. Além disso, o sistema possui bateria que mantém tudo funcionando por horas, mesmo sem energia elétrica."
     },
     {
-      question: "As câmeras gravam à noite?",
-      answer: "Sim! Todas nossas câmeras possuem visão noturna infravermelha, garantindo imagens nítidas mesmo em completa escuridão. A qualidade HD permite identificar rostos e placas tanto de dia quanto à noite."
+      question: "Quem são os profissionais que monitoram?",
+      answer: "Nossa central é composta por profissionais altamente treinados em segurança e vigilância. Passam por treinamento constante e seguem protocolos rigorosos para cada tipo de ocorrência."
     }
   ];
 
@@ -46,7 +46,7 @@ const CameraFAQ = () => {
             Perguntas Frequentes
           </h3>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Respostas para as principais dúvidas sobre sistemas de câmeras CFTV
+            Respostas para as principais dúvidas sobre o serviço de monitoramento 24h
           </p>
         </div>
         
