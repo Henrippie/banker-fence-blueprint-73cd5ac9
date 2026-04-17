@@ -31,6 +31,10 @@ const CameraFAQ = () => {
     {
       question: "Quem são os profissionais que monitoram?",
       answer: "Nossa central é composta por profissionais altamente treinados em segurança e vigilância. Passam por treinamento constante e seguem protocolos rigorosos para cada tipo de ocorrência."
+    },
+    {
+      question: "Consigo acompanhar as câmeras ao vivo?",
+      answer: "Sim! Temos um aplicativo exclusivo para Android e iOS onde você acompanha tudo em tempo real. Além de visualizar as câmeras ao vivo, você recebe notificações instantâneas, pode armar e desarmar o sistema remotamente, e tem acesso ao histórico de eventos. Tudo na palma da sua mão, de onde estiver."
     }
   ];
 
