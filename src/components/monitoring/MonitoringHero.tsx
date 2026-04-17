@@ -51,7 +51,7 @@ const MonitoringHero = () => {
               </div>
               <div className="flex items-center gap-3 text-primary-foreground/90">
                 <CheckCircle className="w-5 h-5 text-secondary flex-shrink-0" />
-                <span className="text-sm">Backup GPRS</span>
+                <span className="text-sm">Backup de internet e energia</span>
               </div>
               <div className="flex items-center gap-3 text-primary-foreground/90">
                 <CheckCircle className="w-5 h-5 text-secondary flex-shrink-0" />
