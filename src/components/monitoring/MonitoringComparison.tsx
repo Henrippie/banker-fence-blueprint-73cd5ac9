@@ -9,7 +9,7 @@ const MonitoringComparison = () => {
   };
 
   const comparisons = [
-    { feature: "Monitoramento 24h por profissionais especializados", camera: false, alarm: true },
+    { feature: "Monitoramento 24h banker ", camera: false, alarm: true },
     { feature: "Atuação imediata (resposta em menos de 60s)", camera: false, alarm: true },
     { feature: "Detecção antecipada antes da invasão", camera: false, alarm: true },
     { feature: "Acesso a imagens em tempo real", camera: true, alarm: true },
