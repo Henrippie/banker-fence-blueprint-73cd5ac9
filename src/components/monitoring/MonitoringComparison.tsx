@@ -48,7 +48,7 @@ const MonitoringComparison = () => {
                 <span className="font-bold text-sm md:text-base text-center">Somente Câmeras</span>
               </div>
               <div className="p-4 md:p-6 flex items-center justify-center bg-secondary text-secondary-foreground">
-                <span className="font-bold text-sm md:text-base text-center">Sistema Banker</span>
+                <span className="font-bold text-sm md:text-base text-center">Sistema 24h Banker</span>
               </div>
             </div>
 
